@@ -9,4 +9,15 @@ class GoodsModel extends Model
 		array('market_price','currency','市场价格必须是货币类型!',1),
 		array('shop_price','currency','本店价格必须是货币类型!',1),
 		);
+
+	protected function _before_insert(&$date,$option){
+
+		var_dump($date);
+		var_dump($option); die;
+		//获取当前时间
+		$date['addtime']=date('Y-m-d H:i:s',time());
+	}
+
+
 }
+

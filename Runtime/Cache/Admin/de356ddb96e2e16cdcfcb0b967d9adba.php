@@ -30,6 +30,12 @@
                     <span class="require-field">*</span></td>
                 </tr>
                 
+                 <tr>
+                    <td class="label">LOGO</td>
+                    <td><input type="file" name="logo" size="30" /></td>
+        
+                </tr>
+                
                 <<tr>
                     <td class="label">市场售价：</td>
                     <td>

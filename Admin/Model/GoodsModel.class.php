@@ -11,7 +11,7 @@ class GoodsModel extends Model
 		);
 
 
-	protected function _before_insert(&$date,$option){
+	protected function _before_insert(&$data,$option){
 		// echo "<pre>";
 		//var_dump($_FILES); die;
 		// echo "</pre>";
@@ -32,10 +32,27 @@ class GoodsModel extends Model
        			 $this->error=$upload->getError();
        			 return FALSE;
    			 }else{// 上传成功
+   			 		
+   			 		$logo = $info['logo']['savepath'] . $info['logo']['savename'] ;
+   			 		$mbiglogo = $info['logo']['savepath'] . 'mbig_' .$info['logo']['savename'] ;
+   			 		$biglogo = $info['logo']['savepath'] . 'big_' .$info['logo']['savename'] ;
+   			 		$midlogo = $info['logo']['savepath'] . 'mid_' .$info['logo']['savename'] ;
+   			 		$smlogo = $info['logo']['savepath'] . 'sm_' .$info['logo']['savename'] ;
+   			 		$image = new \Think\Image(); 
+   			 		$image->open('./Public/Uploads/' . $logo);
+   			 		$image->thumb(700, 700)->save('./Public/Uploads/' . $mbiglogo);
+   			 		$image->thumb(350, 350)->save('./Public/Uploads/' . $biglogo);
+   			 		$image->thumb(130, 130)->save('./Public/Uploads/' . $midlogo);
+   			 		$image->thumb(50, 50)->save('./Public/Uploads/' . $smlogo);
 
-   			 	 echo "<pre>";
-			var_dump($info); die;
-				 echo "</pre>";
+   			 		$data['logo']=$logo;
+   			 		$data['mbig_logo']=$mbiglogo;
+   			 		$data['big_logo']=$biglogo;
+   			 		$data['mid_logo']=$midlogo;
+   			 		$data['sm_logo']=$smlogo;
+   			 	 //echo "<pre>";
+			//var_dump($data); die;
+				// echo "</pre>";
       		  
     }
 
@@ -44,9 +61,9 @@ class GoodsModel extends Model
 	
 		//var_dump($option); die;
 		//获取当前时间
-		//$date['addtime']=date('Y-m-d H:i:s',time());
+		$data['addtime']=date('Y-m-d H:i:s',time());
 		
-		$date['goods_desc'] = removeXSS($_POST['goods_desc']);
+		$data['goods_desc'] = removeXSS($_POST['goods_desc']);
 	}
 
 

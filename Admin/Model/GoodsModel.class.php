@@ -66,6 +66,23 @@ class GoodsModel extends Model
 		$data['goods_desc'] = removeXSS($_POST['goods_desc']);
 	}
 
+  public function search($perpage=2){
+
+    $count=$this->count();
+    $PageObj= new \Think\Page($count,$perpage);
+
+    $PageObj->setConfig('next','下一页');
+    $PageObj->setConfig('prev','上一页');
+
+    $Pagestring = $PageObj->show();
+    $data = $this->limit($PageObj->firstRow.','.$PageObj->listRows)->select();
+    return array(
+      'data'=>$data,
+      'page'=>$Pagestring,
+    );
+
+  }
+
 
 }
 

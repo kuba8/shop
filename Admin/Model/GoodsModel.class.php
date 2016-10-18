@@ -68,14 +68,58 @@ class GoodsModel extends Model
 
   public function search($perpage=2){
 
-    $count=$this->count();
+   /********************搜索*****************/
+    $where=array();
+    $gn=I('get.gn');
+    if($gn)
+      $where['goods_name']=array('like',"%$gn%");
+
+    $fp=I('get.fp');
+    $tp=I('get.tp');
+    if($fp && $tp)
+      $where['shop_price']=array('between',array($fp,$tp));
+    elseif ($fp)
+      $where['shop_price']=array('egt',$fp);
+    elseif ($tp)
+      $where['shop_price']=array('elt',$tp);
+
+    $ios=I('get.ios');
+    if($ios)
+      $where['is_on_sale']=array('eq',$ios);
+
+    $fa=I('get.fa');
+    $ta=I('get.ta');
+    if($fa && $ta)
+      $where['addtime']=array('between',array($fa,$ta));
+    elseif ($fa)
+      $where['addtime']=array('egt',$fa);
+    elseif ($ta)
+      $where['addtime']=array('elt',$ta);
+
+    /********************排序*****************/
+    $orderby='id';
+    $orderway='desc';
+    $odby=I('get.odby');
+    if($odby){
+      if($odby=='id_asc')
+        $orderway='asc';
+      elseif($odby=='price_desc')
+        $orderby='shop_price';
+       elseif($odby=='price_asc'){
+        $orderby='shop_price';
+        $orderway='asc';}
+    }
+
+
+    /********************翻页*****************/
+    $count=$this->where($where)->count();
     $PageObj= new \Think\Page($count,$perpage);
 
     $PageObj->setConfig('next','下一页');
     $PageObj->setConfig('prev','上一页');
 
     $Pagestring = $PageObj->show();
-    $data = $this->limit($PageObj->firstRow.','.$PageObj->listRows)->select();
+    $data = $this->order("$orderby $orderway")->where($where)->limit($PageObj->firstRow.','.$PageObj->listRows)->select();
     return array(
       'data'=>$data,
       'page'=>$Pagestring,

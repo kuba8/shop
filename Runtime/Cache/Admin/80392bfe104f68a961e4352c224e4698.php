@@ -14,34 +14,40 @@
     <div style="clear:both"></div>
 </h1>
 <div class="form-div">
-    <form action="" name="searchForm">
-        
-        <!-- 分类 -->
-        <select name="cat_id">
-            <option value="0">所有分类</option>
-            <?php if(is_array($cat_list)): foreach($cat_list as $key=>$val): ?><option value="<<?php echo ($val["cat_id"]); ?>>"><<?php echo (str_repeat('&nbsp;&nbsp;',$val["lev"])); ?>><<?php echo ($val["cat_name"]); ?>></option><?php endforeach; endif; ?>
-        </select>
-        <!-- 品牌 -->
-        <select name="brand_id">
-            <option value="0">所有品牌</option>
-            <?php if(is_array($brand_list)): foreach($brand_list as $key=>$val): ?><option value="<<?php echo ($val["brand_id"]); ?>>"><<?php echo ($val["brand_name"]); ?>></option><?php endforeach; endif; ?>
-        </select>
-        <!-- 推荐 -->
-        <select name="intro_type">
-            <option value="0">全部</option>
-            <option value="is_best">精品</option>
-            <option value="is_new">新品</option>
-            <option value="is_hot">热销</option>
-        </select>
-        <!-- 上架 -->
-        <select name="is_on_sale">
-            <option value=''>全部</option>
-            <option value="1">上架</option>
-            <option value="0">下架</option>
-        </select>
-        <!-- 关键字 -->
-        关键字 <input type="text" name="keyword" size="15" />
-        <input type="submit" value=" 搜索 " class="button" />
+    <form action="/shop/index.php/Admin/Goods/lst" method="GET" name="searchForm">
+    <p>
+        商品名称：
+        <input type="text" value="<?php echo I('get.gn');?>" name="gn" size="60" />
+    </p>
+     <p>
+        价　　格：
+        从<input type="text" value="<?php echo I('get.fp');?>" name="fp" size="8" />
+        到<input type="text" value="<?php echo I('get.tp');?>" name="tp" size="8" />
+    </p>
+     <p>
+        是否上架：
+        <?php $ios=I('get.ios');?>
+        <input type="radio" name="ios" value="" <?php if($ios=='') echo 'checked=checked';?> /> 全部
+        <input type="radio" name="ios" value="是" <?php if($ios=='是') echo 'checked=checked';?>  /> 上架
+        <input type="radio" name="ios" value="否" <?php if($ios=='否') echo 'checked=checked';?>  /> 下架
+    </p>
+     <p>
+        添加时间：
+        从<input type="text" name="fa" value="<?php echo I('get.fa');?>" size="20" />
+        到<input type="text" name="ta" value="<?php echo I('get.ta');?>" size="20" />
+    </p>
+    <p>
+        排序方式：
+         <?php $odby=I('get.odby','id_desc');?>
+        <input onclick="this.parentNode.parentNode.submit();" type="radio" name="odby" value="id_desc" <?php if($odby=='id_desc') echo 'checked="checked"'?> />以添加时间降序
+        <input onclick="this.parentNode.parentNode.submit();" type="radio" name="odby" value="id_asc" <?php if($odby=='id_asc') echo 'checked="checked"'?> />以添加时间升序
+        <input onclick="this.parentNode.parentNode.submit();" type="radio" name="odby" value="price_desc" <?php if($odby=='price_desc') echo 'checked="checked"'?> />以价格降序
+        <input onclick="this.parentNode.parentNode.submit();"type="radio" name="odby" value="price_asc" <?php if($odby=='price_asc') echo 'checked="checked"'?> />以价格升序
+    </p>
+     <p>
+        <input type="submit" value="搜索" />
+    </p>
+
     </form>
 </div>
 

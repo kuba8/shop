@@ -66,7 +66,7 @@
                 <th>操作</th> 
             </tr>
            <?php foreach ($data as $k=>$v) : ?>
-            <tr>
+            <tr class='tron'>
                 <td align="center"><?php echo $v['id']; ?></td>
                 <td align="center" class="first-cell"><span><?php echo $v['goods_name']; ?></span></td>
                 <td align="center"><img src="/shop/Public/Uploads/<?php echo $v['sm_logo']; ?>"></td>
@@ -113,3 +113,5 @@
     $("#fa").datetimepicker();
     $("#ta").datetimepicker();
 </script>
+
+<script type="text/javascript" src="/shop/Public/Admin/Js/tron.js"></script>

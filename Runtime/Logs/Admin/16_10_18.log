@@ -4112,16 +4112,91 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+<<<<<<< HEAD
 [ 2016-10-18T16:45:09+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst/odby/id_asc/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+=======
+[ 2016-10-18T23:34:54+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:list
+
+[ 2016-10-18T23:35:05+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/lst
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `p39_goods` ORDER BY id desc LIMIT 0,2   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-18T23:35:53+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/lst
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+>>>>>>> 167eb10bd6fc4920d8c9a31681b9c7ac9c1c70c9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0000s ]
+<<<<<<< HEAD
+SQL: SELECT * FROM `p39_goods` ORDER BY id asc LIMIT 2,2   [ RunTime:0.0010s ]
+=======
+SQL: SELECT * FROM `p39_goods` ORDER BY id desc LIMIT 0,2   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-18T23:35:53+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/third-party/jquery.min.js
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:third-party
+
+[ 2016-10-18T23:35:57+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/lst
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
-SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0000s ]
-SQL: SELECT * FROM `p39_goods` ORDER BY id asc LIMIT 2,2   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `p39_goods` ORDER BY id desc LIMIT 0,2   [ RunTime:0.0000s ]
+>>>>>>> 167eb10bd6fc4920d8c9a31681b9c7ac9c1c70c9
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -4130,35 +4205,36 @@ INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+=======
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+>>>>>>> 167eb10bd6fc4920d8c9a31681b9c7ac9c1c70c9
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+<<<<<<< HEAD
 [ 2016-10-18T16:45:09+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst/odby/id_asc/p/3.html
+=======
+[ 2016-10-18T23:35:57+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/third-party/jquery.min.js
+>>>>>>> 167eb10bd6fc4920d8c9a31681b9c7ac9c1c70c9
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
 SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
 SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0000s ]
 SQL: SELECT * FROM `p39_goods` ORDER BY id asc LIMIT 4,2   [ RunTime:0.0000s ]
-INFO: [ view_parse ] --START--
-INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+=======
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:third-party
 
-[ 2016-10-18T16:45:10+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst/odby/id_asc/p/4.html
+[ 2016-10-18T23:36:04+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/lst
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
@@ -4167,7 +4243,122 @@ INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
 SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `p39_goods` ORDER BY id desc LIMIT 0,2   [ RunTime:0.0000s ]
+>>>>>>> 167eb10bd6fc4920d8c9a31681b9c7ac9c1c70c9
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+>>>>>>> 167eb10bd6fc4920d8c9a31681b9c7ac9c1c70c9
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+<<<<<<< HEAD
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-18T16:45:10+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst/odby/id_asc/p/4.html
+=======
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-18T23:36:04+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/third-party/jquery.min.js
+>>>>>>> 167eb10bd6fc4920d8c9a31681b9c7ac9c1c70c9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+<<<<<<< HEAD
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0000s ]
 SQL: SELECT * FROM `p39_goods` ORDER BY id asc LIMIT 6,2   [ RunTime:0.0000s ]
+=======
+ERR: 非法操作:third-party
+
+[ 2016-10-18T23:36:57+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/lst
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `p39_goods` ORDER BY id desc LIMIT 0,2   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-18T23:36:57+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/third-party/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:third-party
+
+[ 2016-10-18T23:37:17+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/lst
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `p39_goods` ORDER BY id desc LIMIT 0,2   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-18T23:37:17+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/third-party/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:third-party
+
+[ 2016-10-18T23:38:26+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/lst
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `p39_goods` ORDER BY id desc LIMIT 0,2   [ RunTime:0.0000s ]
+>>>>>>> 167eb10bd6fc4920d8c9a31681b9c7ac9c1c70c9
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -4181,6 +4372,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+<<<<<<< HEAD
 [ 2016-10-18T16:45:12+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst/odby/id_asc/p/3.html
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
@@ -4191,12 +4383,23 @@ INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
 SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0000s ]
 SQL: SELECT * FROM `p39_goods` ORDER BY id asc LIMIT 4,2   [ RunTime:0.0000s ]
+=======
+[ 2016-10-18T23:38:29+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/lst
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `p39_goods` ORDER BY id desc LIMIT 0,2   [ RunTime:0.0010s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
@@ -4204,22 +4407,60 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2016-10-18T23:39:06+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/lst
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `p39_goods` ORDER BY id desc LIMIT 0,2   [ RunTime:0.0000s ]
+>>>>>>> 167eb10bd6fc4920d8c9a31681b9c7ac9c1c70c9
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+>>>>>>> 167eb10bd6fc4920d8c9a31681b9c7ac9c1c70c9
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+<<<<<<< HEAD
 [ 2016-10-18T16:45:13+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst/odby/id_asc/p/2.html
+=======
+[ 2016-10-18T23:39:44+08:00 ] 127.0.0.1 /shop/index.php/admin/goods/lst
+>>>>>>> 167eb10bd6fc4920d8c9a31681b9c7ac9c1c70c9
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+<<<<<<< HEAD
 SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
 SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0000s ]
 SQL: SELECT * FROM `p39_goods` ORDER BY id asc LIMIT 2,2   [ RunTime:0.0000s ]
+=======
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `p39_goods` ORDER BY id desc LIMIT 0,2   [ RunTime:0.0000s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
@@ -4227,13 +4468,137 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
-[ 2016-10-18T16:45:14+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst/odby/id_asc/p/1.html
+[ 2016-10-18T23:39:53+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst?gn=&fp=&tp=&ios=&fa=2016-10-18+23%3A39&ta=2016-10-18+23%3A39&odby=id_desc
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` WHERE `addtime` BETWEEN '2016-10-18 23:39' AND '2016-10-18 23:39' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `p39_goods` WHERE `addtime` BETWEEN '2016-10-18 23:39' AND '2016-10-18 23:39' ORDER BY id desc LIMIT 0,2   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-18T23:39:57+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst?gn=&fp=&tp=&ios=&fa=&ta=2016-10-18+23%3A39&odby=id_desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` WHERE `addtime` <= '2016-10-18 23:39' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `p39_goods` WHERE `addtime` <= '2016-10-18 23:39' ORDER BY id desc LIMIT 0,2   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-18T23:39:58+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst?gn=&fp=&tp=&ios=&fa=&ta=2016-10-18+23%3A39&odby=id_desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` WHERE `addtime` <= '2016-10-18 23:39' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `p39_goods` WHERE `addtime` <= '2016-10-18 23:39' ORDER BY id desc LIMIT 0,2   [ RunTime:0.0000s ]
+>>>>>>> 167eb10bd6fc4920d8c9a31681b9c7ac9c1c70c9
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+<<<<<<< HEAD
+=======
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-18T23:39:58+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst?gn=&fp=&tp=&ios=&fa=&ta=2016-10-18+23%3A39&odby=id_desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` WHERE `addtime` <= '2016-10-18 23:39' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `p39_goods` WHERE `addtime` <= '2016-10-18 23:39' ORDER BY id desc LIMIT 0,2   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-10-18T23:40:00+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst/ta/2016-10-18+23%3A39/odby/id_desc/p/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` WHERE `addtime` <= '2016-10-18+23:39' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `p39_goods` WHERE `addtime` <= '2016-10-18+23:39' ORDER BY id desc LIMIT 4,2   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+>>>>>>> 167eb10bd6fc4920d8c9a31681b9c7ac9c1c70c9
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+<<<<<<< HEAD
+[ 2016-10-18T16:45:14+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst/odby/id_asc/p/1.html
+=======
+[ 2016-10-18T23:40:00+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst/ta/2016-10-18%2B23%3A39/odby/id_desc/p/2.html
+>>>>>>> 167eb10bd6fc4920d8c9a31681b9c7ac9c1c70c9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+<<<<<<< HEAD
 SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
 SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` LIMIT 1   [ RunTime:0.0000s ]
 SQL: SELECT * FROM `p39_goods` ORDER BY id asc LIMIT 0,2   [ RunTime:0.0000s ]
@@ -4246,6 +4611,43 @@ INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+=======
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` WHERE `addtime` <= '2016-10-18+23:39' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `p39_goods` WHERE `addtime` <= '2016-10-18+23:39' ORDER BY id desc LIMIT 2,2   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-10-18T23:40:01+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst/ta/2016-10-18%2B23%3A39/odby/id_desc/p/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `p39_goods` WHERE `addtime` <= '2016-10-18+23:39' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `p39_goods` WHERE `addtime` <= '2016-10-18+23:39' ORDER BY id desc LIMIT 4,2   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+>>>>>>> 167eb10bd6fc4920d8c9a31681b9c7ac9c1c70c9
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]

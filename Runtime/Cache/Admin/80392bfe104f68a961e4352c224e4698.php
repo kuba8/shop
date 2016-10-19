@@ -33,8 +33,8 @@
     </p>
      <p>
         添加时间：
-        从<input type="text" name="fa" value="<?php echo I('get.fa');?>" size="20" />
-        到<input type="text" name="ta" value="<?php echo I('get.ta');?>" size="20" />
+        从<input type="text" id ="fa" name="fa" value="<?php echo I('get.fa');?>" size="20" />
+        到<input type="text" id ="ta" name="ta" value="<?php echo I('get.ta');?>" size="20" />
     </p>
     <p>
         排序方式：
@@ -100,3 +100,16 @@
 版权所有 &copy; 2005-2012 上海商派网络科技有限公司，并保留所有权利。</div>
 </body>
 </html>
+<script type="text/javascript" src="/shop/Public/umeditor1_2_2-utf8-php/third-party/jquery.min.js"></script>
+<link href="/shop/Public/datetimepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="/shop/Public/datetimepicker/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/shop/Public/datetimepicker/datepicker-zh_cn.js"></script>
+<link rel="stylesheet" media="all" type="text/css" href="/shop/Public/datetimepicker/time/jquery-ui-timepicker-addon.min.css" />
+<script type="text/javascript" src="/shop/Public/datetimepicker/time/jquery-ui-timepicker-addon.min.js"></script>
+<script type="text/javascript" src="/shop/Public/datetimepicker/time/i18n/jquery-ui-timepicker-addon-i18n.min.js"></script>
+
+<script type="text/javascript">
+  $.timepicker.setDefaults($.timepicker.regional['zh-CN']);
+    $("#fa").datetimepicker();
+    $("#ta").datetimepicker();
+</script>

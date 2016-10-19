@@ -21,6 +21,30 @@ class GoodsController extends Controller {
 
        $this->display();
 	  }
+
+    public function edit()
+    {
+     
+    $id=I('get.id');
+    $model=D('goods');
+       if(IS_POST){
+       if($model->create(I('post.'),2))
+       {
+        if(FALSE!==$model->save())
+        {
+          $this->success('操作成功!',U('lst'));
+          exit;
+        }
+       }
+       //假如失败
+        $error=$model->getError();
+        $this->error($error);
+       }
+       $data=$model->find($id);
+       $this->assign('data',$data);
+       $this->display();
+    }
+
     //商品列表页
     public function lst()
     {

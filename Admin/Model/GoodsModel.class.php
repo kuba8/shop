@@ -131,6 +131,18 @@ class GoodsModel extends Model
   }
 
 
+protected function _before_delete($option){
+ $id=$option['where']['id'];
+ $oldLogo=$this->field('logo,mbig_logo,big_logo,mid_logo,sm_logo')->find($id);
+            unlink('./Public/Uploads/'. $oldLogo['logo']);
+            unlink('./Public/Uploads/'. $oldLogo['mbig_logo']);
+            unlink('./Public/Uploads/'. $oldLogo['big_logo']);
+            unlink('./Public/Uploads/'. $oldLogo['mid_logo']);
+            unlink('./Public/Uploads/'. $oldLogo['sm_logo']);
+
+}
+
+
   public function search($perpage=2){
 
    /********************搜索*****************/

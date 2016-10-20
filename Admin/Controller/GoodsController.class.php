@@ -45,6 +45,17 @@ class GoodsController extends Controller {
        $this->display();
     }
 
+    public function delete()
+    {
+     
+    $id=I('get.id');
+    $model=D('goods');
+    if(FALSE!==$model->delete($id))
+      $this->success('删除成功',U('lst'));
+    else 
+      $this->error('删除失败的原因：',$model->getError);
+
+}
     //商品列表页
     public function lst()
     {

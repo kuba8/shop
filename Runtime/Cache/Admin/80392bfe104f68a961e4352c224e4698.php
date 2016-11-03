@@ -8,11 +8,13 @@
 </head>
 <body>
 <h1>
-    <span class="action-span"><a href="__GROUP__/Goods/goodsAdd">添加新商品</a></span>
+    <span class="action-span"><a href="<?php echo $_page_btn_link ;?>"><?php echo $_page_btn_name ;?></a></span>
     <span class="action-span1"><a href="__GROUP__">ECSHOP 管理中心</a></span>
-    <span id="search_id" class="action-span1"> - 商品列表 </span>
+    <span id="search_id" class="action-span1"> - <?php echo $_page_title ;?> </span>
     <div style="clear:both"></div>
 </h1>
+
+
 <div class="form-div">
     <form action="/shop/index.php/Admin/Goods/lst" method="GET" name="searchForm">
     <p>
@@ -95,11 +97,7 @@
     </div>
 </form>
 
-<div id="footer">
-共执行 7 个查询，用时 0.028849 秒，Gzip 已禁用，内存占用 3.219 MB<br />
-版权所有 &copy; 2005-2012 上海商派网络科技有限公司，并保留所有权利。</div>
-</body>
-</html>
+
 <script type="text/javascript" src="/shop/Public/umeditor1_2_2-utf8-php/third-party/jquery.min.js"></script>
 <link href="/shop/Public/datetimepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" charset="utf-8" src="/shop/Public/datetimepicker/jquery-ui-1.9.2.custom.min.js"></script>
@@ -115,3 +113,11 @@
 </script>
 
 <script type="text/javascript" src="/shop/Public/Admin/Js/tron.js"></script>
+
+
+
+<div id="footer">
+共执行 29 个查询，用时 0.539249 秒，Gzip 已禁用，内存占用 3.502 MB<br />
+版权所有 &copy; 2005-2012 上海商派网络科技有限公司，并保留所有权利。</div>
+</body>
+</html>

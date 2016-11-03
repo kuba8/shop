@@ -19,6 +19,12 @@ class GoodsController extends Controller {
         $this->error($error);
        }
 
+        $this->assign(array(
+        '_page_title'=>'添加新商品',
+        '_page_btn_name'=>'商品列表',
+        '_page_btn_link'=>U('lst'),
+        ));
+
        $this->display();
 	  }
 
@@ -42,6 +48,11 @@ class GoodsController extends Controller {
        }
        $data=$model->find($id);
        $this->assign('data',$data);
+       $this->assign(array(
+        '_page_title'=>'修改商品',
+        '_page_btn_name'=>'商品列表',
+        '_page_btn_link'=>U('lst'),
+        ));
        $this->display();
     }
 
@@ -65,6 +76,11 @@ class GoodsController extends Controller {
 
       $this->assign('data', $data['data']);
       $this->assign('page', $data['page']);
+      $this->assign(array(
+        '_page_title'=>'商品列表',
+        '_page_btn_name'=>'添加新商品',
+        '_page_btn_link'=>U('add'),
+        ));
       $this->display();
 
     }

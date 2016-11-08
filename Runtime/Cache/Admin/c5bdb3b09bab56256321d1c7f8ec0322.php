@@ -15,8 +15,6 @@
 </h1>
 
 
-
-
 <div class="tab-div">
     <div id="tabbar-div">
         <p>
@@ -38,7 +36,7 @@
                  <tr>
                     <td class="label">LOGO</td>
                     <td>
-                    <img src="/shop/Public/Uploads/<?php echo $data['mid_logo'];?>">
+                    <?php showImage($data['mid_logo']); ?>
                     <input type="file" name="logo" size="30" /></td>
         
                 </tr>

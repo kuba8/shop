@@ -17,4 +17,12 @@ return array(
     'DB_MASTER_NUM'         =>  1, // 读写分离后 主服务器数量
     'DB_SLAVE_NO'           =>  '', // 指定从服务器序号
     'DEFAULT_FILTER'        =>  'trim,htmlspecialchars', // 默认参数过滤方法 用于I函数...
+
+        'IMAGE_CONFIG' => array(
+        'maxSize' => 1024*1024,
+        'exts' => array('jpg', 'gif', 'png', 'jpeg'),
+        'rootPath' => './Public/Uploads/',  // 上传图片的保存路径  -> PHP要使用的路径，硬盘上的路径
+        'viewPath' => 'http://127.0.0.1/shop/Public/Uploads/',   // 显示图片时的路径    -> 浏览器用的路径，相对网站根目录
+    ),
+
 );

@@ -19,7 +19,12 @@ class GoodsController extends Controller {
         $this->error($error);
        }
 
+       //取出所有品牌
+       $brandModel = D('brand');
+       $brandData = $brandModel->select();
+
         $this->assign(array(
+        'brandData'=>$brandData,
         '_page_title'=>'添加新商品',
         '_page_btn_name'=>'商品列表',
         '_page_btn_link'=>U('lst'),

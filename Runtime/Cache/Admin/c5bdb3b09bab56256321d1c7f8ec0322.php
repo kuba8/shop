@@ -22,7 +22,7 @@
         </p>
     </div>
     <div id="tabbody-div">
-        <form enctype="multipart/form-data" action="/shop/index.php/Admin/Goods/edit/id/8.html" method="post">
+        <form enctype="multipart/form-data" action="/shop/index.php/Admin/Goods/edit/id/11.html" method="post">
 
      <input type="hidden" name="id" value="<?php echo I('get.id');?>" />
 

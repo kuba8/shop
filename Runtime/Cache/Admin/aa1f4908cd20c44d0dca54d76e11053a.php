@@ -17,7 +17,7 @@
 
 
 <div class="main-div">
-    <form name="main_form" method="POST" action="/shop/index.php/Admin/Brand/edit/id/1.html" enctype="multipart/form-data" >
+    <form name="main_form" method="POST" action="/shop/index.php/Admin/Brand/edit/id/3.html" enctype="multipart/form-data" >
     	<input type="hidden" name="id" value="<?php echo $data['id']; ?>" />
 		<input type="hidden" name="old_logo" value="<?php echo $data['logo']; ?>" />
         <table cellspacing="1" cellpadding="3" width="100%">

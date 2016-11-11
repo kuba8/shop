@@ -59,6 +59,7 @@
         <table cellpadding="3" cellspacing="1">
             <tr>
                 <th>编号</th>
+                <th>品牌</th>
                 <th>商品名称</th>
                 <th>logo</th>
                 <th>市场价格</th>
@@ -70,6 +71,7 @@
            <?php foreach ($data as $k=>$v) : ?>
             <tr class='tron'>
                 <td align="center"><?php echo $v['id']; ?></td>
+                <td align="center"><?php echo $v['brand_name']; ?></td>
                 <td align="center" class="first-cell"><span><?php echo $v['goods_name']; ?></span></td>
                 <td align="center"><?php showImage($v['sm_logo']); ?></td>
                 <td align="center"><?php echo $v['market_price']; ?></td>

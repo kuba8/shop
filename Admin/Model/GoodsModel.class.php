@@ -3,8 +3,8 @@ namespace Admin\Model;
 use Think\Model;
 class GoodsModel extends Model
 {
-  protected $insertFields='goods_name,market_price,shop_price,is_on_sale,goods_desc';
-	protected $updateFields='id,goods_name,market_price,shop_price,is_on_sale,goods_desc';
+  protected $insertFields='goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id';
+	protected $updateFields='id,goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id';
 
 
   //定义验证规则
@@ -117,20 +117,20 @@ deleteImage($oldLogo);
     $where=array();
     $gn=I('get.gn');
     if($gn)
-      $where['goods_name']=array('like',"%$gn%");
+      $where['a.goods_name']=array('like',"%$gn%");
 
     $fp=I('get.fp');
     $tp=I('get.tp');
     if($fp && $tp)
-      $where['shop_price']=array('between',array($fp,$tp));
+      $where['a.shop_price']=array('between',array($fp,$tp));
     elseif ($fp)
-      $where['shop_price']=array('egt',$fp);
+      $where['a.shop_price']=array('egt',$fp);
     elseif ($tp)
-      $where['shop_price']=array('elt',$tp);
+      $where['a.shop_price']=array('elt',$tp);
 
     $ios=I('get.ios');
     if($ios)
-      $where['is_on_sale']=array('eq',$ios);
+      $where['a.is_on_sale']=array('eq',$ios);
 
     $fa=I('get.fa');
     $ta=I('get.ta');
@@ -142,7 +142,7 @@ deleteImage($oldLogo);
       $where['addtime']=array('elt',$ta);
 
     /********************排序*****************/
-    $orderby='id';
+    $orderby='a.id';
     $orderway='desc';
     $odby=I('get.odby');
     if($odby){
@@ -164,7 +164,17 @@ deleteImage($oldLogo);
     $PageObj->setConfig('prev','上一页');
 
     $Pagestring = $PageObj->show();
-    $data = $this->order("$orderby $orderway")->where($where)->limit($PageObj->firstRow.','.$PageObj->listRows)->select();
+
+    //取某一页数据
+    $data = $this->order("$orderby $orderway")
+    ->field('a.*,b.brand_name')
+    ->alias('a')
+    ->join('LEFT JOIN __BRAND__ b ON a.brand_id=b.id')
+    ->where($where)
+    ->limit($PageObj->firstRow.','.$PageObj->listRows)
+    ->select();
+
+    //返回数据
     return array(
       'data'=>$data,
       'page'=>$Pagestring,

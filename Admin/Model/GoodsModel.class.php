@@ -110,6 +110,24 @@ protected function _before_delete($option){
 deleteImage($oldLogo);
 }
 
+protected function _after_insert(&$data,$option){
+    $mp=I('post.member_price');
+    $mpModel=D('member_price');
+    foreach ($mp as $k => $v) {
+
+      $_v=(float)$v;
+      if($_v>0)
+      {
+      $mpModel->add(array(
+        'price'=>$v,
+        'level_id'=>$k,
+        'goods_id'=>$data['id'],
+        ));
+    }
+  }
+}
+
+
 
   public function search($perpage=2){
 
@@ -122,11 +140,11 @@ deleteImage($oldLogo);
     $fp=I('get.fp');
     $tp=I('get.tp');
     if($fp && $tp)
-      $where['a.shop_price']=array('between',array($fp,$tp));
+      $where['shop_price']=array('between',array($fp,$tp));
     elseif ($fp)
-      $where['a.shop_price']=array('egt',$fp);
+      $where['shop_price']=array('egt',$fp);
     elseif ($tp)
-      $where['a.shop_price']=array('elt',$tp);
+      $where['shop_price']=array('elt',$tp);
 
     $ios=I('get.ios');
     if($ios)
@@ -135,11 +153,16 @@ deleteImage($oldLogo);
     $fa=I('get.fa');
     $ta=I('get.ta');
     if($fa && $ta)
-      $where['addtime']=array('between',array($fa,$ta));
+      $where['a.addtime']=array('between',array($fa,$ta));
     elseif ($fa)
-      $where['addtime']=array('egt',$fa);
+      $where['a.addtime']=array('egt',$fa);
     elseif ($ta)
-      $where['addtime']=array('elt',$ta);
+      $where['a.addtime']=array('elt',$ta);
+    //品牌
+    $brandId=I('get.brand_id');
+    if($brandId)
+      $where['a.brand_id']=array('eq',$brandId);
+
 
     /********************排序*****************/
     $orderby='a.id';
@@ -157,7 +180,7 @@ deleteImage($oldLogo);
 
 
     /********************翻页*****************/
-    $count=$this->where($where)->count();
+    $count=$this->alias('a')->where($where)->count();
     $PageObj= new \Think\Page($count,$perpage);
 
     $PageObj->setConfig('next','下一页');
@@ -166,9 +189,8 @@ deleteImage($oldLogo);
     $Pagestring = $PageObj->show();
 
     //取某一页数据
-    $data = $this->order("$orderby $orderway")
+    $data = $this->alias('a')->order("$orderby $orderway")
     ->field('a.*,b.brand_name')
-    ->alias('a')
     ->join('LEFT JOIN __BRAND__ b ON a.brand_id=b.id')
     ->where($where)
     ->limit($PageObj->firstRow.','.$PageObj->listRows)

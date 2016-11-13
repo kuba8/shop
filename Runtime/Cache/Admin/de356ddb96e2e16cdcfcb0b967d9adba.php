@@ -18,24 +18,21 @@
 <div class="tab-div">
     <div id="tabbar-div">
         <p>
-            <span class="tab-front" id="general-tab">通用信息</span>
+            <span class="tab-front" >通用信息</span>
+            <span class="tab-back" >商品描述</span>
+            <span class="tab-back" >会员价格</span>
+            <span class="tab-back" >商品属性</span>
+            <span class="tab-back" >商品相册</span>
         </p>
     </div>
     <div id="tabbody-div">
-        <form enctype="multipart/form-data" action="/shop/index.php/Admin/Goods/add" method="post">
-            <table width="90%" id="general-table" align="center">
+        <form enctype="multipart/form-data" action="/shop/index.php/Admin/Goods/add.html" method="post">
+            <table width="90%" class="tab_table" align="center">
 
                  <tr>
                     <td class="label">所在品牌：</td>
                     <td>
-                        <select name="brand_id">
-                        <option value="">请选择</option>
-                           <?php foreach($brandData as $k=>$v) :?> 
-                            <option value="<?php echo $v['id']?>"><?php echo $v['brand_name']?></option>
-                            <?php endforeach; ?>
-                       
-                            
-                        </select>
+                  <?php buildSelect('brand','brand_id','id','brand_name');?>
                     </td>
                 </tr>
 
@@ -75,13 +72,39 @@
                 </tr>
                
 
-                <tr>
-                    <td class="label">商品描述：</td>
+                
+            </table>
+            <!--商品描述-->
+            <table style="display: none;" width="90%" class="tab_table" align="center">
+            <tr>
                     <td>
                         <textarea id="goods_desc" name="goods_desc"></textarea>
                     </td>
                 </tr>
             </table>
+            <!--会员价格-->
+            <table style="display: none;" width="90%" class="tab_table" align="center">
+              <tr>
+                   
+                    <td>
+                        <?php foreach ($mlData as $k=>$v):?>
+                        <p>
+                        <strong><?php echo $v['level_name'];?> </strong>: 
+                        ¥<input type="text"  name="member_price[<?php echo $v['id'];?>]" size="8"/>元
+                        </p> 
+                        <?php endforeach;?>
+                    </td>
+                </tr>
+            </table>
+            <!--商品属性-->
+            <table style="display: none;" width="90%" class="tab_table" align="center">
+            
+            </table>
+            <!--商品相册-->
+            <table style="display: none;" width="90%" class="tab_table" align="center">
+            
+            </table>
+
             <div class="button-div">
                 <input type="submit" value=" 确定 " class="button"/>
                 <input type="reset" value=" 重置 " class="button" />
@@ -102,6 +125,15 @@
             initialFrameWidth:"100%" ,
             initialFrameHeight:350 
         });
+
+
+    $("#tabbar-div p span").click(function(){
+        var i=$(this).index();
+        $(".tab_table").hide();
+        $(".tab_table").eq(i).show();
+        $(".tab-front").removeClass("tab-front").addClass("tab-back");
+        $(this).removeClass("tab-back").addClass("tab-front");
+    });
     </script>
 
 

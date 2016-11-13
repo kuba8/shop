@@ -11,6 +11,14 @@
      <input type="hidden" name="id" value="<?php echo I('get.id');?>" />
 
             <table width="90%" id="general-table" align="center">
+
+                <tr>
+                    <td class="label">所在品牌：</td>
+                    <td>
+                        <?php buildSelect('brand','brand_id','id','brand_name',$data['brand_id']);?>
+                    </td>
+                </tr>
+
                 <tr>
                     <td class="label">商品名称：</td>
                     <td><input type="text" name="goods_name" value="<?php echo $data['goods_name'];?>"size="30" />

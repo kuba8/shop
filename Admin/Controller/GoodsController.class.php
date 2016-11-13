@@ -5,6 +5,7 @@ class GoodsController extends Controller {
    	    public function add()
     {
        if(IS_POST){
+        //var_dump($_POST);die;
         $model=D('goods');
        if($model->create(I('post.'),1))
        {
@@ -23,7 +24,12 @@ class GoodsController extends Controller {
        $brandModel = D('brand');
        $brandData = $brandModel->select();
 
+       //取出所有的会员级别
+       $mlModel=D('member_level');
+       $mlData=$mlModel->select();
+
         $this->assign(array(
+        'mlData'=>$mlData,
         'brandData'=>$brandData,
         '_page_title'=>'添加新商品',
         '_page_btn_name'=>'商品列表',
@@ -53,7 +59,12 @@ class GoodsController extends Controller {
        }
        $data=$model->find($id);
        $this->assign('data',$data);
+       //取出所有品牌
+       $brandModel = D('brand');
+       $brandData = $brandModel->select();
+
        $this->assign(array(
+        'brandData'=>$brandData,
         '_page_title'=>'修改商品',
         '_page_btn_name'=>'商品列表',
         '_page_btn_link'=>U('lst'),

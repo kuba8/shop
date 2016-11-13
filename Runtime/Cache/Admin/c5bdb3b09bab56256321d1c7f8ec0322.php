@@ -15,18 +15,26 @@
 </h1>
 
 
+<style type="text/css">
+    #ul_pic_list li{margin: 5px;list-style-type: none;}
+    #old_pic_list li{float: left;width: 150px;height: 150px;margin: 5px;list-style-type: none;}
+</style>
 <div class="tab-div">
     <div id="tabbar-div">
         <p>
             <span class="tab-front" id="general-tab">通用信息</span>
+            <span class="tab-back" >商品描述</span>
+            <span class="tab-back" >会员价格</span>
+            <span class="tab-back" >商品属性</span>
+            <span class="tab-back" >商品相册</span>
         </p>
     </div>
     <div id="tabbody-div">
-        <form enctype="multipart/form-data" action="/shop/index.php/Admin/Goods/edit/id/11.html" method="post">
+        <form enctype="multipart/form-data" action="/shop/index.php/Admin/Goods/edit/id/14.html" method="post">
 
      <input type="hidden" name="id" value="<?php echo I('get.id');?>" />
 
-            <table width="90%" id="general-table" align="center">
+            <table width="90%" class="tab_table" align="center">
 
                 <tr>
                     <td class="label">所在品牌：</td>
@@ -72,14 +80,55 @@
                     </td>
                 </tr>
                
+            </table>
 
-                <tr>
-                    <td class="label">商品描述：</td>
-                    <td>
+            <!--商品描述-->
+            <table style="display: none;" width="90%" class="tab_table" align="center">
+            <tr>
+                   <td>
                         <textarea id="goods_desc" name="goods_desc"><?php echo $data['goods_desc'];?> </textarea>
                     </td>
                 </tr>
             </table>
+            <!--会员价格-->
+            <table style="display: none;" width="90%" class="tab_table" align="center">
+              <tr>
+                   
+                    <td>
+                        <?php foreach ($mlData as $k=>$v):?>
+                        <p>
+                        <strong><?php echo $v['level_name'];?> </strong>: 
+                        ¥<input value="<?php echo $mpData[$v['id']];?>" type="text"  name="member_price[<?php echo $v['id'];?>]" size="8"/>元
+                        </p> 
+                        <?php endforeach;?>
+                    </td>
+                </tr>
+            </table>
+            <!--商品属性-->
+            <table style="display: none;" width="90%" class="tab_table" align="center">
+            
+            </table>
+            <!--商品相册-->
+            <table style="display: none;" width="90%" class="tab_table" align="center">
+            <tr>
+                <td>
+                    <input id="btn_add_pic" type="button" value="添加一张" />
+                    <hr />
+                    <ul id="ul_pic_list"></ul>
+                    <hr/>
+                    <ul id="old_pic_list">
+                        <?php foreach($gpData as $k=>$v):?>
+                            <li>
+                                <input pic_id="<?php echo $v['id'];?>" class="btn_del_pic" type="button" value="删除" /><br />
+                                <?php showImage($v['mid_pic'],150)?>
+                            </li>
+                         <?php endforeach;?>   
+                    </ul>
+                </td>
+            </tr>
+            </table>
+
+
             <div class="button-div">
                 <input type="submit" value=" 确定 " class="button"/>
                 <input type="reset" value=" 重置 " class="button" />
@@ -99,6 +148,49 @@
             initialFrameWidth:"100%" ,
             initialFrameHeight:350 
         });
+
+   $("#tabbar-div p span").click(function(){
+        var i=$(this).index();
+        $(".tab_table").hide();
+        $(".tab_table").eq(i).show();
+        $(".tab-front").removeClass("tab-front").addClass("tab-back");
+        $(this).removeClass("tab-back").addClass("tab-front");
+    });
+
+   // 添加一张
+$("#btn_add_pic").click(function(){
+    var file = '<li><input type="file" name="pic[]" /></li>';
+    $("#ul_pic_list").append(file);
+});
+
+// 删除图片
+$(".btn_del_pic").click(function(){
+    if(confirm('确定要删除吗？'))
+    {
+        // 先选中删除按钮所在的li标签
+        var li = $(this).parent();
+        // 从这个按钮上获取pic_id属性
+        var pid = $(this).attr("pic_id");
+        /**
+        php中的大U函数三个参数：
+        U('ajaxDelPic')                    ==>   /index.php/Admin/Goods/ajaxDelPic.html
+        U('ajaxDelPic?id=1')                  ==>   /index.php/Admin/Goods/ajaxDelPic/id/1.html
+        U('ajaxDelPic', array('id'=>1))      ==>   /index.php/Admin/Goods/ajaxDelPic/id/1.html
+        U('ajaxDelPic', array('id'=>1), FALSE)      ==>   /index.php/Admin/Goods/ajaxDelPic/id/1
+        **/ 
+        $.ajax({
+            type : "GET",
+            url : "<?php echo U('ajaxDelPic', '', FALSE); ?>/picid/"+pid,
+            success : function(data)
+            {
+                // 把图片从页面中删除掉
+                li.remove();
+            }
+        });
+    }
+});
+
+
     </script>
 
 

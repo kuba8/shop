@@ -2,10 +2,23 @@
 namespace Admin\Controller;
 use Think\Controller;
 class GoodsController extends Controller {
+
+      public function ajaxDelPic()
+      {
+        $picId=I('get.picid');
+        $gpModel=D('goods_pic');
+        $pic=$gpModel->field('pic,sm_pic,mid_pic,big_pic')->find($picId);
+        deleteImage($pic);
+        $gpModel->delete($picId);
+      }
+
+
+
    	    public function add()
     {
        if(IS_POST){
-        //var_dump($_POST);die;
+       
+         //var_dump($_FILES);die;
         $model=D('goods');
        if($model->create(I('post.'),1))
        {
@@ -62,8 +75,30 @@ class GoodsController extends Controller {
        //取出所有品牌
        $brandModel = D('brand');
        $brandData = $brandModel->select();
-
+        //取出所有的会员级别
+       $mlModel=D('member_level');
+       $mlData=$mlModel->select();
+        //取出设置好的会员价格
+       $mpModel=D('member_price');
+       $mpData=$mpModel->where(array(
+        'goods_id'=>array('eq',$id),
+        ))->select();
+       //把二维数组转成一维数组: level_id=>price
+       $_mpData=array();
+       foreach ($mpData as $k => $v) {
+         $_mpData[$v['level_id']]=$v['price'];
+       }
+       //取出相册中的图片
+       $gpModel=D('goods_pic');
+       $gpData=$gpModel->field('id,mid_pic')->where(array(
+        'goods_id'=>array('eq',$id),
+        ))->select();
+       //var_dump($mpData);
+       //var_dump($_mpData);
        $this->assign(array(
+        'mlData'=>$mlData,
+        'mpData'=>$_mpData,
+        'gpData'=>$gpData,
         'brandData'=>$brandData,
         '_page_title'=>'修改商品',
         '_page_btn_name'=>'商品列表',

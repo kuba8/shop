@@ -51,6 +51,67 @@ class GoodsModel extends Model
 
     //$id=I('get.id');
     $id=$option['where']['id'];
+    //处理图片
+    if(isset($_FILES['pic'])){
+        $pics=array();
+        foreach ($_FILES['pic']['name'] as $k => $v) {
+         $pics[]=array(
+          'name'=>$v,
+          'type'=>$_FILES['pic']['type'][$k],
+          'tmp_name'=>$_FILES['pic']['tmp_name'][$k],
+          'error'=>$_FILES['pic']['error'][$k],
+          'size'=>$_FILES['pic']['size'][$k],
+          );
+       }
+       $_FILES=$pics;
+       $gpModel = D('goods_pic');
+
+       // 循环每个上传
+      foreach ($pics as $k => $v)
+      {
+        if($v['error'] == 0)
+        {
+          $ret = uploadOne($k, 'Goods', array(
+            array(650, 650),
+            array(350, 350),
+            array(50, 50),
+          ));
+          if($ret['ok'] == 1)
+          {
+            $gpModel->add(array(
+              'pic' => $ret['images'][0],
+              'big_pic' => $ret['images'][1],
+              'mid_pic' => $ret['images'][2],
+              'sm_pic' => $ret['images'][3],
+              'goods_id' => $id,
+            ));
+          }
+        }
+      }
+
+    }
+
+
+    //处理会员价格
+    $mp=I('post.member_price');
+    $mpModel=D('member_price');
+    $mpModel->where(array(
+      'goods_id'=>array('eq','$id'),
+      ))->delete();
+    foreach ($mp as $k => $v) {
+
+      $_v=(float)$v;
+      if($_v>0)
+      {
+      $mpModel->add(array(
+        'price'=>$v,
+        'level_id'=>$k,
+        'goods_id'=>$id,
+        ));
+    }
+  }
+
+
 
     if($_FILES['logo']['error']==0){
 
@@ -108,9 +169,67 @@ protected function _before_delete($option){
  $id=$option['where']['id'];
  $oldLogo=$this->field('logo,mbig_logo,big_logo,mid_logo,sm_logo')->find($id);
 deleteImage($oldLogo);
+//删除会员价格
+  $mpModel=D('member_price');
+  $mpModel->where(array(
+    'goods_id'=>array('eq',$id),))->delete();
+  //删除相册中的图片
+  $gpModel=D('goods_pic');
+  $pics=$gpModel->field('pic,sm_pic,mid_pic,big_pic')->where(array(
+    'goods_id'=>array('eq',$id),
+    ))->select();
+  foreach ($pics as $k => $v) {
+    deleteImage($v);
+    $gpModel->where(array(
+      'goods_id'=>array('eq',$id),
+      ))->delete();
+  }
+
 }
 
 protected function _after_insert(&$data,$option){
+
+    if(isset($_FILES['pic'])){
+        $pics=array();
+        foreach ($_FILES['pic']['name'] as $k => $v) {
+         $pics[]=array(
+          'name'=>$v,
+          'type'=>$_FILES['pic']['type'][$k],
+          'tmp_name'=>$_FILES['pic']['tmp_name'][$k],
+          'error'=>$_FILES['pic']['error'][$k],
+          'size'=>$_FILES['pic']['size'][$k],
+          );
+       }
+       $_FILES=$pics;
+       $gpModel = D('goods_pic');
+
+       // 循环每个上传
+      foreach ($pics as $k => $v)
+      {
+        if($v['error'] == 0)
+        {
+          $ret = uploadOne($k, 'Goods', array(
+            array(650, 650),
+            array(350, 350),
+            array(50, 50),
+          ));
+          if($ret['ok'] == 1)
+          {
+            $gpModel->add(array(
+              'pic' => $ret['images'][0],
+              'big_pic' => $ret['images'][1],
+              'mid_pic' => $ret['images'][2],
+              'sm_pic' => $ret['images'][3],
+              'goods_id' => $data['id'],
+            ));
+          }
+        }
+      }
+
+
+
+    }
+
     $mp=I('post.member_price');
     $mpModel=D('member_price');
     foreach ($mp as $k => $v) {

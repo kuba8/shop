@@ -98,11 +98,17 @@
             </table>
             <!--商品属性-->
             <table style="display: none;" width="90%" class="tab_table" align="center">
-            
+
             </table>
             <!--商品相册-->
             <table style="display: none;" width="90%" class="tab_table" align="center">
-            
+                <tr>
+                    <td>
+                        <input id="btn_add_pic" type="button" value="添加一张" />
+                        <hr/>
+                        <ul id="ul_pic_list"></ul>
+                    </td>
+                </tr>
             </table>
 
             <div class="button-div">
@@ -133,6 +139,11 @@
         $(".tab_table").eq(i).show();
         $(".tab-front").removeClass("tab-front").addClass("tab-back");
         $(this).removeClass("tab-back").addClass("tab-front");
+    });
+
+    $("#btn_add_pic").click(function(){
+        var file='<li><input type="file" name="pic[]"/></li>';
+        $("#ul_pic_list").append(file);
     });
     </script>
 

@@ -3,8 +3,8 @@ namespace Admin\Model;
 use Think\Model;
 class GoodsModel extends Model
 {
-  protected $insertFields='goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id';
-	protected $updateFields='id,goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id';
+  protected $insertFields='goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cat_id';
+	protected $updateFields='id,goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cat_id';
 
 
   //定义验证规则
@@ -282,6 +282,15 @@ protected function _after_insert(&$data,$option){
     if($brandId)
       $where['a.brand_id']=array('eq',$brandId);
 
+    $catId=I('get.cat_id');
+    if($catId)
+    {
+      $catModel=D('category');
+      $children=$catModel->getChildren($catId);
+      $children[]=$catId;
+      $where['a.cat_id']=array('IN',$children);
+    }
+
 
     /********************排序*****************/
     $orderby='a.id';
@@ -309,8 +318,9 @@ protected function _after_insert(&$data,$option){
 
     //取某一页数据
     $data = $this->alias('a')->order("$orderby $orderway")
-    ->field('a.*,b.brand_name')
+    ->field('a.*,b.brand_name,c.cat_name')
     ->join('LEFT JOIN __BRAND__ b ON a.brand_id=b.id')
+    ->join('LEFT JOIN __CATEGORY__ c ON a.cat_id=c.id')
     ->where($where)
     ->limit($PageObj->firstRow.','.$PageObj->listRows)
     ->select();

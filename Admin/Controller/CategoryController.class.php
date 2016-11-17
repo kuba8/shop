@@ -59,4 +59,38 @@ class CategoryController extends Controller
       $this->error('删除失败的原因：',$model->getError());
 
 }
+
+   public function edit()
+    {
+        $id = I('get.id');
+        $model = D('Category');
+        if(IS_POST)
+        {
+            if($model->create(I('post.'), 2))
+            {
+                if($model->save() !== FALSE)
+                {
+                    $this->success('修改成功！', U('lst', array('p' => I('get.p', 1))));
+                    exit;
+                }
+            }
+            $this->error($model->getError());
+        }
+        $data = $model->find($id);
+        $catData=$model->getTree();
+        $children=$model->getChildren($id);
+        $this->assign('data', $data);
+
+        // 设置页面中的信息
+        $this->assign(array(
+            'catData' => $catData,
+            'children' => $children,
+            '_page_title' => '修改分类',
+            '_page_btn_name' => '分类列表',
+            '_page_btn_link' => U('lst'),
+        ));
+        $this->display();
+    }
+
+
 }

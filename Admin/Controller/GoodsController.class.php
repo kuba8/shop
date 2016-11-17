@@ -16,6 +16,7 @@ class GoodsController extends Controller {
 
    	    public function add()
     {
+      $model = D('Category');
        if(IS_POST){
        
          //var_dump($_FILES);die;
@@ -40,8 +41,9 @@ class GoodsController extends Controller {
        //取出所有的会员级别
        $mlModel=D('member_level');
        $mlData=$mlModel->select();
-
+      $catData=$model->getTree();
         $this->assign(array(
+        'catData'=>$catData,
         'mlData'=>$mlData,
         'brandData'=>$brandData,
         '_page_title'=>'添加新商品',
@@ -95,7 +97,10 @@ class GoodsController extends Controller {
         ))->select();
        //var_dump($mpData);
        //var_dump($_mpData);
+       $model = D('Category');
+       $catData=$model->getTree();
        $this->assign(array(
+        'catData'=>$catData,
         'mlData'=>$mlData,
         'mpData'=>$_mpData,
         'gpData'=>$gpData,
@@ -123,11 +128,14 @@ class GoodsController extends Controller {
     {
       $model=D('goods');
       $data=$model->search();
+      $catModel=D('Category');
+      $catData=$catModel->getTree();
       //$this->assign($data);
 
       $this->assign('data', $data['data']);
       $this->assign('page', $data['page']);
       $this->assign(array(
+        'catData'=>$catData,
         '_page_title'=>'商品列表',
         '_page_btn_name'=>'添加新商品',
         '_page_btn_link'=>U('add'),

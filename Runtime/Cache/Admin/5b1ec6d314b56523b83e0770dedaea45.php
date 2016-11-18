@@ -16,7 +16,7 @@
 
 
 <div class="main-div">
-    <form name="main_form" method="POST" action="/shop/index.php/Admin/Category/add.html" enctype="multipart/form-data">
+    <form name="main_form" method="POST" action="/shop/index.php/Admin/Category/add.html" >
         <table cellspacing="1" cellpadding="3" width="100%">
              <tr>
                 <td class="label">上级分类：</td>

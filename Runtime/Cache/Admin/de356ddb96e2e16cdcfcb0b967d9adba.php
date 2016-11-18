@@ -15,6 +15,11 @@
 </h1>
 
 
+<style type="text/css">
+    #ul_pic_list li{margin: 5px;list-style-type: none;}
+    #cat_list {background: #EEE;margin: 0;}
+    #cat_list li{margin: 5px;}
+</style>
 <div class="tab-div">
     <div id="tabbar-div">
         <p>
@@ -41,9 +46,25 @@
                      <?php endforeach;?>  
                    </select>
                    <span class="require-field">*</span></td>
-                </td>
+            
             </tr>
 
+                <tr>
+                <td class="label">扩展分类：<input onclick="$('#cat_list').append($('#cat_list').find('li').eq(0).clone());" type="button" id="btn_add_cat" value="添加一个" /></td>
+                <td>
+                <ul id="cat_list">
+                <li>
+                   <select name="ext_cat_id[]">
+                     <option value="" >选择分类</option>
+                     <?php foreach($catData as $k => $v) :?>
+                        <option value="<?php echo $v['id'];?>"><?php echo str_repeat('-',8*$v['level']) . $v['cat_name'];?>
+                            
+                        </option>
+                     <?php endforeach;?>  
+                   </select>
+            </li>
+            </ul>
+            </td>
                  <tr>
                     <td class="label">所在品牌：</td>
                     <td>

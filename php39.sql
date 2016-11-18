@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2016 年 11 月 17 日 17:15
+-- 生成日期: 2016 年 11 月 18 日 17:26
 -- 服务器版本: 5.5.40
 -- PHP 版本: 5.3.29
 
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `p39_goods` (
   KEY `brand_id` (`brand_id`),
   KEY `is_on_sale` (`is_on_sale`),
   KEY `cat_id` (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品' AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品' AUTO_INCREMENT=6 ;
 
 --
 -- 转存表中的数据 `p39_goods`
@@ -123,7 +123,29 @@ INSERT INTO `p39_goods` (`id`, `goods_name`, `market_price`, `shop_price`, `good
 (1, 'note7', '7000.00', '6000.00', '', '是', '否', '2016-11-16 10:35:02', 'Goods/2016-11-16/582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_3_582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_2_582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_1_582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_0_582bc5d6cb2e6.jpg', 1, 0),
 (2, 'iphone7', '8000.00', '7800.00', '', '是', '否', '2016-11-16 10:38:08', 'Goods/2016-11-16/582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_3_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_2_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_1_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_0_582bc6907bbe2.jpg', 2, 0),
 (3, '小米note', '3000.00', '2000.00', '<p>小米好用</p>', '是', '否', '2016-11-16 10:39:43', 'Goods/2016-11-16/582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_3_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_2_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_1_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_0_582bc6ef54c8b.jpg', 3, 2),
-(4, '三星冰箱', '2000.00', '1800.00', '', '是', '否', '2016-11-17 11:15:22', '', '', '', '', '', 1, 17);
+(4, '三星冰箱', '2000.00', '1800.00', '', '是', '否', '2016-11-17 11:15:22', '', '', '', '', '', 1, 17),
+(5, 'iphone8', '7000.00', '6000.00', '', '是', '否', '2016-11-18 15:30:54', 'Goods/2016-11-18/582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_3_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_2_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_1_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_0_582eae2df10ca.JPG', 2, 2);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `p39_goods_cat`
+--
+
+CREATE TABLE IF NOT EXISTS `p39_goods_cat` (
+  `cat_id` mediumint(8) unsigned NOT NULL COMMENT '分类id',
+  `goods_id` mediumint(8) unsigned NOT NULL COMMENT '商品Id',
+  KEY `goods_id` (`goods_id`),
+  KEY `cat_id` (`cat_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品扩展分类';
+
+--
+-- 转存表中的数据 `p39_goods_cat`
+--
+
+INSERT INTO `p39_goods_cat` (`cat_id`, `goods_id`) VALUES
+(21, 5),
+(3, 5);
 
 -- --------------------------------------------------------
 

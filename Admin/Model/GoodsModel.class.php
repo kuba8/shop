@@ -189,6 +189,20 @@ deleteImage($oldLogo);
 
 protected function _after_insert(&$data,$option){
 
+    $ecid=I('post.ext_cat_id');
+    if($ecid)
+    {
+      $gcModel=D('goods_cat');
+      foreach ($ecid as $k => $v) {
+       if(empty($v))
+        continue;
+        $gcModel->add(array(
+          'cat_id'=>$v,
+          'goods_id'=>$data['id'],
+          ));
+      }
+    }
+
     if(isset($_FILES['pic'])){
         $pics=array();
         foreach ($_FILES['pic']['name'] as $k => $v) {
@@ -246,7 +260,28 @@ protected function _after_insert(&$data,$option){
   }
 }
 
-
+  public function getGoodsIdByCatId($catid)
+  {
+    $catModel=D('category');
+    $children=$catModel->getChildren($catId);
+    $children[]=$catId;
+    $dids=$this->field('id')->where(array('cat_id'=>array('IN',$children),
+      ))->select();
+    $gcModel=D('goods_cat');
+    $gids1=$gcModel->field('DISTINCT goods_id id')->where(array(
+      'cat_id'=>array('IN',$children),
+      ))->select();
+    if($gids&&$gids1)
+      $gids=array_merge($gids,$gids1);
+    elseif($gids1)
+      $gids=$gids1;
+    $id=array();
+    foreach ($gids as $k => $v) {
+      if(!in_array($v['id'],$id))
+        $id[]=$v['id'];
+    }
+    return $id;
+  }
 
   public function search($perpage=2){
 
@@ -285,10 +320,8 @@ protected function _after_insert(&$data,$option){
     $catId=I('get.cat_id');
     if($catId)
     {
-      $catModel=D('category');
-      $children=$catModel->getChildren($catId);
-      $children[]=$catId;
-      $where['a.cat_id']=array('IN',$children);
+     $gids=$this->getGoodsIdByCatId($catId);
+      $where['a.id']=array('IN',$gids);
     }
 
 
@@ -318,11 +351,14 @@ protected function _after_insert(&$data,$option){
 
     //取某一页数据
     $data = $this->alias('a')->order("$orderby $orderway")
-    ->field('a.*,b.brand_name,c.cat_name')
+    ->field('a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name')
     ->join('LEFT JOIN __BRAND__ b ON a.brand_id=b.id')
     ->join('LEFT JOIN __CATEGORY__ c ON a.cat_id=c.id')
+    ->join('LEFT JOIN __GOODS_CAT__ d ON a.id=d.goods_id')
+    ->join('LEFT JOIN __CATEGORY__ e ON d.cat_id=e.id')
     ->where($where)
     ->limit($PageObj->firstRow.','.$PageObj->listRows)
+    ->group('a.id')
     ->select();
 
     //返回数据

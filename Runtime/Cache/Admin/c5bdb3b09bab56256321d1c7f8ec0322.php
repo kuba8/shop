@@ -18,6 +18,8 @@
 <style type="text/css">
     #ul_pic_list li{margin: 5px;list-style-type: none;}
     #old_pic_list li{float: left;width: 150px;height: 150px;margin: 5px;list-style-type: none;}
+    #cat_list {background: #EEE;margin: 0;}
+    #cat_list li{margin: 5px;}
 </style>
 <div class="tab-div">
     <div id="tabbar-div">
@@ -30,7 +32,7 @@
         </p>
     </div>
     <div id="tabbody-div">
-        <form enctype="multipart/form-data" action="/shop/index.php/Admin/Goods/edit/id/5.html" method="post">
+        <form enctype="multipart/form-data" action="/shop/index.php/Admin/Goods/edit/id/4.html" method="post">
 
      <input type="hidden" name="id" value="<?php echo I('get.id');?>" />
 
@@ -48,8 +50,43 @@
                      <?php endforeach;?>  
                    </select>
                    <span class="require-field">*</span></td>
-                </td>
+                
             </tr>
+                    
+           <tr>
+                <td class="label">扩展分类：<input onclick="$('#cat_list').append($('#cat_list').find('li').eq(0).clone());" type="button" id="btn_add_cat" value="添加一个" /></td>
+                <td>
+                <ul id="cat_list">
+                <?php if($gcData):?>
+                <?php foreach($gcData as $k1 => $v1):?>
+                <li>
+                   <select name="ext_cat_id[]">
+                     <option value="" >选择分类</option>
+                     <?php foreach($catData as $k => $v) : if($v['id']==$v1['cat_id']) $select='selected="selected"'; else $select=''; ?>
+                        <option <?php echo $select; ?> value="<?php echo $v['id'];?>"><?php echo str_repeat('-',8*$v['level']) . $v['cat_name'];?>
+                            
+                        </option>
+                     <?php endforeach;?>  
+                   </select>
+            </li>
+         <?php endforeach;?>
+
+     <?php else:?>
+           <li>
+                   <select name="ext_cat_id[]">
+                     <option value="" >选择分类</option>
+                     <?php foreach($catData as $k => $v) :?>
+                        <option <?php echo $select; ?> value="<?php echo $v['id'];?>"><?php echo str_repeat('-',8*$v['level']) . $v['cat_name'];?>
+                            
+                        </option>
+                     <?php endforeach;?>  
+                   </select>
+            </li>
+     <?php endif;?>
+            </ul>
+            </td>
+            </tr>
+
 
                 <tr>
                     <td class="label">所在品牌：</td>

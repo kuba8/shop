@@ -99,7 +99,13 @@ class GoodsController extends Controller {
        //var_dump($_mpData);
        $model = D('Category');
        $catData=$model->getTree();
+       //取出扩展分类ID
+       $gcModel=D('goods_cat');
+       $gcData=$gcModel->field('cat_id')->where(array(
+        'goods_id'=>array('eq',$id),
+        ))->select();
        $this->assign(array(
+        'gcData'=>$gcData,
         'catData'=>$catData,
         'mlData'=>$mlData,
         'mpData'=>$_mpData,

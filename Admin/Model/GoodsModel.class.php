@@ -51,6 +51,23 @@ class GoodsModel extends Model
 
     //$id=I('get.id');
     $id=$option['where']['id'];
+    //处理扩展分类
+    $ecid=I('post.ext_cat_id');
+    $gcModel=D('goods_cat');
+    $gcModel->where(array(
+      'goods_id'=>array('eq',$id),
+      ))->delete();
+    if($ecid)
+    {
+      foreach ($ecid as $k => $v) {
+       if(empty($v))
+        continue;
+        $gcModel->add(array(
+          'cat_id'=>$v,
+          'goods_id'=>$id,
+          ));
+      }
+    }
     //处理图片
     if(isset($_FILES['pic'])){
         $pics=array();
@@ -169,6 +186,12 @@ protected function _before_delete($option){
  $id=$option['where']['id'];
  $oldLogo=$this->field('logo,mbig_logo,big_logo,mid_logo,sm_logo')->find($id);
 deleteImage($oldLogo);
+  //删除扩展分类
+  $gcModel=D('goods_cat');
+  $gcModel->where(array(
+    'goods_id'=>array('eq',$id),
+    ))->delete();
+
 //删除会员价格
   $mpModel=D('member_price');
   $mpModel->where(array(
@@ -260,27 +283,33 @@ protected function _after_insert(&$data,$option){
   }
 }
 
-  public function getGoodsIdByCatId($catid)
+  public function getGoodsIdByCatId($catId)
   {
     $catModel=D('category');
     $children=$catModel->getChildren($catId);
     $children[]=$catId;
-    $dids=$this->field('id')->where(array('cat_id'=>array('IN',$children),
+    $gids=$this->field('id')->where(array(
+      'cat_id'=>array('IN',$children),
       ))->select();
+
     $gcModel=D('goods_cat');
     $gids1=$gcModel->field('DISTINCT goods_id id')->where(array(
       'cat_id'=>array('IN',$children),
       ))->select();
+ 
     if($gids&&$gids1)
       $gids=array_merge($gids,$gids1);
     elseif($gids1)
       $gids=$gids1;
+
     $id=array();
     foreach ($gids as $k => $v) {
       if(!in_array($v['id'],$id))
         $id[]=$v['id'];
     }
+
     return $id;
+
   }
 
   public function search($perpage=2){
@@ -321,6 +350,7 @@ protected function _after_insert(&$data,$option){
     if($catId)
     {
      $gids=$this->getGoodsIdByCatId($catId);
+     //var_dump($gids); die;
       $where['a.id']=array('IN',$gids);
     }
 

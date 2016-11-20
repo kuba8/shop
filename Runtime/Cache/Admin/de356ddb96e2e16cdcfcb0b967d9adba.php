@@ -49,7 +49,7 @@
             
             </tr>
 
-                <tr>
+            <tr>
                 <td class="label">扩展分类：<input onclick="$('#cat_list').append($('#cat_list').find('li').eq(0).clone());" type="button" id="btn_add_cat" value="添加一个" /></td>
                 <td>
                 <ul id="cat_list">
@@ -65,6 +65,7 @@
             </li>
             </ul>
             </td>
+            </tr>
                  <tr>
                     <td class="label">所在品牌：</td>
                     <td>

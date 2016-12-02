@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2016 年 11 月 18 日 17:26
+-- 生成日期: 2016 年 12 月 02 日 16:55
 -- 服务器版本: 5.5.40
 -- PHP 版本: 5.3.29
 
@@ -19,6 +19,32 @@ SET time_zone = "+00:00";
 --
 -- 数据库: `php39`
 --
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `p39_attribute`
+--
+
+CREATE TABLE IF NOT EXISTS `p39_attribute` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `attr_name` varchar(30) NOT NULL COMMENT '属性名称',
+  `attr_type` enum('唯一','可选') NOT NULL COMMENT '属性类型',
+  `attr_option_values` varchar(300) NOT NULL DEFAULT '' COMMENT '属性可选值',
+  `type_id` mediumint(8) unsigned NOT NULL COMMENT '所属类型Id',
+  PRIMARY KEY (`id`),
+  KEY `type_id` (`type_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='属性表' AUTO_INCREMENT=7 ;
+
+--
+-- 转存表中的数据 `p39_attribute`
+--
+
+INSERT INTO `p39_attribute` (`id`, `attr_name`, `attr_type`, `attr_option_values`, `type_id`) VALUES
+(1, '颜色', '可选', '黑色,白色,紫色,蓝色,黄色,粉红色,金色', 1),
+(4, '尺寸', '可选', '6,5,4,3,2,7', 1),
+(5, '出厂日期', '唯一', '', 1),
+(6, '操作系统', '可选', '安卓,苹果', 1);
 
 -- --------------------------------------------------------
 
@@ -107,6 +133,7 @@ CREATE TABLE IF NOT EXISTS `p39_goods` (
   `mbig_logo` varchar(150) NOT NULL DEFAULT '' COMMENT '更大图',
   `brand_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '品牌id',
   `cat_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '主分类Id',
+  `type_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '类型Id',
   PRIMARY KEY (`id`),
   KEY `shop_price` (`shop_price`),
   KEY `addtime` (`addtime`),
@@ -119,12 +146,28 @@ CREATE TABLE IF NOT EXISTS `p39_goods` (
 -- 转存表中的数据 `p39_goods`
 --
 
-INSERT INTO `p39_goods` (`id`, `goods_name`, `market_price`, `shop_price`, `goods_desc`, `is_on_sale`, `is_delete`, `addtime`, `logo`, `sm_logo`, `mid_logo`, `big_logo`, `mbig_logo`, `brand_id`, `cat_id`) VALUES
-(1, 'note7', '7000.00', '6000.00', '', '是', '否', '2016-11-16 10:35:02', 'Goods/2016-11-16/582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_3_582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_2_582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_1_582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_0_582bc5d6cb2e6.jpg', 1, 0),
-(2, 'iphone7', '8000.00', '7800.00', '', '是', '否', '2016-11-16 10:38:08', 'Goods/2016-11-16/582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_3_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_2_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_1_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_0_582bc6907bbe2.jpg', 2, 0),
-(3, '小米note', '3000.00', '2000.00', '<p>小米好用</p>', '是', '否', '2016-11-16 10:39:43', 'Goods/2016-11-16/582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_3_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_2_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_1_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_0_582bc6ef54c8b.jpg', 3, 2),
-(4, '三星冰箱', '2000.00', '1800.00', '', '是', '否', '2016-11-17 11:15:22', '', '', '', '', '', 1, 17),
-(5, 'iphone8', '7000.00', '6000.00', '', '是', '否', '2016-11-18 15:30:54', 'Goods/2016-11-18/582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_3_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_2_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_1_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_0_582eae2df10ca.JPG', 2, 2);
+INSERT INTO `p39_goods` (`id`, `goods_name`, `market_price`, `shop_price`, `goods_desc`, `is_on_sale`, `is_delete`, `addtime`, `logo`, `sm_logo`, `mid_logo`, `big_logo`, `mbig_logo`, `brand_id`, `cat_id`, `type_id`) VALUES
+(1, 'note7', '7000.00', '6000.00', '', '是', '否', '2016-11-16 10:35:02', 'Goods/2016-11-16/582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_3_582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_2_582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_1_582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_0_582bc5d6cb2e6.jpg', 1, 0, 0),
+(2, 'iphone7', '8000.00', '7800.00', '', '是', '否', '2016-11-16 10:38:08', 'Goods/2016-11-16/582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_3_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_2_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_1_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_0_582bc6907bbe2.jpg', 2, 0, 0),
+(3, '小米note', '3000.00', '2000.00', '<p>小米好用</p>', '是', '否', '2016-11-16 10:39:43', 'Goods/2016-11-16/582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_3_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_2_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_1_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_0_582bc6ef54c8b.jpg', 3, 2, 0),
+(4, '三星冰箱', '2000.00', '1800.00', '', '是', '否', '2016-11-17 11:15:22', '', '', '', '', '', 1, 17, 0),
+(5, 'iphone8', '7000.00', '6000.00', '', '是', '否', '2016-11-18 15:30:54', 'Goods/2016-11-18/582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_3_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_2_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_1_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_0_582eae2df10ca.JPG', 2, 2, 0);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `p39_goods_attr`
+--
+
+CREATE TABLE IF NOT EXISTS `p39_goods_attr` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `attr_value` varchar(150) NOT NULL DEFAULT '' COMMENT '属性值',
+  `attr_id` mediumint(8) unsigned NOT NULL COMMENT '属性Id',
+  `goods_id` mediumint(8) unsigned NOT NULL COMMENT '商品Id',
+  PRIMARY KEY (`id`),
+  KEY `goods_id` (`goods_id`),
+  KEY `attr_id` (`attr_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品属性' AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -146,6 +189,19 @@ CREATE TABLE IF NOT EXISTS `p39_goods_cat` (
 INSERT INTO `p39_goods_cat` (`cat_id`, `goods_id`) VALUES
 (21, 5),
 (3, 5);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `p39_goods_number`
+--
+
+CREATE TABLE IF NOT EXISTS `p39_goods_number` (
+  `goods_id` mediumint(8) unsigned NOT NULL COMMENT '商品Id',
+  `goods_number` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '库存量',
+  `goods_attr_id` varchar(150) NOT NULL COMMENT '商品属性表的ID,如果有多个，就用程序拼成字符串存到这个字段中',
+  KEY `goods_id` (`goods_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='库存量';
 
 -- --------------------------------------------------------
 
@@ -241,6 +297,28 @@ INSERT INTO `p39_member_price` (`price`, `level_id`, `goods_id`) VALUES
 ('1800.00', 2, 3),
 ('1700.00', 3, 3),
 ('1500.00', 4, 3);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `p39_type`
+--
+
+CREATE TABLE IF NOT EXISTS `p39_type` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `type_name` varchar(30) NOT NULL COMMENT '类型名称',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='类型' AUTO_INCREMENT=6 ;
+
+--
+-- 转存表中的数据 `p39_type`
+--
+
+INSERT INTO `p39_type` (`id`, `type_name`) VALUES
+(1, '手机'),
+(2, '服装'),
+(3, '书'),
+(4, '笔记本');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

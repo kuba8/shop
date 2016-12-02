@@ -9,7 +9,7 @@
 <body>
 <h1>
     <span class="action-span"><a href="<?php echo $_page_btn_link ;?>"><?php echo $_page_btn_name ;?></a></span>
-    <span class="action-span1"><a href="__GROUP__">ECSHOP 管理中心</a></span>
+    <span class="action-span1"><a href="<?php echo U('Index/index');?>">ECSHOP 管理中心</a></span>
     <span id="search_id" class="action-span1"> - <?php echo $_page_title ;?> </span>
     <div style="clear:both"></div>
 </h1>

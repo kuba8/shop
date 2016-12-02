@@ -3,6 +3,16 @@ namespace Admin\Controller;
 use Think\Controller;
 class GoodsController extends Controller {
 
+      public function ajaxGetAttr()
+      {
+        $typeId=I('get.type_id');
+        $attrModel=D('Attribute');
+        $attrData=$attrModel->where(array(
+          'type_id'=>array('eq',$typeId),
+          ))->select();
+        echo json_encode($attrData);
+      }
+
       public function ajaxDelPic()
       {
         $picId=I('get.picid');
@@ -19,7 +29,7 @@ class GoodsController extends Controller {
       $model = D('Category');
        if(IS_POST){
        
-         //var_dump($_POST);die;
+         var_dump($_POST);die;
         $model=D('goods');
        if($model->create(I('post.'),1))
        {

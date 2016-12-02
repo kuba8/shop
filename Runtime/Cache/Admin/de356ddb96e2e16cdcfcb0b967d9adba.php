@@ -9,7 +9,7 @@
 <body>
 <h1>
     <span class="action-span"><a href="<?php echo $_page_btn_link ;?>"><?php echo $_page_btn_name ;?></a></span>
-    <span class="action-span1"><a href="__GROUP__">ECSHOP 管理中心</a></span>
+    <span class="action-span1"><a href="<?php echo U('Index/index');?>">ECSHOP 管理中心</a></span>
     <span id="search_id" class="action-span1"> - <?php echo $_page_title ;?> </span>
     <div style="clear:both"></div>
 </h1>
@@ -135,7 +135,16 @@
             </table>
             <!--商品属性-->
             <table style="display: none;" width="90%" class="tab_table" align="center">
-
+                <tr>
+                    <td>
+                        商品类型：<?php buildSelect('Type','type_id','id','type_name');?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul id='attr_list'></ul>
+                    </td>
+                </tr>
             </table>
             <!--商品相册-->
             <table style="display: none;" width="90%" class="tab_table" align="center">
@@ -182,6 +191,59 @@
         var file='<li><input type="file" name="pic[]"/></li>';
         $("#ul_pic_list").append(file);
     });
+
+    $("select[name=type_id]").change(function(){
+        var typeId=$(this).val();
+        if(typeId>0)
+        {
+            $.ajax({
+                type:"GET",
+                url:"<?php echo U('ajaxGetAttr','',FALSE);?>/type_id/"+typeId,
+                dataType:"json",
+                success:function(data)
+                {
+                    var li="";
+                    $(data).each(function(k,v){
+                        li +='<li>';
+                        if(v.attr_type=='可选')
+                            li+='<a onclick="addNewAttr(this);" href="#">[+]</a>';
+                        li+=v.attr_name+'：';
+                        if(v.attr_option_values=="")
+                            li+='<input type="text" name="attr_value['+v.id+'][]"/>';
+                        else
+                        {
+                            li+='<select name="attr_value['+v.id+'][]"><option value="">请选择...</option>';
+                            var _attr=v.attr_option_values.split(',');
+                            for(var i=0;i<_attr.length;i++)
+                            {
+                                li+='<option value="'+_attr[i]+'">';
+                                li+=_attr[i];
+                                li+='</option>';
+                            }
+                            li+='</select>';
+                        }
+                        li+='</li>'
+                    });
+                    $("#attr_list").html(li);
+                }
+            });
+        }
+        else
+            $("#attr_list").html("");
+        });
+
+        function addNewAttr(a)
+        {
+            var li = $(a).parent();
+            if($(a).text()=='[+]')
+            {
+                var newLi = li.clone();
+                newLi.find("a").text('[-]');
+                li.after(newLi);
+            }
+            else
+                li.remove();
+        }
     </script>
 
 

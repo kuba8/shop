@@ -15,35 +15,28 @@
 </h1>
 
 
-
-<!-- 商品列表 -->
-<form method="post" action="" name="listForm" onsubmit="">
-    <div class="list-div" id="listDiv">
-        <table cellpadding="3" cellspacing="1">
+<div class="main-div">
+    <form name="main_form" method="POST" action="/shop/index.php/Admin/Type/add.html" enctype="multipart/form-data">
+        <table cellspacing="1" cellpadding="3" width="100%">
             <tr>
-                <th>分类名称</th>
-                <th>操作</th> 
-            </tr>
-           <?php foreach ($data as $k=>$v) : ?>
-            <tr class="tron">
-                <td><?php echo str_repeat('-',8*$v['level']) . $v['cat_name']; ?></td>
-                <td align="center">
-                <a href="<?php echo U('edit?id=' . $v['id']);?>">修改</a>
-                <a onclick="return confirm('你确定要删除吗？');" href="<?php echo U('delete?id=' . $v['id']);?>">删除</a>
+                <td class="label">类型名称：</td>
+                <td>
+                    <input  type="text" name="type_name" value="" />
                 </td>
             </tr>
-           <?php endforeach;?>
+            <tr>
+                <td colspan="99" align="center">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+                </td>
+            </tr>
         </table>
+    </form>
+</div>
 
 
-    </div>
-</form>
-
-
-<script type="text/javascript" src="/shop/Public/umeditor1_2_2-utf8-php/third-party/jquery.min.js"></script>
-<script type="text/javascript" src="/shop/Public/Admin/Js/tron.js"></script>
-
-
+<script>
+</script>
 
 <div id="footer">
 共执行 29 个查询，用时 0.539249 秒，Gzip 已禁用，内存占用 3.502 MB<br />

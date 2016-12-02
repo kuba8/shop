@@ -29,7 +29,7 @@ class GoodsController extends Controller {
       $model = D('Category');
        if(IS_POST){
        
-         var_dump($_POST);die;
+        // var_dump($_POST);die;
         $model=D('goods');
        if($model->create(I('post.'),1))
        {

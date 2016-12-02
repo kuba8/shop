@@ -3,8 +3,8 @@ namespace Admin\Model;
 use Think\Model;
 class GoodsModel extends Model
 {
-  protected $insertFields='goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cat_id';
-	protected $updateFields='id,goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cat_id';
+  protected $insertFields='goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cat_id,type_id';
+	protected $updateFields='id,goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cat_id,type_id';
 
 
   //定义验证规则
@@ -184,6 +184,12 @@ class GoodsModel extends Model
 
 protected function _before_delete($option){
  $id=$option['where']['id'];
+
+ $gaModel=D('goods_attr');
+ $gaModel->where(array(
+  'goods_id'=>array('eq',$id),
+  ))->delete();
+
  $oldLogo=$this->field('logo,mbig_logo,big_logo,mid_logo,sm_logo')->find($id);
 deleteImage($oldLogo);
   //删除扩展分类
@@ -211,6 +217,19 @@ deleteImage($oldLogo);
 }
 
 protected function _after_insert(&$data,$option){
+
+    $attrValue=I('post.attr_value');
+    $gaModel=D('goods_attr');
+    foreach ($attrValue as $k => $v) {
+      $v=array_unique($v);
+      foreach ($v as $k1 => $v1) {
+        $gaModel->add(array(
+          'goods_id'=>$data['id'],
+          'attr_id'=>$k,
+          'attr_value'=>$v1,
+          ));
+      }
+    }
 
     $ecid=I('post.ext_cat_id');
     if($ecid)

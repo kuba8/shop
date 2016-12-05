@@ -169,19 +169,20 @@
                          <?php
  $attrId=array(); foreach($gaData as $k =>$v): if(in_array($v['attr_id'],$attrId)) $opt='-'; else { $opt='+'; $attrId[]=$v['attr_id']; } ?>                   
                            <li>
+                               <input type="hidden" name="goods_attr_id[]" value="<?php echo $v['id'];?>" />
                                <?php if($v['attr_type']=='可选'):?>
                                 <a onclick="addNewAttr(this);" href="#">[<?php echo $opt;?>]</a>
                                <?php endif;?>
                                <?php echo $v['attr_name'];?>
                                <?php if($v['attr_option_values']): $attr=explode(',',$v['attr_option_values']); ?>
-                                <select>
+                                <select name="attr_value[<?php echo $v['attr_id'];?>][]">
                                     <option value="">请选择</option>
                                     <?php foreach ($attr as $k1=>$v1): if($v1==$v['attr_value']) $select='selected="selected"'; else $select=''; ?>
                                     <option <?php echo $select;?> value="<?php echo $v1;?>"> <?php echo $v1;?></option>
                                 <?php endforeach;?>
                                 </select>
                             <?php else:?>
-                                <input type="text" name="" value="<?php echo $v['attr_value'];?>" />
+                                <input type="text" name="attr_value[<?php echo $v['attr_id'];?>][]" value="<?php echo $v['attr_value'];?>" />
                             <?php endif;?>
                                 
                            </li>
@@ -319,6 +320,8 @@ $(".btn_del_pic").click(function(){
             if($(a).text()=='[+]')
             {
                 var newLi = li.clone();
+                newLi.find("option:selected").removeAttr("selected");
+                newLi.find("input[name='goods_attr_id[]']").val("");
                 newLi.find("a").text('[-]');
                 li.after(newLi);
             }

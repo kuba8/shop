@@ -114,7 +114,19 @@ class GoodsController extends Controller {
        $gcData=$gcModel->field('cat_id')->where(array(
         'goods_id'=>array('eq',$id),
         ))->select();
+       //取出商品已经设置过的属性
+       $gaModel=D('goods_attr');
+       $gaData=$gaModel->alias('a')
+       ->field('a.*,b.attr_name,b.attr_type,b.attr_option_values')
+       ->join('LEFT JOIN __ATTRIBUTE__ b ON a.attr_id=b.id')
+       ->where(array(
+        'a.goods_id'=>array('eq',$id),
+        ))->select();
+
+       var_dump($gaData);
+
        $this->assign(array(
+        'gaData'=>$gaData,
         'gcData'=>$gcData,
         'catData'=>$catData,
         'mlData'=>$mlData,

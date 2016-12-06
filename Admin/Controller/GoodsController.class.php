@@ -3,6 +3,19 @@ namespace Admin\Controller;
 use Think\Controller;
 class GoodsController extends Controller {
 
+      public function ajaxDelAttr()
+      {
+        $goodsId=addslashes(I('get.goods_id'));
+        $gaid=addslashes(I('get.gaid'));
+        $gaModel=D('goods_attr');
+        $gaModel->delete($gaid);
+        //删除相关库存量数据
+        //$gnModel=D('goods_number');
+        //$gnModel->where(array(
+           // 'goods_id'=>array('EXP',"=$goodsId AND FIND_IN_SET($gaid,attr_list)"),
+        // ))->delete();
+      }
+
       public function ajaxGetAttr()
       {
         $typeId=I('get.type_id');
@@ -22,6 +35,19 @@ class GoodsController extends Controller {
         $gpModel->delete($picId);
       }
 
+      public function goods_number()
+      {
+        header('Content-Type:text/html;charset=utf8');
+        $id =I('get.id');
+        $gaModel=D('goods_attr');
+        $gaData=$gaModel->alias('a')
+        ->join('LEFT JOIN __ATTRIBUTE__ b ON a.attr_id=b.id')
+        ->where(array(
+          'a.goods_id'=>array('eq',$id),
+          'b.attr_type'=>array('eq','可选'),
+          ))->select();
+        var_dump($gaData);die;
+      }
 
 
    	    public function add()
@@ -123,7 +149,7 @@ class GoodsController extends Controller {
         'a.type_id'=>array('eq',$data[type_id]),
         ))->select();
 
-       var_dump($gaData);
+       //var_dump($attrData);
 
        $this->assign(array(
         'gaData'=>$attrData,

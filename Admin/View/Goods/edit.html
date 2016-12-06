@@ -336,7 +336,25 @@ $(".btn_del_pic").click(function(){
                 li.after(newLi);
             }
             else
-                li.remove();
-        }
+               {
+                var gaid=li.find("input[name='goods_attr_id[]']").val();
+                if(gaid=='')
+                    li.remove();
+                else
+                {
+                    if(confirm('如果删除了这个属性，那么相关的库存量数据也会被一起删除，确定要删除吗？'))
+                    {
+                        $.ajax({
+                             type:"GET",
+                             url:"<?php echo U('ajaxDelAttr?goods_id='.$data['id'],'',FALSE);?>/gaid/"+gaid,
+                               success:function(data)
+
+                    {   
+                        li.remove();
+                    }
+                });
+                }
+               }
+        }}
     </script>
     </script>

@@ -39,14 +39,61 @@ class GoodsController extends Controller {
       {
         header('Content-Type:text/html;charset=utf8');
         $id =I('get.id');
+        $gnModel=D('goods_number');
+        if(IS_POST)
+        {
+          //var_dump($_POST);die;
+          $gaid=I('post.goods_attr_id');
+          $gn=I('post.goods_number');
+          $gaidCount=count($gaid);
+          $gnCount=count($gn);
+          $rate=$gaidCount/$gnCount;
+          $_i=0;
+          foreach ($gn as $k => $v) {
+            $_goodsAttrId=array();
+            for($i=0;$i<$rate;$i++)
+            {
+              $_goodsAttrId[]=$gaid[$_i];
+              $_i++;
+            }
+            sort($_goodsAttrId,SORT_NUMERIC);
+            $_goodsAttrId=(string)implode(',',$_goodsAttrId);
+            $gnModel->add(array(
+              'goods_id'=>$id,
+              'goods_attr_id'=>$_goodsAttrId,
+              'goods_number'=>$v,
+              ));
+          }
+        }
         $gaModel=D('goods_attr');
         $gaData=$gaModel->alias('a')
+        ->field('a.*,b.attr_name')
         ->join('LEFT JOIN __ATTRIBUTE__ b ON a.attr_id=b.id')
         ->where(array(
           'a.goods_id'=>array('eq',$id),
           'b.attr_type'=>array('eq','可选'),
           ))->select();
-        var_dump($gaData);die;
+
+        $_gaData=array();
+        foreach ($gaData as $k => $v) 
+        {
+          $_gaData[$v['attr_name']][]=$v;
+        }
+        //取出这件商品已经设置过的库存量
+        $gnData=$gnModel->where(array(
+          'goods_id'=>$id,
+          ))->select();
+        var_dump($gnData);
+
+        $this->assign(array(
+        'gnData'=>$gnData,
+        'gaData'=>$_gaData,
+        '_page_title'=>'库存量',
+        '_page_btn_name'=>'返回列表',
+        '_page_btn_link'=>U('lst'),
+        ));
+
+       $this->display();
       }
 
 

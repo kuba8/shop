@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2016 年 12 月 02 日 16:55
+-- 生成日期: 2016 年 12 月 09 日 16:39
 -- 服务器版本: 5.5.40
 -- PHP 版本: 5.3.29
 
@@ -19,6 +19,39 @@ SET time_zone = "+00:00";
 --
 -- 数据库: `php39`
 --
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `p39_admin`
+--
+
+CREATE TABLE IF NOT EXISTS `p39_admin` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `username` varchar(30) NOT NULL COMMENT '用户名',
+  `password` char(32) NOT NULL COMMENT '密码',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='管理员' AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `p39_admin`
+--
+
+INSERT INTO `p39_admin` (`id`, `username`, `password`) VALUES
+(1, 'root', '21232f297a57a5a743894a0e4a801fc3');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `p39_admin_role`
+--
+
+CREATE TABLE IF NOT EXISTS `p39_admin_role` (
+  `admin_id` mediumint(8) unsigned NOT NULL COMMENT '管理员id',
+  `role_id` mediumint(8) unsigned NOT NULL COMMENT '角色id',
+  KEY `admin_id` (`admin_id`),
+  KEY `role_id` (`role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='管理员角色';
 
 -- --------------------------------------------------------
 
@@ -140,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `p39_goods` (
   KEY `brand_id` (`brand_id`),
   KEY `is_on_sale` (`is_on_sale`),
   KEY `cat_id` (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品' AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品' AUTO_INCREMENT=8 ;
 
 --
 -- 转存表中的数据 `p39_goods`
@@ -151,7 +184,8 @@ INSERT INTO `p39_goods` (`id`, `goods_name`, `market_price`, `shop_price`, `good
 (2, 'iphone7', '8000.00', '7800.00', '', '是', '否', '2016-11-16 10:38:08', 'Goods/2016-11-16/582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_3_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_2_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_1_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_0_582bc6907bbe2.jpg', 2, 0, 0),
 (3, '小米note', '3000.00', '2000.00', '<p>小米好用</p>', '是', '否', '2016-11-16 10:39:43', 'Goods/2016-11-16/582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_3_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_2_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_1_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_0_582bc6ef54c8b.jpg', 3, 2, 0),
 (4, '三星冰箱', '2000.00', '1800.00', '', '是', '否', '2016-11-17 11:15:22', '', '', '', '', '', 1, 17, 0),
-(5, 'iphone8', '7000.00', '6000.00', '', '是', '否', '2016-11-18 15:30:54', 'Goods/2016-11-18/582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_3_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_2_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_1_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_0_582eae2df10ca.JPG', 2, 2, 0);
+(5, 'iphone8', '7000.00', '6000.00', '', '是', '否', '2016-11-18 15:30:54', 'Goods/2016-11-18/582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_3_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_2_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_1_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_0_582eae2df10ca.JPG', 2, 2, 0),
+(6, '测试测试测试', '0.00', '0.00', '', '是', '否', '2016-12-05 10:06:48', '', '', '', '', '', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -167,7 +201,21 @@ CREATE TABLE IF NOT EXISTS `p39_goods_attr` (
   PRIMARY KEY (`id`),
   KEY `goods_id` (`goods_id`),
   KEY `attr_id` (`attr_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品属性' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品属性' AUTO_INCREMENT=13 ;
+
+--
+-- 转存表中的数据 `p39_goods_attr`
+--
+
+INSERT INTO `p39_goods_attr` (`id`, `attr_value`, `attr_id`, `goods_id`) VALUES
+(1, '黑色', 1, 6),
+(2, '紫色', 1, 6),
+(3, '粉红色', 1, 6),
+(4, '5', 4, 6),
+(5, '3', 4, 6),
+(6, '2015-10-10', 5, 6),
+(7, '安卓', 6, 6),
+(8, '苹果', 6, 6);
 
 -- --------------------------------------------------------
 
@@ -202,6 +250,16 @@ CREATE TABLE IF NOT EXISTS `p39_goods_number` (
   `goods_attr_id` varchar(150) NOT NULL COMMENT '商品属性表的ID,如果有多个，就用程序拼成字符串存到这个字段中',
   KEY `goods_id` (`goods_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='库存量';
+
+--
+-- 转存表中的数据 `p39_goods_number`
+--
+
+INSERT INTO `p39_goods_number` (`goods_id`, `goods_number`, `goods_attr_id`) VALUES
+(6, 222, '1,4,7'),
+(6, 222, '2,5,7'),
+(6, 666, '1,5,8'),
+(6, 555, '3,4,8');
 
 -- --------------------------------------------------------
 
@@ -301,6 +359,47 @@ INSERT INTO `p39_member_price` (`price`, `level_id`, `goods_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `p39_privilege`
+--
+
+CREATE TABLE IF NOT EXISTS `p39_privilege` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `pri_name` varchar(30) NOT NULL COMMENT '权限名称',
+  `module_name` varchar(30) NOT NULL DEFAULT '' COMMENT '模块名称',
+  `controller_name` varchar(30) NOT NULL DEFAULT '' COMMENT '控制器名称',
+  `action_name` varchar(30) NOT NULL DEFAULT '' COMMENT '方法名称',
+  `parent_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '上级权限Id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='权限' AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `p39_role`
+--
+
+CREATE TABLE IF NOT EXISTS `p39_role` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `role_name` varchar(30) NOT NULL COMMENT '角色名称',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='角色' AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `p39_role_pri`
+--
+
+CREATE TABLE IF NOT EXISTS `p39_role_pri` (
+  `pri_id` mediumint(8) unsigned NOT NULL COMMENT '权限id',
+  `role_id` mediumint(8) unsigned NOT NULL COMMENT '角色id',
+  KEY `pri_id` (`pri_id`),
+  KEY `role_id` (`role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='角色权限';
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `p39_type`
 --
 
@@ -308,7 +407,7 @@ CREATE TABLE IF NOT EXISTS `p39_type` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `type_name` varchar(30) NOT NULL COMMENT '类型名称',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='类型' AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='类型' AUTO_INCREMENT=5 ;
 
 --
 -- 转存表中的数据 `p39_type`

@@ -206,6 +206,11 @@ class GoodsModel extends Model
 protected function _before_delete($option){
  $id=$option['where']['id'];
 
+ $gnModel=D('goods_number');
+ $gnModel->where(array(
+    'goods_id'=>array('eq',$id),
+  ))->delete();
+
  $gaModel=D('goods_attr');
  $gaModel->where(array(
   'goods_id'=>array('eq',$id),

@@ -18,13 +18,13 @@
 
 <!-- 列表 -->
 <div class="list-div" id="listDiv">
-<form method="POST" action="/shop/index.php/Admin/Goods/goods_number/id/5.html">
+<form method="POST" action="/shop/index.php/Admin/Goods/goods_number/id/6.html">
 	<table cellpadding="3" cellspacing="1">
 		<tr>
 			<?php foreach ($gaData as $k =>$v):?>
 				<th><?php echo $k;?></th>
 			<?php endforeach;?>
-				<th>库存量</th>
+				<th width="120">库存量</th>
 				<th width="60">操作</th>	
 		</tr>
 		<?php if($gnData):?>

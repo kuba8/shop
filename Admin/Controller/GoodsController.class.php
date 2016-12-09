@@ -43,6 +43,9 @@ class GoodsController extends Controller {
         if(IS_POST)
         {
           //var_dump($_POST);die;
+          $gnModel->where(array(
+            'goods_id'=>array('eq',$id),
+            ))->delete();
           $gaid=I('post.goods_attr_id');
           $gn=I('post.goods_number');
           $gaidCount=count($gaid);
@@ -64,6 +67,7 @@ class GoodsController extends Controller {
               'goods_number'=>$v,
               ));
           }
+          $this->success('设置成功!',U('goods_number?id='.I('get.id')));
         }
         $gaModel=D('goods_attr');
         $gaData=$gaModel->alias('a')
@@ -83,7 +87,7 @@ class GoodsController extends Controller {
         $gnData=$gnModel->where(array(
           'goods_id'=>$id,
           ))->select();
-        var_dump($gnData);
+        //var_dump($gnData);
 
         $this->assign(array(
         'gnData'=>$gnData,

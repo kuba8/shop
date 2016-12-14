@@ -16,22 +16,24 @@
 
 
 <div class="main-div">
-    <form name="main_form" method="POST" action="/shop/index.php/Admin/Role/add.html" enctype="multipart/form-data">
+    <form name="main_form" method="POST" action="/shop/index.php/Admin/MemberLevel/add.html" enctype="multipart/form-data">
         <table cellspacing="1" cellpadding="3" width="100%">
             <tr>
-                <td class="label">角色名称：</td>
+                <td class="label">级别名称：</td>
                 <td>
-                    <input  type="text" name="role_name" value="" />
+                    <input  type="text" name="level_name" value="" />
                 </td>
             </tr>
             <tr>
-                <td class="label">权限列表：</td>
+                <td class="label">积分下限：</td>
                 <td>
-                    <?php foreach ($priData as $k =>$v):?>
-                    <?php echo str_repeat('-',8*$v['level']);?>
-                    <input  type="checkbox" name="pri_id[]" value="<?php echo $v['id'];?>" />
-                    <?php echo $v['pri_name'];?> <br/>
-                <?php endforeach;?>
+                    <input  type="text" name="jifen_bottom" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">积分上限：</td>
+                <td>
+                    <input  type="text" name="jifen_top" value="" />
                 </td>
             </tr>
             <tr>

@@ -15,23 +15,27 @@
 </h1>
 
 
+
 <div class="main-div">
-    <form name="main_form" method="POST" action="/shop/index.php/Admin/Role/add.html" enctype="multipart/form-data">
+    <form name="main_form" method="POST" action="/shop/index.php/Admin/MemberLevel/edit/id/1.html" enctype="multipart/form-data" >
+    	<input type="hidden" name="id" value="<?php echo $data['id']; ?>" />
         <table cellspacing="1" cellpadding="3" width="100%">
             <tr>
-                <td class="label">角色名称：</td>
+                <td class="label">级别名称：</td>
                 <td>
-                    <input  type="text" name="role_name" value="" />
+                    <input  type="text" name="level_name" value="<?php echo $data['level_name']; ?>" />
                 </td>
             </tr>
             <tr>
-                <td class="label">权限列表：</td>
+                <td class="label">积分下限：</td>
                 <td>
-                    <?php foreach ($priData as $k =>$v):?>
-                    <?php echo str_repeat('-',8*$v['level']);?>
-                    <input  type="checkbox" name="pri_id[]" value="<?php echo $v['id'];?>" />
-                    <?php echo $v['pri_name'];?> <br/>
-                <?php endforeach;?>
+                    <input  type="text" name="jifen_bottom" value="<?php echo $data['jifen_bottom']; ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">积分上限：</td>
+                <td>
+                    <input  type="text" name="jifen_top" value="<?php echo $data['jifen_top']; ?>" />
                 </td>
             </tr>
             <tr>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2016 年 12 月 09 日 16:39
+-- 生成日期: 2016 年 12 月 14 日 17:11
 -- 服务器版本: 5.5.40
 -- PHP 版本: 5.3.29
 
@@ -31,14 +31,15 @@ CREATE TABLE IF NOT EXISTS `p39_admin` (
   `username` varchar(30) NOT NULL COMMENT '用户名',
   `password` char(32) NOT NULL COMMENT '密码',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='管理员' AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='管理员' AUTO_INCREMENT=3 ;
 
 --
 -- 转存表中的数据 `p39_admin`
 --
 
 INSERT INTO `p39_admin` (`id`, `username`, `password`) VALUES
-(1, 'root', '21232f297a57a5a743894a0e4a801fc3');
+(1, 'root', '21232f297a57a5a743894a0e4a801fc3'),
+(2, 'admin', '21232f297a57a5a743894a0e4a801fc3');
 
 -- --------------------------------------------------------
 
@@ -370,7 +371,51 @@ CREATE TABLE IF NOT EXISTS `p39_privilege` (
   `action_name` varchar(30) NOT NULL DEFAULT '' COMMENT '方法名称',
   `parent_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '上级权限Id',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='权限' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='权限' AUTO_INCREMENT=39 ;
+
+--
+-- 转存表中的数据 `p39_privilege`
+--
+
+INSERT INTO `p39_privilege` (`id`, `pri_name`, `module_name`, `controller_name`, `action_name`, `parent_id`) VALUES
+(1, '商品模块', '', '', '', 0),
+(2, '商品列表', 'Admin', 'Goods', 'lst', 1),
+(3, '添加商品', 'Admin', 'Goods', 'add', 2),
+(4, '修改商品', 'Admin', 'Goods', 'edit', 2),
+(5, '删除商品', 'Admin', 'Goods', 'delete', 2),
+(6, '分类列表', 'Admin', 'Category', 'lst', 1),
+(7, '添加分类', 'Admin', 'Category', 'add', 6),
+(8, '修改分类', 'Admin', 'Category', 'edit', 6),
+(9, '删除分类', 'Admin', 'Category', 'delete', 6),
+(10, 'RBAC', '', '', '', 0),
+(11, '权限列表', 'Admin', 'Privilege', 'lst', 10),
+(12, '添加权限', 'Privilege', 'Admin', 'add', 11),
+(13, '修改权限', 'Admin', 'Privilege', 'edit', 11),
+(14, '删除权限', 'Admin', 'Privilege', 'delete', 11),
+(15, '角色列表', 'Admin', 'Role', 'lst', 10),
+(16, '添加角色', 'Admin', 'Role', 'add', 15),
+(17, '修改角色', 'Admin', 'Role', 'edit', 15),
+(18, '删除角色', 'Admin', 'Role', 'delete', 15),
+(19, '管理员列表', 'Admin', 'Admin', 'lst', 10),
+(20, '添加管理员', 'Admin', 'Admin', 'add', 19),
+(21, '修改管理员', 'Admin', 'Admin', 'edit', 19),
+(22, '删除管理员', 'Admin', 'Admin', 'delete', 19),
+(23, '类型列表', 'Admin', 'Type', 'lst', 1),
+(24, '添加类型', 'Admin', 'Type', 'add', 23),
+(25, '修改类型', 'Admin', 'Type', 'edit', 23),
+(26, '删除类型', 'Admin', 'Type', 'delete', 23),
+(27, '属性列表', 'Admin', 'Attribute', 'lst', 23),
+(28, '添加属性', 'Admin', 'Attribute', 'add', 27),
+(29, '修改属性', 'Admin', 'Attribute', 'edit', 27),
+(30, '删除属性', 'Admin', 'Attribute', 'delete', 27),
+(31, 'ajax删除商品属性', 'Admin', 'Goods', 'ajaxDelGoodsAttr', 4),
+(32, 'ajax删除商品相册图片', 'Admin', 'Goods', 'ajaxDelImage', 4),
+(33, '会员管理', '', '', '', 0),
+(34, '会员级别列表', 'Admin', 'MemberLevel', 'lst', 33),
+(35, '添加会员级别', 'Admin', 'MemberLevel', 'add', 34),
+(36, '修改会员级别', 'Admin', 'MemberLevel', 'edit', 34),
+(37, '删除会员级别', 'Admin', 'MemberLevel', 'delete', 34),
+(38, '品牌列表', 'Admin', 'Brand', 'lst', 1);
 
 -- --------------------------------------------------------
 
@@ -382,7 +427,14 @@ CREATE TABLE IF NOT EXISTS `p39_role` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `role_name` varchar(30) NOT NULL COMMENT '角色名称',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='角色' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='角色' AUTO_INCREMENT=3 ;
+
+--
+-- 转存表中的数据 `p39_role`
+--
+
+INSERT INTO `p39_role` (`id`, `role_name`) VALUES
+(2, '测试1');
 
 -- --------------------------------------------------------
 
@@ -396,6 +448,36 @@ CREATE TABLE IF NOT EXISTS `p39_role_pri` (
   KEY `pri_id` (`pri_id`),
   KEY `role_id` (`role_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='角色权限';
+
+--
+-- 转存表中的数据 `p39_role_pri`
+--
+
+INSERT INTO `p39_role_pri` (`pri_id`, `role_id`) VALUES
+(1, 2),
+(2, 2),
+(3, 2),
+(5, 2),
+(6, 2),
+(8, 2),
+(23, 2),
+(26, 2),
+(27, 2),
+(29, 2),
+(10, 2),
+(11, 2),
+(12, 2),
+(13, 2),
+(14, 2),
+(15, 2),
+(16, 2),
+(17, 2),
+(19, 2),
+(20, 2),
+(33, 2),
+(34, 2),
+(35, 2),
+(36, 2);
 
 -- --------------------------------------------------------
 

@@ -29,6 +29,18 @@ class RoleModel extends Model
 	protected function _before_insert(&$data, $option)
 	{
 	}
+	//插入后
+	protected function _after_insert(&$data, $option)
+	{
+		$priID = I('post.pri_id');
+		$rpModel = D('role_pri');
+		foreach ($priID as  $v) {
+			$rpModel->add(array(
+				'pri_id'=>$v,
+				'role_id'=>$data['id'],
+				));
+		}
+	}
 	// 修改前
 	protected function _before_update(&$data, $option)
 	{

@@ -52,10 +52,20 @@ class RoleController extends Controller
     	$data = $model->find($id);
     	$this->assign('data', $data);
 
+        $priModel = D('privilege');
+        $priData = $priModel->getTree();
+
+        $rpModel = D('role_pri');
+        $rpData = $rpModel->field('GROUP_CONCAT(pri_id) pri_id')->where(array(
+            'role_id'=>array('eq',$id),
+            ))->find();
+
 		// 设置页面中的信息
 		$this->assign(array(
-			'_page_title' => '修改',
-			'_page_btn_name' => '列表',
+            'rpData' => $rpData['pri_id'],
+            'priData' => $priData,
+			'_page_title' => '修改角色',
+			'_page_btn_name' => '角色列表',
 			'_page_btn_link' => U('lst'),
 		));
 		$this->display();

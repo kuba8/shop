@@ -17,13 +17,23 @@
 
 
 <div class="main-div">
-    <form name="main_form" method="POST" action="/shop/index.php/Admin/Role/edit/id/1.html" enctype="multipart/form-data" >
+    <form name="main_form" method="POST" action="/shop/index.php/Admin/Role/edit/id/2/p/1.html" enctype="multipart/form-data" >
     	<input type="hidden" name="id" value="<?php echo $data['id']; ?>" />
         <table cellspacing="1" cellpadding="3" width="100%">
             <tr>
                 <td class="label">角色名称：</td>
                 <td>
                     <input  type="text" name="role_name" value="<?php echo $data['role_name']; ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">权限列表：</td>
+                <td>
+                    <?php foreach ($priData as $k =>$v): if(strpos(','.$rpData.',',','.$v['id'].',')!==FALSE) $check='checked="checked"'; else $check=''; ?>
+                    <?php echo str_repeat('-',8*$v['level']);?>
+                    <input <?php echo $check;?> level_id="<?php echo $v['level'];?>"  type="checkbox" name="pri_id[]" value="<?php echo $v['id'];?>" />
+                    <?php echo $v['pri_name'];?> <br/>
+                <?php endforeach;?>
                 </td>
             </tr>
             <tr>
@@ -37,7 +47,37 @@
 </div>
 
 
+<script src="/shop/Public/umeditor1_2_2-utf8-php/third-party/jquery.min.js"></script>
+ <script src="/shop/Public/Admin/Js/tron.js"></script>
 <script>
+$(":checkbox").click(function(){
+    var tmp_level_id=level_id=$(this).attr("level_id");
+    if($(this).prop("checked"))
+    {
+        $(this).nextAll(":checkbox").each(function(k,v){
+            if($(v).attr("level_id")>level_id)
+                $(v).prop("checked","checked");
+            else
+                return false;
+        });
+        $(this).prevAll(":checkbox").each(function(k,v){
+            if($(v).attr("level_id")<tmp_level_id)
+            {
+                  $(v).prop("checked","checked");
+                  tmp_level_id--;
+            }
+        });
+    }
+    else
+    {
+        $(this).nextAll(":checkbox").each(function(k,v){
+            if($(v).attr("level_id")>level_id)
+                $(v).removeAttr("checked");
+            else
+                return false;
+        });
+    }
+});
 </script>
 
 <div id="footer">

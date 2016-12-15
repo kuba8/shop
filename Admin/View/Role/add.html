@@ -13,7 +13,7 @@
                 <td>
                     <?php foreach ($priData as $k =>$v):?>
                     <?php echo str_repeat('-',8*$v['level']);?>
-                    <input  type="checkbox" name="pri_id[]" value="<?php echo $v['id'];?>" />
+                    <input level_id="<?php echo $v['level'];?>"  type="checkbox" name="pri_id[]" value="<?php echo $v['id'];?>" />
                     <?php echo $v['pri_name'];?> <br/>
                 <?php endforeach;?>
                 </td>
@@ -28,6 +28,35 @@
     </form>
 </div>
 
-
+ <script src="__PUBLIC__/umeditor1_2_2-utf8-php/third-party/jquery.min.js"></script>
+ <script src="__PUBLIC__/Admin/Js/tron.js"></script>
 <script>
+$(":checkbox").click(function(){
+    var tmp_level_id=level_id=$(this).attr("level_id");
+    if($(this).prop("checked"))
+    {
+        $(this).nextAll(":checkbox").each(function(k,v){
+            if($(v).attr("level_id")>level_id)
+                $(v).prop("checked","checked");
+            else
+                return false;
+        });
+        $(this).prevAll(":checkbox").each(function(k,v){
+            if($(v).attr("level_id")<tmp_level_id)
+            {
+                  $(v).prop("checked","checked");
+                  tmp_level_id--;
+            }
+        });
+    }
+    else
+    {
+        $(this).nextAll(":checkbox").each(function(k,v){
+            if($(v).attr("level_id")>level_id)
+                $(v).removeAttr("checked");
+            else
+                return false;
+        });
+    }
+});
 </script>

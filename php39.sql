@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2016 年 12 月 14 日 17:11
+-- 生成日期: 2016 年 12 月 15 日 17:19
 -- 服务器版本: 5.5.40
 -- PHP 版本: 5.3.29
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `p39_admin` (
   `username` varchar(30) NOT NULL COMMENT '用户名',
   `password` char(32) NOT NULL COMMENT '密码',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='管理员' AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='管理员' AUTO_INCREMENT=5 ;
 
 --
 -- 转存表中的数据 `p39_admin`
@@ -39,7 +39,9 @@ CREATE TABLE IF NOT EXISTS `p39_admin` (
 
 INSERT INTO `p39_admin` (`id`, `username`, `password`) VALUES
 (1, 'root', '21232f297a57a5a743894a0e4a801fc3'),
-(2, 'admin', '21232f297a57a5a743894a0e4a801fc3');
+(2, 'admin', '21232f297a57a5a743894a0e4a801fc3'),
+(3, 'admin1', '21232f297a57a5a743894a0e4a801fc3'),
+(4, 'admin2', '21232f297a57a5a743894a0e4a801fc3');
 
 -- --------------------------------------------------------
 
@@ -53,6 +55,15 @@ CREATE TABLE IF NOT EXISTS `p39_admin_role` (
   KEY `admin_id` (`admin_id`),
   KEY `role_id` (`role_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='管理员角色';
+
+--
+-- 转存表中的数据 `p39_admin_role`
+--
+
+INSERT INTO `p39_admin_role` (`admin_id`, `role_id`) VALUES
+(3, 2),
+(4, 2),
+(4, 3);
 
 -- --------------------------------------------------------
 
@@ -427,14 +438,15 @@ CREATE TABLE IF NOT EXISTS `p39_role` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `role_name` varchar(30) NOT NULL COMMENT '角色名称',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='角色' AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='角色' AUTO_INCREMENT=4 ;
 
 --
 -- 转存表中的数据 `p39_role`
 --
 
 INSERT INTO `p39_role` (`id`, `role_name`) VALUES
-(2, '测试1');
+(2, '测试1'),
+(3, '测试2');
 
 -- --------------------------------------------------------
 
@@ -456,28 +468,47 @@ CREATE TABLE IF NOT EXISTS `p39_role_pri` (
 INSERT INTO `p39_role_pri` (`pri_id`, `role_id`) VALUES
 (1, 2),
 (2, 2),
-(3, 2),
-(5, 2),
-(6, 2),
-(8, 2),
-(23, 2),
-(26, 2),
-(27, 2),
-(29, 2),
+(4, 2),
+(31, 2),
+(32, 2),
 (10, 2),
 (11, 2),
 (12, 2),
 (13, 2),
 (14, 2),
-(15, 2),
-(16, 2),
-(17, 2),
-(19, 2),
-(20, 2),
-(33, 2),
-(34, 2),
-(35, 2),
-(36, 2);
+(1, 3),
+(2, 3),
+(3, 3),
+(4, 3),
+(31, 3),
+(32, 3),
+(5, 3),
+(6, 3),
+(7, 3),
+(8, 3),
+(9, 3),
+(23, 3),
+(24, 3),
+(25, 3),
+(26, 3),
+(27, 3),
+(28, 3),
+(29, 3),
+(30, 3),
+(38, 3),
+(10, 3),
+(11, 3),
+(12, 3),
+(13, 3),
+(14, 3),
+(15, 3),
+(16, 3),
+(17, 3),
+(18, 3),
+(19, 3),
+(20, 3),
+(21, 3),
+(22, 3);
 
 -- --------------------------------------------------------
 

@@ -22,7 +22,13 @@ class RoleModel extends Model
 		$page->setConfig('next', '下一页');
 		$data['page'] = $page->show();
 		/************************************** 取数据 ******************************************/
-		$data['data'] = $this->alias('a')->where($where)->group('a.id')->limit($page->firstRow.','.$page->listRows)->select();
+		$data['data'] = $this->alias('a')
+		->field('a.*,GROUP_CONCAT(c.pri_name) pri_name')
+		->join('LEFT JOIN __ROLE_PRI__ b ON a.id=b.role_id
+				LEFT JOIN __PRIVILEGE__ c ON b.pri_id=c.id')
+		->where($where)->group('a.id')->limit($page->firstRow.','.$page->listRows)
+		->group('a.id')
+		->select();
 		return $data;
 	}
 	// 添加前
@@ -44,6 +50,17 @@ class RoleModel extends Model
 	// 修改前
 	protected function _before_update(&$data, $option)
 	{
+		$priId=I('post.pri_id');
+		$rpModel=D('role_pri');
+		$rpModel->where(array(
+			'role_id'=>array('eq',$option['where']['id']),
+			))->delete();
+		foreach ($priId as $v) {
+			$rpModel->add(array(
+				'pri_id'=>$v,
+				'role_id'=>$option['where']['id'],
+				));
+		}
 	}
 	// 删除前
 	protected function _before_delete($option)

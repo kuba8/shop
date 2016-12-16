@@ -12,6 +12,20 @@ class AdminModel extends Model
 		array('password', 'require', '密码不能为空！', 1, 'regex', 1),
 		array('password', 'cpassword', '两次密码输入不一致！', 1, 'confirm', 3),
 	);
+
+	public $_login_validate = array(
+		array('username', 'require', '用户名不能为空！', 1),
+		array('password', 'require', '密码不能为空！', 1),
+		array('chkcode', 'require', '验证码不能为空！', 1),
+		array('chkcode', 'check_verify', '验证错误！', 1, 'callback'),
+	);
+
+	function check_verify($code, $id = '')
+	{
+    	$verify = new \Think\Verify();
+    	return $verify->check($code, $id);
+	}
+
 	public function search($pageSize = 20)
 	{
 		/**************************************** 搜索 ****************************************/

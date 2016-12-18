@@ -3,7 +3,7 @@ namespace Admin\Model;
 use Think\Model;
 class AdminModel extends Model 
 {
-	protected $insertFields = array('username','password','cpassword');
+	protected $insertFields = array('username','password','cpassword','chkcode');
 	protected $updateFields = array('id','username','password','cpassword');
 	protected $_validate = array(
 		array('username', 'require', '用户名不能为空！', 1, 'regex', 3),
@@ -19,6 +19,39 @@ class AdminModel extends Model
 		array('chkcode', 'require', '验证码不能为空！', 1),
 		array('chkcode', 'check_verify', '验证错误！', 1, 'callback'),
 	);
+
+	public function login()
+	{
+		$username=$this->username;
+		$password=$this->password;
+		$user=$this->where(array(
+			'username'=>array('eq',$username),
+			))->find();
+		if(user)
+		{
+			if($user['password']==md5($password))
+			{
+				session('id',$user['id']);
+				session('username',$user['username']);
+				return TRUE;
+			}
+			else
+			{
+				$this->error='密码不正确';
+				return FALSE;
+			}
+		}
+	else
+			{
+				$this->error='用户名不存在';
+				return FALSE;
+			}	
+	}
+
+	public function logout()
+	{
+		session(null);
+	}
 
 	function check_verify($code, $id = '')
 	{

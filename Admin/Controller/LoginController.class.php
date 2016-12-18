@@ -12,7 +12,29 @@ class LoginController extends Controller
     $Verify->entry();
    }
 
-   public function login(){
+   public function login()
+   {
+    if(IS_POST)
+    {
+      $model = D('Admin');
+      if($model->validate($model->_login_validate)->create())
+      {
+        if($model->login())
+        {
+          $this->success('登录成功!',U('Index/index'));
+          exit;
+        }
+      }
+      $this->error($model->getError());
+    }
+
 		$this->display();
+   }
+
+   public function logout()
+   {
+    $model = D('Admin');
+    $model->logout();
+    redirect('login');
    }
 }

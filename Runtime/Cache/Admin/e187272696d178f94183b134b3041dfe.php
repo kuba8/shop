@@ -123,43 +123,16 @@ body {
 <div id="main-div">
     <div id="menu-list">
         <ul id="menu-ul">
+        <?php  $priModel = D('privilege'); $btns = $priModel->getBtns(); foreach($btns as $k => $v): ?>
             <li class="explode" key="02_cat_and_goods" name="menu">
-            商品管理
+            <?php echo $v['pri_name'];?>
                 <ul>
-                    <li class="menu-item"><a href="<?php echo U('Goods/lst');?>" target="main-frame">商品列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Brand/lst');?>" target="main-frame">商品品牌</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Category/lst');?>" target="main-frame">分类列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Type/lst');?>" target="main-frame">类型列表</a></li>
+                <?php foreach ($v['children'] as $k1 => $v1):?>
+                    <li class="menu-item"><a href="<?php echo U($v1['module_name'].'/'.$v1['controller_name'].'/'.$v1['action_name']);?>" target="main-frame"><?php echo $v1['pri_name'];?></a></li>
+                <?php endforeach;?>
                 </ul>
             </li>
-
-            <li class="explode" key="04_order" name="menu">
-            订单管理
-                <ul>
-                    <li class="menu-item"><a href="orderList.html" target="main-frame">订单列表</a></li>
-                    <li class="menu-item"><a href="orderQuery.html" target="main-frame">订单查询</a></li>
-                    <li class="menu-item"><a href="orderAdd.html" target="main-frame">添加订单</a></li>
-                    <li class="menu-item"><a href="delivery_list.html" target="main-frame">发货单列表</a></li>
-                    <li class="menu-item"><a href="back_list.html" target="main-frame">退货单列表</a></li>
-                </ul>
-            </li>
-            <li class="explode" key="08_members" name="menu">
-            会员管理
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('MemberLevel/lst');?>" target="main-frame">会员级别列表</a></li>
-                    <li class="menu-item"><a href="userAdd.html" target="main-frame">添加会员</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Gii/Index/index');?>" target="main-frame">GII</a></li>
-                </ul>
-            </li>
-            <li class="explode" key="08_members" name="menu">
-            RBAC
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('Privilege/lst');?>" target="main-frame">权限列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Role/lst');?>" target="main-frame">角色列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Admin/lst');?>" target="main-frame">管理员列表</a></li>
-                    
-                </ul>
-            </li>
+          <?php endforeach;?>
         </ul>
     </div>
     <div id="help-div" style="display:none">
@@ -167,9 +140,9 @@ body {
         <div id="help-content"></div>
     </div>
 </div>
-<script type="text/javascript" src="./Js/global.js"></script>
-<script type="text/javascript" src="./Js/utils.js"></script>
-<script type="text/javascript" src="./Js/transport.js"></script>
+<script type="text/javascript" src="/shop/Public/Admin/Js/global.js"></script>
+<script type="text/javascript" src="/shop/Public/Admin/Js/utils.js"></script>
+<script type="text/javascript" src="/shop/Public/Admin/Js/transport.js"></script>
 <script language="JavaScript">
     var collapse_all = "闭合";
     var expand_all = "展开";

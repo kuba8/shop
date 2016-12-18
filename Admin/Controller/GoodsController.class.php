@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class GoodsController extends Controller {
+class GoodsController extends BaseController {
 
       public function ajaxDelAttr()
       {

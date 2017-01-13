@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2016 年 12 月 15 日 17:19
+-- 生成日期: 2017 年 01 月 13 日 17:43
 -- 服务器版本: 5.5.40
 -- PHP 版本: 5.3.29
 
@@ -125,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `p39_category` (
   `cat_name` varchar(30) NOT NULL COMMENT '分类名称',
   `parent_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '上级分类的Id,0:顶级分类',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='分类' AUTO_INCREMENT=27 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='分类' AUTO_INCREMENT=30 ;
 
 --
 -- 转存表中的数据 `p39_category`
@@ -145,16 +145,13 @@ INSERT INTO `p39_category` (`id`, `cat_name`, `parent_id`) VALUES
 (12, '营养保健', 0),
 (13, '图书、音像、电子书', 0),
 (14, '彩票、旅行、充值、票务', 0),
-(15, '理财、众筹、白条、保险', 0),
 (17, '生活电器', 1),
 (18, '厨房电器', 1),
 (19, '个护健康', 1),
-(20, '五金家装', 1),
 (21, 'iphone', 2),
-(23, 'aaaaaaaa', 0),
-(24, '大家电', 0),
-(25, '洗衣机', 0),
-(26, '水管', 20);
+(27, '洗衣机', 17),
+(28, '烘干机', 17),
+(29, '按摩机', 17);
 
 -- --------------------------------------------------------
 
@@ -179,25 +176,34 @@ CREATE TABLE IF NOT EXISTS `p39_goods` (
   `brand_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '品牌id',
   `cat_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '主分类Id',
   `type_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '类型Id',
+  `promote_price` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '促销价格',
+  `promote_start_date` datetime NOT NULL COMMENT '促销开始时间',
+  `promote_end_date` datetime NOT NULL COMMENT '促销结束时间',
+  `is_new` enum('是','否') NOT NULL DEFAULT '否' COMMENT '是否新品',
+  `is_hot` enum('是','否') NOT NULL DEFAULT '否' COMMENT '是否热卖',
+  `is_best` enum('是','否') NOT NULL DEFAULT '否' COMMENT '是否精品',
   PRIMARY KEY (`id`),
   KEY `shop_price` (`shop_price`),
   KEY `addtime` (`addtime`),
   KEY `brand_id` (`brand_id`),
   KEY `is_on_sale` (`is_on_sale`),
-  KEY `cat_id` (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品' AUTO_INCREMENT=8 ;
+  KEY `cat_id` (`cat_id`),
+  KEY `id` (`id`),
+  KEY `id_2` (`id`),
+  KEY `id_3` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品' AUTO_INCREMENT=7 ;
 
 --
 -- 转存表中的数据 `p39_goods`
 --
 
-INSERT INTO `p39_goods` (`id`, `goods_name`, `market_price`, `shop_price`, `goods_desc`, `is_on_sale`, `is_delete`, `addtime`, `logo`, `sm_logo`, `mid_logo`, `big_logo`, `mbig_logo`, `brand_id`, `cat_id`, `type_id`) VALUES
-(1, 'note7', '7000.00', '6000.00', '', '是', '否', '2016-11-16 10:35:02', 'Goods/2016-11-16/582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_3_582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_2_582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_1_582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_0_582bc5d6cb2e6.jpg', 1, 0, 0),
-(2, 'iphone7', '8000.00', '7800.00', '', '是', '否', '2016-11-16 10:38:08', 'Goods/2016-11-16/582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_3_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_2_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_1_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_0_582bc6907bbe2.jpg', 2, 0, 0),
-(3, '小米note', '3000.00', '2000.00', '<p>小米好用</p>', '是', '否', '2016-11-16 10:39:43', 'Goods/2016-11-16/582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_3_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_2_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_1_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_0_582bc6ef54c8b.jpg', 3, 2, 0),
-(4, '三星冰箱', '2000.00', '1800.00', '', '是', '否', '2016-11-17 11:15:22', '', '', '', '', '', 1, 17, 0),
-(5, 'iphone8', '7000.00', '6000.00', '', '是', '否', '2016-11-18 15:30:54', 'Goods/2016-11-18/582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_3_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_2_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_1_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_0_582eae2df10ca.JPG', 2, 2, 0),
-(6, '测试测试测试', '0.00', '0.00', '', '是', '否', '2016-12-05 10:06:48', '', '', '', '', '', 0, 0, 1);
+INSERT INTO `p39_goods` (`id`, `goods_name`, `market_price`, `shop_price`, `goods_desc`, `is_on_sale`, `is_delete`, `addtime`, `logo`, `sm_logo`, `mid_logo`, `big_logo`, `mbig_logo`, `brand_id`, `cat_id`, `type_id`, `promote_price`, `promote_start_date`, `promote_end_date`, `is_new`, `is_hot`, `is_best`) VALUES
+(1, 'note7', '7000.00', '6000.00', '', '是', '否', '2016-11-16 10:35:02', 'Goods/2016-11-16/582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_3_582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_2_582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_1_582bc5d6cb2e6.jpg', 'Goods/2016-11-16/thumb_0_582bc5d6cb2e6.jpg', 1, 0, 0, '0.00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '否', '否', '否'),
+(2, 'iphone7', '8000.00', '7800.00', '', '是', '否', '2016-11-16 10:38:08', 'Goods/2016-11-16/582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_3_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_2_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_1_582bc6907bbe2.jpg', 'Goods/2016-11-16/thumb_0_582bc6907bbe2.jpg', 2, 0, 0, '0.00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '否', '否', '否'),
+(3, '小米note', '3000.00', '2000.00', '<p>小米好用</p>', '是', '否', '2016-11-16 10:39:43', 'Goods/2016-11-16/582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_3_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_2_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_1_582bc6ef54c8b.jpg', 'Goods/2016-11-16/thumb_0_582bc6ef54c8b.jpg', 3, 2, 0, '80.00', '2017-01-10 00:00:00', '2017-01-30 00:00:00', '否', '否', '否'),
+(4, '三星冰箱', '2000.00', '1800.00', '', '是', '否', '2016-11-17 11:15:22', '', '', '', '', '', 1, 17, 0, '0.00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '否', '否', '否'),
+(5, 'iphone8', '7000.00', '6000.00', '', '是', '否', '2016-11-18 15:30:54', 'Goods/2016-11-18/582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_3_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_2_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_1_582eae2df10ca.JPG', 'Goods/2016-11-18/thumb_0_582eae2df10ca.JPG', 2, 2, 0, '60.00', '2017-01-11 00:00:00', '2017-01-20 00:00:00', '否', '否', '否'),
+(6, '测试测试测试', '0.00', '0.00', '', '是', '否', '2016-12-05 10:06:48', '', '', '', '', '', 0, 0, 1, '99.00', '2017-01-13 16:52:00', '2017-01-15 16:52:00', '否', '是', '是');
 
 -- --------------------------------------------------------
 
@@ -213,7 +219,7 @@ CREATE TABLE IF NOT EXISTS `p39_goods_attr` (
   PRIMARY KEY (`id`),
   KEY `goods_id` (`goods_id`),
   KEY `attr_id` (`attr_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品属性' AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品属性' AUTO_INCREMENT=9 ;
 
 --
 -- 转存表中的数据 `p39_goods_attr`
@@ -351,6 +357,14 @@ INSERT INTO `p39_member_price` (`price`, `level_id`, `goods_id`) VALUES
 ('6800.00', 2, 2),
 ('5800.00', 3, 2),
 ('5000.00', 4, 2),
+('2000.00', 1, 3),
+('1800.00', 2, 3),
+('1700.00', 3, 3),
+('1500.00', 4, 3),
+('2000.00', 1, 3),
+('1800.00', 2, 3),
+('1700.00', 3, 3),
+('1500.00', 4, 3),
 ('2000.00', 1, 3),
 ('1800.00', 2, 3),
 ('1700.00', 3, 3),

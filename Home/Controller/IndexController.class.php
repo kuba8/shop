@@ -3,6 +3,19 @@ namespace Home\Controller;
 class IndexController extends NavController {
 
     public function index(){
+
+        $goodsModel = D('Admin/Goods');
+        $goods1 = $goodsModel->getPromoteGoods();
+        $goods2 = $goodsModel->getRecGoods('is_new');
+        $goods3 = $goodsModel->getRecGoods('is_hot');
+        $goods4 = $goodsModel->getRecGoods('is_best');
+        $this->assign(array(
+            'goods1' => $goods1,
+            'goods2' => $goods2,
+            'goods3' => $goods3,
+            'goods4' => $goods4,
+            ));
+        var_dump($goods3);
     	$this->assign(array(
     		'_show_nav'=>1,
     		'_page_keywords'=>'首页',

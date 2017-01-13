@@ -3,8 +3,8 @@ namespace Admin\Model;
 use Think\Model;
 class GoodsModel extends Model
 {
-  protected $insertFields='goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cat_id,type_id';
-	protected $updateFields='id,goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cat_id,type_id';
+  protected $insertFields='goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cat_id,type_id,promote_price,promote_start_date,promote_end_date,is_new,is_best,is_hot';
+	protected $updateFields='id,goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cat_id,type_id,promote_price,promote_start_date,promote_end_date,is_new,is_best,is_hot';
 
 
   //定义验证规则
@@ -444,6 +444,30 @@ protected function _after_insert(&$data,$option){
 
   }
 
+  public function getPromoteGoods($limit = 5)
+  {
+    $today = date('Y-m-d H:i');
+    return $this->field('id,goods_name,mid_logo,promote_price')
+    ->where(array(
+      'is_on_sale'=>array('eq','是'),
+      'promote_price'=>array('gt',0),
+      'promote_start_date'=>array('elt',$today),
+      'promote_end_date'=>array('egt',$today),
+      ))
+    ->limit($limit)
+    ->select();
+  }
+
+  public function getRecGoods($recType,$limit = 3)
+  {
+    return $this->field('id,goods_name,mid_logo,promote_price')
+    ->where(array(
+      'is_on_sale'=>array('eq','是'),
+      '$recType'=>array('eq','是'),
+      ))
+    ->limit($limit)
+    ->select();
+  }
 
 }
 

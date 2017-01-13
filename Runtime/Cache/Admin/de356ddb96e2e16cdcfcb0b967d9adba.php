@@ -107,7 +107,35 @@
                         <input type="radio" name="is_on_sale" value="否"/> 否
                     </td>
                 </tr>
-               
+                 <tr>
+                    <td class="label">促销价格：</td>
+                    <td>
+                        价格：￥<input type="text" name="promote_price" size="8" />元
+                        开始时间：<input type="text" id="promote_start_date" name="promote_start_date" />
+                        结束时间：<input type="text" id="promote_end_date" name="promote_end_date" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">是否新品：</td>
+                    <td>
+                        <input type="radio" name="is_new" value="是"/ > 是
+                        <input type="radio" name="is_new" value="否"/ checked="checked"> 否
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">是否精品：</td>
+                    <td>
+                        <input type="radio" name="is_best" value="是"/ > 是
+                        <input type="radio" name="is_best" value="否"/ checked="checked"> 否
+                    </td>
+                </tr>
+                 <tr>
+                    <td class="label">是否热卖：</td>
+                    <td>
+                        <input type="radio" name="is_hot" value="是"/ > 是
+                        <input type="radio" name="is_hot" value="否"/ checked="checked"> 否
+                    </td>
+                </tr>              
 
                 
             </table>
@@ -245,7 +273,18 @@
                 li.remove();
         }
     </script>
+<link href="/shop/Public/datetimepicker/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="utf-8" src="/shop/Public/datetimepicker/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/shop/Public/datetimepicker/datepicker-zh_cn.js"></script>
+<link rel="stylesheet" media="all" type="text/css" href="/shop/Public/datetimepicker/time/jquery-ui-timepicker-addon.min.css" />
+<script type="text/javascript" src="/shop/Public/datetimepicker/time/jquery-ui-timepicker-addon.min.js"></script>
+<script type="text/javascript" src="/shop/Public/datetimepicker/time/i18n/jquery-ui-timepicker-addon-i18n.min.js"></script>
 
+<script type="text/javascript">
+  $.timepicker.setDefaults($.timepicker.regional['zh-CN']);
+    $("#promote_start_date").datetimepicker();
+    $("#promote_end_date").datetimepicker();
+</script>
 
 <div id="footer">
 共执行 29 个查询，用时 0.539249 秒，Gzip 已禁用，内存占用 3.502 MB<br />

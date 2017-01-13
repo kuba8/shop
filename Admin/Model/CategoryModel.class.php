@@ -62,4 +62,40 @@ class CategoryModel extends Model
 		}
 		}
 
+	public function getNavData(){
+		//先从缓存取出数据
+		$catData = S('catData');
+		if(!$catData)
+	{
+		$all = $this->select();
+		$ret = array();
+		foreach ($all as $k => $v) 
+		{
+			if($v['parent_id']==0)
+			{	
+				foreach ($all as $k1 => $v1)
+				 {
+					if($v1['parent_id']==$v['id'])
+					{
+						foreach ($all as $k2 => $v2) 
+						{
+							if($v2['parent_id']==$v1['id'])
+							{
+								$v1['children'][]=$v2;
+							}
+						}
+						$v['children'][]=$v1;
+				}
+			   }
+				$ret[]=$v;
+			}
+		}
+		S('catData',$ret,86400);
+		return $ret;
+	}
+		else
+		return $catData;
+
+	}
+
 }

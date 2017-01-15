@@ -353,10 +353,9 @@
 							<dl>
 								<dt><a href="<?php echo U('goods?id='.$v['id'])?>"><?php showImage($v['mid_logo']);?></a></dt>
 								<dd><a href=""><?php echo $v['goods_name'];?></a></dd>
-								<dd><span>售价：</span><strong> ￥<?php echo $v['promote_price'];?>元</strong></dd>
+								<dd><span>售价：</span><strong> ￥<?php echo $v['shop_price'];?>元</strong></dd>
 							</dl>
 						</li>
-						<?php $model->getLastSql();?>
 					<?php endforeach;?>
 					</ul>	
 				</div>
@@ -365,56 +364,32 @@
 				<!-- 推荐商品 atart -->
 				<div class="recommend none">
 					<ul>
+					<?php foreach($goods4 as $k => $v):?>
 						<li>
 							<dl>
-								<dt><a href=""><img src="/shop/Public/Home/images/recommend1.jpg" alt="" /></a></dt>
-								<dd><a href="">黄飞红麻辣花生整箱特惠装</a></dd>
-								<dd><span>售价：</span><strong> ￥139.00</strong></dd>
+								<dt><a href="<?php echo U('goods?id='.$v['id'])?>"><?php showImage($v['mid_logo']);?></a></dt>
+								<dd><a href=""><?php echo $v['goods_name'];?></a></dd>
+								<dd><span>售价：</span><strong> ￥<?php echo $v['shop_price'];?>元</strong></dd>
 							</dl>
 						</li>
-						<li>
-							<dl>
-								<dt><a href=""><img src="/shop/Public/Home/images/recommend2.jpg" alt="" /></a></dt>
-								<dd><a href="">戴尔IN1940MW 19英寸LE</a></dd>
-								<dd><span>售价：</span><strong> ￥679.00</strong></dd>
-							</dl>
-						</li>
-						<li>
-							<dl>
-								<dt><a href=""><img src="/shop/Public/Home/images/recommend3.jpg" alt="" /></a></dt>
-								<dd><a href="">罗辑思维音频车载CD</a></dd>
-								<dd><span>售价：</span><strong> ￥24.80</strong></dd>
-							</dl>
-						</li>
-					</ul>
+					<?php endforeach;?>
+					</ul>	
 				</div>
 				<!-- 推荐商品 end -->
 			
 				<!-- 新品上架 start-->
 				<div class="new none">
-					<ul>
+						<ul>
+					<?php foreach($goods2 as $k => $v):?>
 						<li>
 							<dl>
-								<dt><a href=""><img src="/shop/Public/Home/images/new1.jpg" alt="" /></a></dt>
-								<dd><a href="">E路航T70超薄GPS 7寸大屏！</a></dd>
-								<dd><span>售价：</span><strong> ￥369.00</strong></dd>
+								<dt><a href="<?php echo U('goods?id='.$v['id'])?>"><?php showImage($v['mid_logo']);?></a></dt>
+								<dd><a href=""><?php echo $v['goods_name'];?></a></dd>
+								<dd><span>售价：</span><strong> ￥<?php echo $v['shop_price'];?>元</strong></dd>
 							</dl>
 						</li>
-						<li>
-							<dl>
-								<dt><a href=""><img src="/shop/Public/Home/images/new2.jpg" alt="" /></a></dt>
-								<dd><a href="">乐和居 爆品 特价疯狂抢</a></dd>
-								<dd><span>售价：</span><strong> ￥2799.00</strong></dd>
-							</dl>
-						</li>
-						<li>
-							<dl>
-								<dt><a href=""><img src="/shop/Public/Home/images/new3.jpg" alt="" /></a></dt>
-								<dd><a href="">北欧 套装 抄底再续最后几小时</a></dd>
-								<dd><span>售价：</span><strong> ￥999.00</strong></dd>
-							</dl>
-						</li>
-					</ul>
+					<?php endforeach;?>
+					</ul>	
 				</div>
 				<!-- 新品上架 end-->
 
@@ -476,29 +451,19 @@
 	<!-- 导购区域 end -->
 	
 	<div style="clear:both;"></div>
-
+	<?php foreach($floorData as $k =>$v):?>
 	<!--1F 电脑办公 start -->
 	<div class="floor1 floor w1210 bc mt10">
 		<!-- 1F 左侧 start -->
 		<div class="floor_left fl">
 			<!-- 商品分类信息 start-->
 			<div class="cate fl">
-				<h2>电脑、办公</h2>
+				<h2><?php echo $v['cat_name'];?></h2>
 				<div class="cate_wrap">
 					<ul>
-						<li><a href=""><b>.</b>外设产品</a></li>
-						<li><a href=""><b>.</b>鼠标</a></li>
-						<li><a href=""><b>.</b>笔记本</a></li>
-						<li><a href=""><b>.</b>超极本</a></li>
-						<li><a href=""><b>.</b>平板电脑</a></li>
-						<li><a href=""><b>.</b>主板</a></li>
-						<li><a href=""><b>.</b>显卡</a></li>
-						<li><a href=""><b>.</b>打印机</a></li>
-						<li><a href=""><b>.</b>一体机</a></li>
-						<li><a href=""><b>.</b>投影机</a></li>
-						<li><a href=""><b>.</b>路由器</a></li>
-						<li><a href=""><b>.</b>网卡</a></li>
-						<li><a href=""><b>.</b>交换机</a></li>
+						<?php foreach($v['subCat'] as $k1 =>$v1):?>
+						<li><a href=""><b>.</b><?php echo $v1['cat_name'];?></a></li>
+						<?php endforeach;?>
 					</ul>
 					<p><a href=""><img src="/shop/Public/Home/images/notebook.jpg" alt="" /></a></p>
 				</div>
@@ -510,11 +475,9 @@
 			<!-- 商品列表信息 start-->
 			<div class="goodslist fl">
 				<h2>
-					<span class="on">推荐商品</span>
-					<span>电脑整机</span>
-					<span>电脑配件</span>
-					<span>办公打印</span>
-					<span>网络产品</span>
+					<?php foreach($v['recSubCat'] as $k1 =>$v1):?>
+					<span <?php if($k1==0) echo 'class="on"' ;?> ><?php echo $v1['cat_name'];?></span>
+					<?php endforeach;?>
 				</h2>
 				<div class="goodslist_wrap">
 					<div>
@@ -702,7 +665,7 @@
 
 	</div>
 	<!--1F 电脑办公 start -->
-
+	<?php endforeach;?>
 
 <!-- 引入帮助文件 -->
 	<div style="clear:both;"></div>

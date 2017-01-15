@@ -3,8 +3,8 @@ namespace Admin\Model;
 use Think\Model;
 class GoodsModel extends Model
 {
-  protected $insertFields='goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cat_id,type_id,promote_price,promote_start_date,promote_end_date,is_new,is_best,is_hot';
-	protected $updateFields='id,goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cat_id,type_id,promote_price,promote_start_date,promote_end_date,is_new,is_best,is_hot';
+  protected $insertFields='goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cat_id,type_id,promote_price,promote_start_date,promote_end_date,is_new,is_best,is_hot,sort_num,is_floor';
+	protected $updateFields='id,goods_name,market_price,shop_price,is_on_sale,goods_desc,brand_id,cat_id,type_id,promote_price,promote_start_date,promote_end_date,is_new,is_best,is_hot,sort_num,is_floor';
 
 
   //定义验证规则
@@ -455,17 +455,20 @@ protected function _after_insert(&$data,$option){
       'promote_end_date'=>array('egt',$today),
       ))
     ->limit($limit)
+    ->order('sort_num ASC')
     ->select();
   }
 
-  public function getRecGoods($recType,$limit = 3)
+  public function getRecGoods($recType,$limit = 5)
   {
-    return $this->field('id,goods_name,mid_logo,promote_price')
+    return $this->field('id,goods_name,mid_logo,promote_price,shop_price')
     ->where(array(
       'is_on_sale'=>array('eq','是'),
-      '$recType'=>array('eq','是'),
+      //'$recType'=>array('eq','是'),  用单引号就出错，单引号内部变量不会执行
+      "$recType"=>array('eq','是'),
       ))
     ->limit($limit)
+    ->order('sort_num ASC')
     ->select();
   }
 

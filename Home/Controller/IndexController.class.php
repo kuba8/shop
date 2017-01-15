@@ -9,13 +9,19 @@ class IndexController extends NavController {
         $goods2 = $goodsModel->getRecGoods('is_new');
         $goods3 = $goodsModel->getRecGoods('is_hot');
         $goods4 = $goodsModel->getRecGoods('is_best');
+
+        $catModel = D('Admin/Category');
+        $floorData = $catModel->floorData();
+        var_dump($floorData);
+
         $this->assign(array(
             'goods1' => $goods1,
             'goods2' => $goods2,
             'goods3' => $goods3,
             'goods4' => $goods4,
+            'floorData' => $floorData,
             ));
-        var_dump($goods3);
+        //var_dump($goods3);
     	$this->assign(array(
     		'_show_nav'=>1,
     		'_page_keywords'=>'首页',

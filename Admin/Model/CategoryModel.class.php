@@ -3,8 +3,8 @@ namespace Admin\Model;
 use Think\Model;
 class CategoryModel extends Model 
 {
-	protected $insertFields = array('cat_name','parent_name','parent_id');
-	protected $updateFields = array('id','cat_name','parent_name','parent_id');
+	protected $insertFields = array('cat_name','parent_name','parent_id','is_floor');
+	protected $updateFields = array('id','cat_name','parent_name','parent_id','is_floor');
 	protected $_validate = array(
 		array('cat_name', 'require', '分类名称不能为空！', 1, 'regex', 3),
 	);
@@ -95,6 +95,32 @@ class CategoryModel extends Model
 	}
 		else
 		return $catData;
+
+	}
+
+	public function floorData()
+	{
+		$ret =$this->where(array(
+			'parent_id'=>array('eq',0),
+			'is_floor'=>array('eq','是'),
+			))->select();
+
+		foreach ($ret as $k => $v)
+		 {
+			$ret[$k]['subCat'] = $this->where(array(
+				'parent_id'=>array('eq',$v['id']),
+				'is_floor'=>array('eq','否'),
+				))->select();
+		
+
+		 
+			$ret[$k]['recSubCat'] = $this->where(array(
+				'parent_id'=>array('eq',$v['id']),
+				'is_floor'=>array('eq','是'),
+				))->select();
+		}
+
+		return $ret;
 
 	}
 

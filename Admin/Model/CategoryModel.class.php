@@ -100,6 +100,12 @@ class CategoryModel extends Model
 
 	public function floorData()
 	{
+		$floorData = S('floorData');
+		if($floorData)
+			return $floorData;
+		else
+		{
+		$goodsModel = D('Admin/Goods');
 		$ret =$this->where(array(
 			'parent_id'=>array('eq',0),
 			'is_floor'=>array('eq','是'),
@@ -107,6 +113,15 @@ class CategoryModel extends Model
 
 		foreach ($ret as $k => $v)
 		 {
+		 	$goodsId = $goodsModel->getGoodsIdByCatId($v['id']);
+		 	$ret[$k]['brand']=$goodsModel->alias('a')
+		 	->join('LEFT JOIN __BRAND__ b ON a.brand_id=b.id')
+		 	->field('DISTINCT brand_id,b.brand_name,b.logo')
+		 	->where(array(
+		 		'a.id'=>array('in',$goodsId),
+		 		'a.brand_id'=>array('neq',0),
+		 		))->select();
+
 			$ret[$k]['subCat'] = $this->where(array(
 				'parent_id'=>array('eq',$v['id']),
 				'is_floor'=>array('eq','否'),
@@ -118,10 +133,23 @@ class CategoryModel extends Model
 				'parent_id'=>array('eq',$v['id']),
 				'is_floor'=>array('eq','是'),
 				))->select();
+
+			foreach ($ret[$k]['recSubCat'] as $k1 => &$v1) {
+				
+				$gids = $goodsModel->getGoodsIdByCatId($v1['id']);
+				var_dump($gids);
+				$v1['goods'] = $goodsModel->field('id,mid_logo,goods_name,shop_price')->where(array(
+					'is_on_sale'=>array('eq','是'),
+					'is_floor'=>array('eq','是'),
+					'id'=>array('in',$gids),
+					//'id'=>array('in',('3,4,5,6')),
+					))->order('sort_num ASC')->limit(8)->select();
+
+			}
 		}
-
+		S('floorData',$ret,86400);
 		return $ret;
-
+	}
 	}
 
 }

@@ -330,7 +330,7 @@ protected function _after_insert(&$data,$option){
 
   public function getGoodsIdByCatId($catId)
   {
-    $catModel=D('category');
+    $catModel=D('Admin/Category');
     $children=$catModel->getChildren($catId);
     $children[]=$catId;
     $gids=$this->field('id')->where(array(

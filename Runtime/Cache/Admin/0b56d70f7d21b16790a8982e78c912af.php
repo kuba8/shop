@@ -17,7 +17,7 @@
 
 
 <div class="main-div">
-    <form name="main_form" method="POST" action="/shop/index.php/Admin/Category/edit/id/18.html" >
+    <form name="main_form" method="POST" action="/shop/index.php/Admin/Category/edit/id/30.html" >
     	<input type="hidden" name="id" value="<?php echo $data['id']; ?>" />
         <table cellspacing="1" cellpadding="3" width="100%">
             <tr>

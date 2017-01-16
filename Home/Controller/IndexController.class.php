@@ -4,6 +4,9 @@ class IndexController extends NavController {
 
     public function index(){
 
+        $file = uniqid();
+        file_put_contents('./piao/'.$file, 'abc');
+
         $goodsModel = D('Admin/Goods');
         $goods1 = $goodsModel->getPromoteGoods();
         $goods2 = $goodsModel->getRecGoods('is_new');
@@ -12,7 +15,7 @@ class IndexController extends NavController {
 
         $catModel = D('Admin/Category');
         $floorData = $catModel->floorData();
-        var_dump($floorData);
+        //var_dump($floorData);
 
         $this->assign(array(
             'goods1' => $goods1,

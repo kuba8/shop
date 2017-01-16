@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<title><?php echo $_page_title;?></title>
-	<meta name="keywords" content="<?php echo $_page_keywords;?>" />
-	<meta name="description" content="<?php echo $_page_description;?>" />
+	<title>首页</title>
+	<meta name="keywords" content="首页" />
+	<meta name="description" content="首页" />
 	<!-- 引入公共的css -->
 	<link rel="stylesheet" href="/shop/Public/Home/style/base.css" type="text/css">
 	<link rel="stylesheet" href="/shop/Public/Home/style/global.css" type="text/css">
@@ -136,34 +136,145 @@
 		<!-- 导航条部分 start -->
 		<div class="nav w1210 bc mt10">
 			<!--  商品分类部分 start-->
-			<div class="category fl <?php if($_show_nav == 0) echo 'cat1';?>">
-				<div class="cat_hd <?php if($_show_nav == 0) echo 'off';?>">  <!-- 注意，首页在此div上只需要添加cat_hd类，非首页，默认收缩分类时添加上off类，并将cat_bd设置为不显示(加上类none即可)，鼠标滑过时展开菜单则将off类换成on类 -->
+			<div class="category fl ">
+				<div class="cat_hd ">  <!-- 注意，首页在此div上只需要添加cat_hd类，非首页，默认收缩分类时添加上off类，并将cat_bd设置为不显示(加上类none即可)，鼠标滑过时展开菜单则将off类换成on类 -->
 					<h2>全部商品分类</h2>
 					<em></em>
 				</div>
 				
-				<div class="cat_bd <?php if($_show_nav == 0) echo 'none';?>"> 
+				<div class="cat_bd "> 
 				
-					<?php foreach($catData as $k => $v):?>
-					<div class="cat <?php if($k==0) echo 'item1';?> ">
-						<h3><a href=""><?php echo $v['cat_name'];?></a> <b></b></h3>
+										<div class="cat item1 ">
+						<h3><a href="">家用电器</a> <b></b></h3>
 						<div class="cat_detail none">
-							<?php foreach ($v['children'] as $k1 => $v1):?>
-							<dl <?php if($k1==0) echo 'class="dl_1st"';?>>
-								<dt><a href=""><?php echo $v1['cat_name'];?></a></dt>
+														<dl class="dl_1st">
+								<dt><a href="">生活电器</a></dt>
 								<dd>
-								<?php foreach ($v1['children'] as $k2 => $v2):?>
-									<a href=""><?php echo $v2['cat_name'];?></a>
-								<?php endforeach;?>				
+																	<a href="">洗衣机</a>
+																	<a href="">烘干机</a>
+																	<a href="">按摩机</a>
+												
 								</dd>
 							</dl>
-							<?php endforeach;?>
-							
+														<dl >
+								<dt><a href="">厨房电器</a></dt>
+								<dd>
+												
+								</dd>
+							</dl>
+														<dl >
+								<dt><a href="">个护健康</a></dt>
+								<dd>
+												
+								</dd>
+							</dl>
+														<dl >
+								<dt><a href="">五金家电</a></dt>
+								<dd>
+												
+								</dd>
+							</dl>
+														
 				
 						</div>
 					</div>
-				<?php endforeach;?>
-				</div>
+									<div class="cat  ">
+						<h3><a href="">手机、数码、京东通信</a> <b></b></h3>
+						<div class="cat_detail none">
+														<dl class="dl_1st">
+								<dt><a href="">iphone</a></dt>
+								<dd>
+												
+								</dd>
+							</dl>
+														<dl >
+								<dt><a href="">三星手机</a></dt>
+								<dd>
+												
+								</dd>
+							</dl>
+														
+				
+						</div>
+					</div>
+									<div class="cat  ">
+						<h3><a href="">电脑、办公</a> <b></b></h3>
+						<div class="cat_detail none">
+														
+				
+						</div>
+					</div>
+									<div class="cat  ">
+						<h3><a href="">家居、家具、家装、厨具</a> <b></b></h3>
+						<div class="cat_detail none">
+														
+				
+						</div>
+					</div>
+									<div class="cat  ">
+						<h3><a href="">男装、女装、内衣、珠宝</a> <b></b></h3>
+						<div class="cat_detail none">
+														
+				
+						</div>
+					</div>
+									<div class="cat  ">
+						<h3><a href="">个护化妆</a> <b></b></h3>
+						<div class="cat_detail none">
+														
+				
+						</div>
+					</div>
+									<div class="cat  ">
+						<h3><a href="">运动户外</a> <b></b></h3>
+						<div class="cat_detail none">
+														
+				
+						</div>
+					</div>
+									<div class="cat  ">
+						<h3><a href="">汽车、汽车用品</a> <b></b></h3>
+						<div class="cat_detail none">
+														
+				
+						</div>
+					</div>
+									<div class="cat  ">
+						<h3><a href="">母婴、玩具乐器</a> <b></b></h3>
+						<div class="cat_detail none">
+														
+				
+						</div>
+					</div>
+									<div class="cat  ">
+						<h3><a href="">食品、酒类、生鲜、特产</a> <b></b></h3>
+						<div class="cat_detail none">
+														
+				
+						</div>
+					</div>
+									<div class="cat  ">
+						<h3><a href="">营养保健</a> <b></b></h3>
+						<div class="cat_detail none">
+														
+				
+						</div>
+					</div>
+									<div class="cat  ">
+						<h3><a href="">图书、音像、电子书</a> <b></b></h3>
+						<div class="cat_detail none">
+														
+				
+						</div>
+					</div>
+									<div class="cat  ">
+						<h3><a href="">彩票、旅行、充值、票务</a> <b></b></h3>
+						<div class="cat_detail none">
+														
+				
+						</div>
+					</div>
+								</div>
 
 			</div>
 			<!--  商品分类部分 end--> 
@@ -332,64 +443,91 @@
 				<!-- 疯狂抢购 start-->
 				<div class="crazy">
 					<ul>
-					<?php foreach($goods1 as $k => $v):?>
-						<li>
+											<li>
 							<dl>
-								<dt><a href="<?php echo U('goods?id='.$v['id'])?>"><?php showImage($v['mid_logo']);?></a></dt>
-								<dd><a href=""><?php echo $v['goods_name'];?></a></dd>
-								<dd><span>售价：</span><strong> ￥<?php echo $v['promote_price'];?>元</strong></dd>
+								<dt><a href="/shop/index.php/Home/Index/goods/id/5.html"><img   src='http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-18/thumb_2_582eae2df10ca.JPG' /></a></dt>
+								<dd><a href="">iphone8</a></dd>
+								<dd><span>售价：</span><strong> ￥60.00元</strong></dd>
 							</dl>
 						</li>
-					<?php endforeach;?>
-					</ul>	
+											<li>
+							<dl>
+								<dt><a href="/shop/index.php/Home/Index/goods/id/3.html"><img   src='http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-16/thumb_2_582bc6ef54c8b.jpg' /></a></dt>
+								<dd><a href="">小米note</a></dd>
+								<dd><span>售价：</span><strong> ￥80.00元</strong></dd>
+							</dl>
+						</li>
+										</ul>	
 				</div>
 				<!-- 疯狂抢购 end-->
 
 				<!-- 热卖商品 start -->
 				<div class="hot none">
 					<ul>
-					<?php foreach($goods3 as $k => $v):?>
-						<li>
+											<li>
 							<dl>
-								<dt><a href="<?php echo U('goods?id='.$v['id'])?>"><?php showImage($v['mid_logo']);?></a></dt>
-								<dd><a href=""><?php echo $v['goods_name'];?></a></dd>
-								<dd><span>售价：</span><strong> ￥<?php echo $v['shop_price'];?>元</strong></dd>
+								<dt><a href="/shop/index.php/Home/Index/goods/id/2.html"><img   src='http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-16/thumb_2_582bc6907bbe2.jpg' /></a></dt>
+								<dd><a href="">iphone7</a></dd>
+								<dd><span>售价：</span><strong> ￥7800.00元</strong></dd>
 							</dl>
 						</li>
-					<?php endforeach;?>
-					</ul>	
+											<li>
+							<dl>
+								<dt><a href="/shop/index.php/Home/Index/goods/id/6.html"><img   src='http://127.0.0.1/shop/Public/Uploads/' /></a></dt>
+								<dd><a href="">测试测试测试</a></dd>
+								<dd><span>售价：</span><strong> ￥2800.00元</strong></dd>
+							</dl>
+						</li>
+										</ul>	
 				</div>
 				<!-- 热卖商品 end -->
 
 				<!-- 推荐商品 atart -->
 				<div class="recommend none">
 					<ul>
-					<?php foreach($goods4 as $k => $v):?>
-						<li>
+											<li>
 							<dl>
-								<dt><a href="<?php echo U('goods?id='.$v['id'])?>"><?php showImage($v['mid_logo']);?></a></dt>
-								<dd><a href=""><?php echo $v['goods_name'];?></a></dd>
-								<dd><span>售价：</span><strong> ￥<?php echo $v['shop_price'];?>元</strong></dd>
+								<dt><a href="/shop/index.php/Home/Index/goods/id/3.html"><img   src='http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-16/thumb_2_582bc6ef54c8b.jpg' /></a></dt>
+								<dd><a href="">小米note</a></dd>
+								<dd><span>售价：</span><strong> ￥2000.00元</strong></dd>
 							</dl>
 						</li>
-					<?php endforeach;?>
-					</ul>	
+											<li>
+							<dl>
+								<dt><a href="/shop/index.php/Home/Index/goods/id/2.html"><img   src='http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-16/thumb_2_582bc6907bbe2.jpg' /></a></dt>
+								<dd><a href="">iphone7</a></dd>
+								<dd><span>售价：</span><strong> ￥7800.00元</strong></dd>
+							</dl>
+						</li>
+											<li>
+							<dl>
+								<dt><a href="/shop/index.php/Home/Index/goods/id/6.html"><img   src='http://127.0.0.1/shop/Public/Uploads/' /></a></dt>
+								<dd><a href="">测试测试测试</a></dd>
+								<dd><span>售价：</span><strong> ￥2800.00元</strong></dd>
+							</dl>
+						</li>
+										</ul>	
 				</div>
 				<!-- 推荐商品 end -->
 			
 				<!-- 新品上架 start-->
 				<div class="new none">
 						<ul>
-					<?php foreach($goods2 as $k => $v):?>
-						<li>
+											<li>
 							<dl>
-								<dt><a href="<?php echo U('goods?id='.$v['id'])?>"><?php showImage($v['mid_logo']);?></a></dt>
-								<dd><a href=""><?php echo $v['goods_name'];?></a></dd>
-								<dd><span>售价：</span><strong> ￥<?php echo $v['shop_price'];?>元</strong></dd>
+								<dt><a href="/shop/index.php/Home/Index/goods/id/5.html"><img   src='http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-18/thumb_2_582eae2df10ca.JPG' /></a></dt>
+								<dd><a href="">iphone8</a></dd>
+								<dd><span>售价：</span><strong> ￥6000.00元</strong></dd>
 							</dl>
 						</li>
-					<?php endforeach;?>
-					</ul>	
+											<li>
+							<dl>
+								<dt><a href="/shop/index.php/Home/Index/goods/id/2.html"><img   src='http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-16/thumb_2_582bc6907bbe2.jpg' /></a></dt>
+								<dd><a href="">iphone7</a></dd>
+								<dd><span>售价：</span><strong> ￥7800.00元</strong></dd>
+							</dl>
+						</li>
+										</ul>	
 				</div>
 				<!-- 新品上架 end-->
 
@@ -451,20 +589,17 @@
 	<!-- 导购区域 end -->
 	
 	<div style="clear:both;"></div>
-	<?php foreach($floorData as $k =>$v):?>
-	<!--1F 电脑办公 start -->
+		<!--1F 电脑办公 start -->
 	<div class="floor1 floor w1210 bc mt10">
 		<!-- 1F 左侧 start -->
 		<div class="floor_left fl">
 			<!-- 商品分类信息 start-->
 			<div class="cate fl">
-				<h2><?php echo $v['cat_name'];?></h2>
+				<h2>家用电器</h2>
 				<div class="cate_wrap">
 					<ul>
-						<?php foreach($v['subCat'] as $k1 =>$v1):?>
-						<li><a href=""><b>.</b><?php echo $v1['cat_name'];?></a></li>
-						<?php endforeach;?>
-					</ul>
+												<li><a href=""><b>.</b>生活电器</a></li>
+											</ul>
 					<p><a href=""><img src="/shop/Public/Home/images/notebook.jpg" alt="" /></a></p>
 				</div>
 				
@@ -475,27 +610,38 @@
 			<!-- 商品列表信息 start-->
 			<div class="goodslist fl">
 				<h2>
-					<?php foreach($v['recSubCat'] as $k1 =>$v1):?>
-					<span <?php if($k1==0) echo 'class="on"' ;?> ><?php echo $v1['cat_name'];?></span>
-					<?php endforeach;?>
-				</h2>
+										<span class="on" >厨房电器</span>
+										<span  >个护健康</span>
+										<span  >五金家电</span>
+									</h2>
 				<div class="goodslist_wrap">
-				<?php foreach($v['recSubCat'] as $k1 =>$v1):?>
-					<div <?php if($k1>0) echo 'class="none"';?>>
+									<div >
 					<ul>
-						<?php foreach($v1['goods'] as $k2 =>$v2):?>
-							<li>
+													<li>
 								<dl>
-									<dt><a href="<?php echo U('goods?id='.$v2['id']);?>"><?php showImage($v2['mid_logo']);?></a></dt>
-									<dd><a href="<?php echo U('goods?id='.$v2['id']);?>"><?php echo $v2['goods_name'];?></a></dd>
-									<dd><span>售价：</span> <strong>￥<?php echo $v2['shop_price'];?>元</strong></dd>
+									<dt><a href="/shop/index.php/Home/Index/goods/id/6.html"><img   src='http://127.0.0.1/shop/Public/Uploads/' /></a></dt>
+									<dd><a href="/shop/index.php/Home/Index/goods/id/6.html">测试测试测试</a></dd>
+									<dd><span>售价：</span> <strong>￥2800.00元</strong></dd>
 								</dl>
 							</li>
-						<?php endforeach;?>
-					</ul>
+											</ul>
 					</div>
-					<?php endforeach;?>
-					
+										<div class="none">
+					<ul>
+													<li>
+								<dl>
+									<dt><a href="/shop/index.php/Home/Index/goods/id/7.html"><img   src='http://127.0.0.1/shop/Public/Uploads/Goods/2017-01-16/mid_587c753c10163.jpg' /></a></dt>
+									<dd><a href="/shop/index.php/Home/Index/goods/id/7.html">电动牙刷</a></dd>
+									<dd><span>售价：</span> <strong>￥300.00元</strong></dd>
+								</dl>
+							</li>
+											</ul>
+					</div>
+										<div class="none">
+					<ul>
+											</ul>
+					</div>
+										
 
 				</div>
 			</div>
@@ -510,10 +656,9 @@
 				<h2><a href="">更多品牌&nbsp;></a><strong>品牌旗舰店</strong></h2>
 				<div class="sidebar_wrap">
 					<ul>
-					<?php foreach($v['brand'] as $k =>$v):?>
-						<li><a href=""><?php echo showImage($v['logo']);?></a></li>
-					<?php endforeach;?>
-					</ul>
+											<li><a href=""><img   src='http://127.0.0.1/shop/Public/Uploads/Brand/2016-11-16/582bc55e41c16.jpg' /></a></li>
+											<li><a href=""><img   src='http://127.0.0.1/shop/Public/Uploads/Brand/2016-11-16/582bc5a559f11.jpg' /></a></li>
+										</ul>
 				</div>
 			</div>
 			<!-- 品牌旗舰店 end -->
@@ -543,8 +688,89 @@
 
 	</div>
 	<!--1F 电脑办公 start -->
-	<?php endforeach;?>
+		<!--1F 电脑办公 start -->
+	<div class="floor1 floor w1210 bc mt10">
+		<!-- 1F 左侧 start -->
+		<div class="floor_left fl">
+			<!-- 商品分类信息 start-->
+			<div class="cate fl">
+				<h2>手机、数码、京东通信</h2>
+				<div class="cate_wrap">
+					<ul>
+												<li><a href=""><b>.</b>iphone</a></li>
+											</ul>
+					<p><a href=""><img src="/shop/Public/Home/images/notebook.jpg" alt="" /></a></p>
+				</div>
+				
 
+			</div>
+			<!-- 商品分类信息 end-->
+
+			<!-- 商品列表信息 start-->
+			<div class="goodslist fl">
+				<h2>
+										<span class="on" >三星手机</span>
+									</h2>
+				<div class="goodslist_wrap">
+									<div >
+					<ul>
+													<li>
+								<dl>
+									<dt><a href="/shop/index.php/Home/Index/goods/id/1.html"><img   src='http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-16/thumb_2_582bc5d6cb2e6.jpg' /></a></dt>
+									<dd><a href="/shop/index.php/Home/Index/goods/id/1.html">note7</a></dd>
+									<dd><span>售价：</span> <strong>￥6000.00元</strong></dd>
+								</dl>
+							</li>
+											</ul>
+					</div>
+										
+
+				</div>
+			</div>
+			<!-- 商品列表信息 end-->
+		</div>
+		<!-- 1F 左侧 end -->
+		
+		<!-- 右侧 start -->
+		<div class="sidebar fl ml10">
+			<!-- 品牌旗舰店 start -->
+			<div class="brand">
+				<h2><a href="">更多品牌&nbsp;></a><strong>品牌旗舰店</strong></h2>
+				<div class="sidebar_wrap">
+					<ul>
+											<li><a href=""><img   src='http://127.0.0.1/shop/Public/Uploads/Brand/2016-11-16/582bc55e41c16.jpg' /></a></li>
+											<li><a href=""><img   src='http://127.0.0.1/shop/Public/Uploads/Brand/2016-11-16/582bc59c3f340.jpg' /></a></li>
+										</ul>
+				</div>
+			</div>
+			<!-- 品牌旗舰店 end -->
+			
+			<!-- 分类资讯 start -->
+			<div class="info mt10">
+				<h2><strong>分类资讯</strong></h2>
+				<div class="sidebar_wrap">
+					<ul>
+						<li><a href=""><b>.</b>iphone 5s土豪金大量到货</a></li>
+						<li><a href=""><b>.</b>三星note 3低价促销</a></li>
+						<li><a href=""><b>.</b>thinkpad x240即将上市</a></li>
+						<li><a href=""><b>.</b>双十一来临，众商家血拼</a></li>
+					</ul>
+				</div>
+				
+			</div>
+			<!-- 分类资讯 end -->
+			
+			<!-- 广告 start -->
+			<div class="ads mt10">
+				<a href=""><img src="/shop/Public/Home/images/canon.jpg" alt="" /></a>
+			</div>
+			<!-- 广告 end -->
+		</div>
+		<!-- 右侧 end -->
+
+	</div>
+	<!--1F 电脑办公 start -->
+	
 <!-- 引入帮助文件 -->
 	<div style="clear:both;"></div>
 

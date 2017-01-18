@@ -152,4 +152,14 @@ class CategoryModel extends Model
 	}
 	}
 
+
+	public function parentPath($catId){
+		static $ret = array();
+		$info = $this->field('id,cat_name,parent_id')->find($catId);
+		$ret[] = $info;
+		if($info['parent_id']>0)
+			$this->parentPath($info['parent_id']);
+		return $ret;
+	}
+
 }

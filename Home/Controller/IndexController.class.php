@@ -35,6 +35,20 @@ class IndexController extends NavController {
     }
 
     public function goods(){
+
+        $id = I('get.id');
+        $gModel = D('Goods');
+        $info = $gModel->find($id);
+        $catModel = D('Admin/Category');
+        $catPath = $catModel->parentPath($info['cat_id']);
+
+        var_dump($catPath);
+
+        $this->assign(array(
+            'info'=>$info,
+            'catPath'=>$catPath,
+            ));
+
     	$this->assign(array(
     		'_show_nav'=>0,
     		'_page_keywords'=>'商品详情页',

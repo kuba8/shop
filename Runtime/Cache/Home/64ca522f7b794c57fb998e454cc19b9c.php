@@ -312,17 +312,7 @@
 			<!-- 最近浏览 start -->
 			<div class="viewd leftbar mt10">
 				<h2><a href="">清空</a><strong>最近浏览过的商品</strong></h2>
-				<div class="leftbar_wrap">
-					<dl>
-						<dt><a href=""><img src="/shop/Public/Home/images/hpG4.jpg" alt="" /></a></dt>
-						<dd><a href="">惠普G4-1332TX 14英寸笔记...</a></dd>
-					</dl>
-
-					<dl class="last">
-						<dt><a href=""><img src="/shop/Public/Home/images/crazy4.jpg" alt="" /></a></dt>
-						<dd><a href="">直降200元！TCL正1.5匹空调</a></dd>
-					</dl>
-				</div>
+				<div class="leftbar_wrap" id="display_history"></div>
 			</div>
 			<!-- 最近浏览 end -->
 
@@ -339,7 +329,7 @@
 				<div class="preview fl">
 					<div class="midpic">
 						<a href="/shop/Public/Home/images/preview_l1.jpg" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
-							<img src="/shop/Public/Home/images/preview_m1.jpg" alt="" />               <!-- 第一幅图片的中图 -->
+							<?php showImage($info['big_logo']);?>               <!-- 第一幅图片的中图 -->
 						</a>
 					</div>
 	
@@ -803,6 +793,24 @@
 		</div>
 	</div>
 	<!-- 底部导航 end -->
+
+<script >
+<?php $config = C('IMAGE_CONFIG');?>
+var viewPath = '<?php echo $config['viewPath'];?>';
+	$.ajax({
+		type : "GET",
+		url : "<?php echo U('Index/displayHistory?id='.$info['id']);?>",
+		dataType : "json",
+		success : function(data)
+		{
+			var html = "";
+			$(data).each(function(k,v){
+				html += '<dl><dt><a href="<?php echo U('goods','',FALSE);?>/id/'+v.id+'"><img src="'+viewPath+v.mid_logo+'" /></a></dt><dd><a href="<?php echo U('goods','',FALSE);?>/id/'+v.id+'">'+v.goods_name+'</a></dd></dl>'
+			});
+			$("#display_history").html(html);
+		}
+	});
+</script>
 
 	<div style="clear:both;"></div>
 	<!-- 底部版权 start -->

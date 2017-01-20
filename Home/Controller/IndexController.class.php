@@ -2,6 +2,24 @@
 namespace Home\Controller;
 class IndexController extends NavController {
 
+    public function displayHistory()
+    {
+        $id = I('get.id');
+        $data = isset($_COOKIE['display_history']) ? unserialize($_COOKIE['display_history']) : array();
+        array_unshift($data, $id);
+        $data = array_unique($data);
+        if(count($data)>5)
+            $data = array_slice($data, 0,5);
+        setcookie('display_history',serialize($data),time()+30*86400,'/');
+        $goodsModel = D('Goods');
+        $data = implode(',', $data);
+        $gData = $goodsModel->field('id,mid_logo,goods_name')->where(array(
+            'id'=>array('in',$data),
+            'is_on_sale'=>array('eq','是'),
+            ))->order("FIELD(id,$data)")->select();
+        echo json_encode($gData);
+    }
+
     public function index(){
 
         $file = uniqid();

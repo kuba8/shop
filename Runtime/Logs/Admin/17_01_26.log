@@ -1,0 +1,1812 @@
+[ 2017-01-26T09:25:14+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T09:25:17+08:00 ] 127.0.0.1 /shop/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T09:25:17+08:00 ] 127.0.0.1 /shop/index.php/Admin/Login/chkcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-01-26T09:25:27+08:00 ] 127.0.0.1 /shop/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Admin\Model\AdminModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\AdminModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `p39_admin` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: auto D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `p39_admin` WHERE `username` = 'root' LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant user - assumed 'user' D:\phpStudy\WWW\shop\Admin\Model\AdminModel.class.php 第 30 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T09:25:28+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-26T09:25:28+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T09:25:28+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/Images/ecshop_logo.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-26T09:25:28+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `p39_privilege`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-01-26T09:25:28+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T09:25:28+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/Images/menu_arrow.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T09:25:28+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/Images/menu_minus.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T09:25:29+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_goods a LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name FROM p39_goods a LEFT JOIN p39_brand b ON a.brand_id=b.id LEFT JOIN p39_category c ON a.cat_id=c.id LEFT JOIN p39_goods_cat d ON a.id=d.goods_id LEFT JOIN p39_category e ON d.cat_id=e.id  GROUP BY a.id ORDER BY a.id desc LIMIT 0,2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-26T09:25:32+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_level` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_member_level`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_member_price` WHERE `goods_id` = '7'  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `p39_goods_pic` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`mid_pic` FROM `p39_goods_pic` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0060s ]
+SQL: SELECT `cat_id` FROM `p39_goods_cat` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0090s ]
+NOTIC: [8] Use of undefined constant type_id - assumed 'type_id' D:\phpStudy\WWW\shop\Admin\Controller\GoodsController.class.php 第 200 行.
+SQL: SELECT a.id attr_id,a.attr_name,a.attr_type,a.attr_option_values,b.attr_value,b.id FROM p39_attribute a LEFT JOIN p39_goods_attr b ON (a.id=b.attr_id AND b.goods_id=7)  WHERE a.type_id = '1'  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T09:37:43+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_goods a LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name FROM p39_goods a LEFT JOIN p39_brand b ON a.brand_id=b.id LEFT JOIN p39_category c ON a.cat_id=c.id LEFT JOIN p39_goods_cat d ON a.id=d.goods_id LEFT JOIN p39_category e ON d.cat_id=e.id  GROUP BY a.id ORDER BY a.id desc LIMIT 0,2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:03:12+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_brand`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_member_level` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_member_level`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_price` WHERE `goods_id` = '7'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_goods_pic` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`mid_pic` FROM `p39_goods_pic` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0050s ]
+SQL: SELECT `cat_id` FROM `p39_goods_cat` WHERE `goods_id` = '7'  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0080s ]
+NOTIC: [8] Use of undefined constant type_id - assumed 'type_id' D:\phpStudy\WWW\shop\Admin\Controller\GoodsController.class.php 第 200 行.
+SQL: SELECT a.id attr_id,a.attr_name,a.attr_type,a.attr_option_values,b.attr_value,b.id FROM p39_attribute a LEFT JOIN p39_goods_attr b ON (a.id=b.attr_id AND b.goods_id=7)  WHERE a.type_id = '1'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0030s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-01-26T10:03:17+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `p39_goods_attr` [ RunTime:0.0040s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='黑色' WHERE `id` = '9' [ RunTime:0.0040s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='白色' WHERE `id` = '10' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='紫色' WHERE `id` = '11' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='5' WHERE `id` = '12' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='7' WHERE `id` = '13' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='2015-10-10' WHERE `id` = '14' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='安卓' WHERE `id` = '15' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='苹果' WHERE `id` = '16' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0050s ]
+SQL: DELETE FROM `p39_goods_cat` WHERE `goods_id` = 7 [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_goods_cat` (`cat_id`,`goods_id`) VALUES ('19','7') [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0050s ]
+SQL: DELETE FROM `p39_member_price` WHERE `goods_id` = '$id' [ RunTime:0.0000s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('500.00','1','7') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('400.00','2','7') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('300.00','3','7') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('200.00','4','7') [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods` SET `cat_id`='29',`brand_id`='1',`goods_name`='电动牙刷',`market_price`='600.00',`shop_price`='280.00',`is_on_sale`='是',`promote_price`='0.00',`promote_start_date`='0000-00-00 00:00:00',`promote_end_date`='0000-00-00 00:00:00',`is_new`='否',`is_best`='否',`is_hot`='否',`is_floor`='是',`sort_num`='100',`goods_desc`='<p>这个是个香蕉</p><p></p>',`type_id`='1' WHERE `id` = 7 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:03:18+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0060s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_goods a LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name FROM p39_goods a LEFT JOIN p39_brand b ON a.brand_id=b.id LEFT JOIN p39_category c ON a.cat_id=c.id LEFT JOIN p39_goods_cat d ON a.id=d.goods_id LEFT JOIN p39_category e ON d.cat_id=e.id  GROUP BY a.id ORDER BY a.id desc LIMIT 0,2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:03:35+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_level` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_level`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_price` WHERE `goods_id` = '7'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_goods_pic` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`mid_pic` FROM `p39_goods_pic` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0040s ]
+SQL: SELECT `cat_id` FROM `p39_goods_cat` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0050s ]
+NOTIC: [8] Use of undefined constant type_id - assumed 'type_id' D:\phpStudy\WWW\shop\Admin\Controller\GoodsController.class.php 第 200 行.
+SQL: SELECT a.id attr_id,a.attr_name,a.attr_type,a.attr_option_values,b.attr_value,b.id FROM p39_attribute a LEFT JOIN p39_goods_attr b ON (a.id=b.attr_id AND b.goods_id=7)  WHERE a.type_id = '1'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:03:43+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `p39_goods_attr` [ RunTime:0.0050s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='黑色' WHERE `id` = '9' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='白色' WHERE `id` = '10' [ RunTime:0.0040s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='紫色' WHERE `id` = '11' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='5' WHERE `id` = '12' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='7' WHERE `id` = '13' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='2015-10-10' WHERE `id` = '14' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='安卓' WHERE `id` = '15' [ RunTime:0.0040s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='苹果' WHERE `id` = '16' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0040s ]
+SQL: DELETE FROM `p39_goods_cat` WHERE `goods_id` = 7 [ RunTime:0.0030s ]
+SQL: INSERT INTO `p39_goods_cat` (`cat_id`,`goods_id`) VALUES ('19','7') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: DELETE FROM `p39_member_price` WHERE `goods_id` = '$id' [ RunTime:0.0000s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('500.00','1','7') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('400.00','2','7') [ RunTime:0.0050s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('300.00','3','7') [ RunTime:0.0030s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('200.00','4','7') [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods` SET `cat_id`='29',`brand_id`='1',`goods_name`='电动牙刷',`market_price`='600.00',`shop_price`='320.00',`is_on_sale`='是',`promote_price`='0.00',`promote_start_date`='0000-00-00 00:00:00',`promote_end_date`='0000-00-00 00:00:00',`is_new`='否',`is_best`='否',`is_hot`='否',`is_floor`='是',`sort_num`='100',`goods_desc`='<p>这个是个香蕉</p><p></p>',`type_id`='1' WHERE `id` = 7 [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-26T10:03:44+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0060s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_goods a LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name FROM p39_goods a LEFT JOIN p39_brand b ON a.brand_id=b.id LEFT JOIN p39_category c ON a.cat_id=c.id LEFT JOIN p39_goods_cat d ON a.id=d.goods_id LEFT JOIN p39_category e ON d.cat_id=e.id  GROUP BY a.id ORDER BY a.id desc LIMIT 0,2   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:03:53+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_level` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_member_level`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_price` WHERE `goods_id` = '7'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_goods_pic` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`mid_pic` FROM `p39_goods_pic` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0040s ]
+SQL: SELECT `cat_id` FROM `p39_goods_cat` WHERE `goods_id` = '7'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant type_id - assumed 'type_id' D:\phpStudy\WWW\shop\Admin\Controller\GoodsController.class.php 第 200 行.
+SQL: SELECT a.id attr_id,a.attr_name,a.attr_type,a.attr_option_values,b.attr_value,b.id FROM p39_attribute a LEFT JOIN p39_goods_attr b ON (a.id=b.attr_id AND b.goods_id=7)  WHERE a.type_id = '1'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:04:02+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: validate D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `p39_goods_attr` [ RunTime:0.0040s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='黑色' WHERE `id` = '9' [ RunTime:0.0020s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='白色' WHERE `id` = '10' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='紫色' WHERE `id` = '11' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='5' WHERE `id` = '12' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='7' WHERE `id` = '13' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='2015-10-10' WHERE `id` = '14' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='安卓' WHERE `id` = '15' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='苹果' WHERE `id` = '16' [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0040s ]
+SQL: DELETE FROM `p39_goods_cat` WHERE `goods_id` = 7 [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_goods_cat` (`cat_id`,`goods_id`) VALUES ('19','7') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0050s ]
+SQL: DELETE FROM `p39_member_price` WHERE `goods_id` = '$id' [ RunTime:0.0000s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('500.00','1','7') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('400.00','2','7') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('300.00','3','7') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('100.00','4','7') [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods` SET `cat_id`='29',`brand_id`='1',`goods_name`='电动牙刷',`market_price`='600.00',`shop_price`='320.00',`is_on_sale`='是',`promote_price`='0.00',`promote_start_date`='0000-00-00 00:00:00',`promote_end_date`='0000-00-00 00:00:00',`is_new`='否',`is_best`='否',`is_hot`='否',`is_floor`='是',`sort_num`='100',`goods_desc`='<p>这个是个香蕉</p><p></p>',`type_id`='1' WHERE `id` = 7 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-26T10:04:03+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_goods a LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name FROM p39_goods a LEFT JOIN p39_brand b ON a.brand_id=b.id LEFT JOIN p39_category c ON a.cat_id=c.id LEFT JOIN p39_goods_cat d ON a.id=d.goods_id LEFT JOIN p39_category e ON d.cat_id=e.id  GROUP BY a.id ORDER BY a.id desc LIMIT 0,2   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:04:28+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_level` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_level`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:05:23+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `p39_goods` (`cat_id`,`brand_id`,`goods_name`,`market_price`,`shop_price`,`is_on_sale`,`promote_price`,`promote_start_date`,`promote_end_date`,`is_new`,`is_best`,`is_hot`,`is_floor`,`sort_num`,`goods_desc`,`type_id`,`addtime`) VALUES ('1','1','1122','1111','133','是','','','','否','否','否','否','100','','0','2017-01-26 10:05:23') [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `p39_goods_attr` [ RunTime:0.0040s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 249 行.
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0070s ]
+SQL: INSERT INTO `p39_goods_cat` (`cat_id`,`goods_id`) VALUES ('28','8') [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('5555','1','8') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('3333','2','8') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('2222','3','8') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('1111','4','8') [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-26T10:05:24+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_goods a LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name FROM p39_goods a LEFT JOIN p39_brand b ON a.brand_id=b.id LEFT JOIN p39_category c ON a.cat_id=c.id LEFT JOIN p39_goods_cat d ON a.id=d.goods_id LEFT JOIN p39_category e ON d.cat_id=e.id  GROUP BY a.id ORDER BY a.id desc LIMIT 0,2   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:09:36+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_goods` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_member_level` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_level`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_price` WHERE `goods_id` = '8'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_goods_pic` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`mid_pic` FROM `p39_goods_pic` WHERE `goods_id` = '8'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0040s ]
+SQL: SELECT `cat_id` FROM `p39_goods_cat` WHERE `goods_id` = '8'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0040s ]
+SQL: SELECT a.id attr_id,a.attr_name,a.attr_type,a.attr_option_values,b.attr_value,b.id FROM p39_attribute a LEFT JOIN p39_goods_attr b ON (a.id=b.attr_id AND b.goods_id=8)  WHERE a.type_id = '0'  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: brandData D:\phpStudy\WWW\shop\Admin\Controller\GoodsController.class.php 第 219 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:09:39+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `p39_goods_attr` [ RunTime:0.0040s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 59 行.
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0040s ]
+SQL: DELETE FROM `p39_goods_cat` WHERE `goods_id` = 8 [ RunTime:0.0020s ]
+SQL: INSERT INTO `p39_goods_cat` (`cat_id`,`goods_id`) VALUES ('28','8') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: DELETE FROM `p39_member_price` WHERE `goods_id` = '$id' [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('5555.00','1','8') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('3333.00','2','8') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('2222.00','3','8') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('1111.00','4','8') [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods` SET `cat_id`='1',`brand_id`='1',`goods_name`='1122',`market_price`='1131.00',`shop_price`='133.00',`is_on_sale`='是',`promote_price`='0.00',`promote_start_date`='0000-00-00 00:00:00',`promote_end_date`='0000-00-00 00:00:00',`is_new`='否',`is_best`='否',`is_hot`='否',`is_floor`='否',`sort_num`='100',`goods_desc`='',`type_id`='0' WHERE `id` = 8 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:09:40+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_goods a LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name FROM p39_goods a LEFT JOIN p39_brand b ON a.brand_id=b.id LEFT JOIN p39_category c ON a.cat_id=c.id LEFT JOIN p39_goods_cat d ON a.id=d.goods_id LEFT JOIN p39_category e ON d.cat_id=e.id  GROUP BY a.id ORDER BY a.id desc LIMIT 0,2   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:10:30+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/goods_number/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `p39_goods_number` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `p39_goods_attr` [ RunTime:0.0040s ]
+SQL: SELECT a.*,b.attr_name FROM p39_goods_attr a LEFT JOIN p39_attribute b ON a.attr_id=b.id  WHERE a.goods_id = '8' AND b.attr_type = '可选'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `p39_goods_number` WHERE `goods_id` = 8  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:10:47+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_goods` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_level` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_level`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_price` WHERE `goods_id` = '8'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_pic` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`mid_pic` FROM `p39_goods_pic` WHERE `goods_id` = '8'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0040s ]
+SQL: SELECT `cat_id` FROM `p39_goods_cat` WHERE `goods_id` = '8'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant type_id - assumed 'type_id' D:\phpStudy\WWW\shop\Admin\Controller\GoodsController.class.php 第 200 行.
+SQL: SELECT a.id attr_id,a.attr_name,a.attr_type,a.attr_option_values,b.attr_value,b.id FROM p39_attribute a LEFT JOIN p39_goods_attr b ON (a.id=b.attr_id AND b.goods_id=8)  WHERE a.type_id = '0'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:10:48+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `p39_goods_attr` [ RunTime:0.0050s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 59 行.
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0040s ]
+SQL: DELETE FROM `p39_goods_cat` WHERE `goods_id` = 8 [ RunTime:0.0040s ]
+SQL: INSERT INTO `p39_goods_cat` (`cat_id`,`goods_id`) VALUES ('28','8') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0050s ]
+SQL: DELETE FROM `p39_member_price` WHERE `goods_id` = '$id' [ RunTime:0.0000s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('5555.00','1','8') [ RunTime:0.0020s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('3333.00','2','8') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('2222.00','3','8') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('1111.00','4','8') [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods` SET `cat_id`='1',`brand_id`='1',`goods_name`='1122',`market_price`='1131.00',`shop_price`='133.00',`is_on_sale`='是',`promote_price`='0.00',`promote_start_date`='0000-00-00 00:00:00',`promote_end_date`='0000-00-00 00:00:00',`is_new`='否',`is_best`='否',`is_hot`='否',`is_floor`='否',`sort_num`='100',`goods_desc`='',`type_id`='0' WHERE `id` = 8 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:10:49+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_goods a LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name FROM p39_goods a LEFT JOIN p39_brand b ON a.brand_id=b.id LEFT JOIN p39_category c ON a.cat_id=c.id LEFT JOIN p39_goods_cat d ON a.id=d.goods_id LEFT JOIN p39_category e ON d.cat_id=e.id  GROUP BY a.id ORDER BY a.id desc LIMIT 0,2   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-26T10:13:16+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_goods` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_level` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_level`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_price` WHERE `goods_id` = '8'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_pic` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`mid_pic` FROM `p39_goods_pic` WHERE `goods_id` = '8'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0040s ]
+SQL: SELECT `cat_id` FROM `p39_goods_cat` WHERE `goods_id` = '8'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0050s ]
+NOTIC: [8] Use of undefined constant type_id - assumed 'type_id' D:\phpStudy\WWW\shop\Admin\Controller\GoodsController.class.php 第 200 行.
+SQL: SELECT a.id attr_id,a.attr_name,a.attr_type,a.attr_option_values,b.attr_value,b.id FROM p39_attribute a LEFT JOIN p39_goods_attr b ON (a.id=b.attr_id AND b.goods_id=8)  WHERE a.type_id = '0'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:13:25+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `p39_goods_attr` [ RunTime:0.0040s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 59 行.
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0040s ]
+SQL: DELETE FROM `p39_goods_cat` WHERE `goods_id` = 8 [ RunTime:0.0030s ]
+SQL: INSERT INTO `p39_goods_cat` (`cat_id`,`goods_id`) VALUES ('28','8') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0050s ]
+SQL: DELETE FROM `p39_member_price` WHERE `goods_id` = 8 [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('5555.00','1','8') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('3333.00','2','8') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('2222.00','3','8') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('1111.00','4','8') [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods` SET `cat_id`='1',`brand_id`='1',`goods_name`='1122',`market_price`='1131.00',`shop_price`='132.00',`is_on_sale`='是',`promote_price`='0.00',`promote_start_date`='0000-00-00 00:00:00',`promote_end_date`='0000-00-00 00:00:00',`is_new`='否',`is_best`='否',`is_hot`='否',`is_floor`='否',`sort_num`='100',`goods_desc`='',`type_id`='0' WHERE `id` = 8 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-26T10:13:26+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_goods a LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name FROM p39_goods a LEFT JOIN p39_brand b ON a.brand_id=b.id LEFT JOIN p39_category c ON a.cat_id=c.id LEFT JOIN p39_goods_cat d ON a.id=d.goods_id LEFT JOIN p39_category e ON d.cat_id=e.id  GROUP BY a.id ORDER BY a.id desc LIMIT 0,2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:13:36+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_level` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_level`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_price` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_pic` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`mid_pic` FROM `p39_goods_pic` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0050s ]
+SQL: SELECT `cat_id` FROM `p39_goods_cat` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0070s ]
+NOTIC: [8] Use of undefined constant type_id - assumed 'type_id' D:\phpStudy\WWW\shop\Admin\Controller\GoodsController.class.php 第 200 行.
+SQL: SELECT a.id attr_id,a.attr_name,a.attr_type,a.attr_option_values,b.attr_value,b.id FROM p39_attribute a LEFT JOIN p39_goods_attr b ON (a.id=b.attr_id AND b.goods_id=7)  WHERE a.type_id = '1'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:13:44+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `p39_goods_attr` [ RunTime:0.0040s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='黑色' WHERE `id` = '9' [ RunTime:0.0020s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='白色' WHERE `id` = '10' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='紫色' WHERE `id` = '11' [ RunTime:0.0020s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='5' WHERE `id` = '12' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='7' WHERE `id` = '13' [ RunTime:0.0040s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='2015-10-10' WHERE `id` = '14' [ RunTime:0.0020s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='安卓' WHERE `id` = '15' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='苹果' WHERE `id` = '16' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0040s ]
+SQL: DELETE FROM `p39_goods_cat` WHERE `goods_id` = 7 [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_goods_cat` (`cat_id`,`goods_id`) VALUES ('19','7') [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0050s ]
+SQL: DELETE FROM `p39_member_price` WHERE `goods_id` = 7 [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('500.00','1','7') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('400.00','2','7') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('300.00','3','7') [ RunTime:0.0020s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('100.00','4','7') [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods` SET `cat_id`='29',`brand_id`='1',`goods_name`='电动牙刷',`market_price`='600.00',`shop_price`='300.00',`is_on_sale`='是',`promote_price`='0.00',`promote_start_date`='0000-00-00 00:00:00',`promote_end_date`='0000-00-00 00:00:00',`is_new`='否',`is_best`='否',`is_hot`='否',`is_floor`='是',`sort_num`='100',`goods_desc`='<p>这个是个香蕉</p><p></p>',`type_id`='1' WHERE `id` = 7 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:13:45+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0070s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_goods a LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name FROM p39_goods a LEFT JOIN p39_brand b ON a.brand_id=b.id LEFT JOIN p39_category c ON a.cat_id=c.id LEFT JOIN p39_goods_cat d ON a.id=d.goods_id LEFT JOIN p39_category e ON d.cat_id=e.id  GROUP BY a.id ORDER BY a.id desc LIMIT 0,2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:16:41+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_level` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_level`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_price` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_pic` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`mid_pic` FROM `p39_goods_pic` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0040s ]
+SQL: SELECT `cat_id` FROM `p39_goods_cat` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant type_id - assumed 'type_id' D:\phpStudy\WWW\shop\Admin\Controller\GoodsController.class.php 第 200 行.
+SQL: SELECT a.id attr_id,a.attr_name,a.attr_type,a.attr_option_values,b.attr_value,b.id FROM p39_attribute a LEFT JOIN p39_goods_attr b ON (a.id=b.attr_id AND b.goods_id=7)  WHERE a.type_id = '1'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-26T10:17:07+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `p39_goods_attr` [ RunTime:0.0040s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='黑色' WHERE `id` = '9' [ RunTime:0.0020s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='白色' WHERE `id` = '10' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='紫色' WHERE `id` = '11' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='5' WHERE `id` = '12' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='7' WHERE `id` = '13' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='2015-10-10' WHERE `id` = '14' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='安卓' WHERE `id` = '15' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='苹果' WHERE `id` = '16' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0050s ]
+SQL: DELETE FROM `p39_goods_cat` WHERE `goods_id` = 7 [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_goods_cat` (`cat_id`,`goods_id`) VALUES ('19','7') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: DELETE FROM `p39_member_price` WHERE `goods_id` = 7 [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('500.00','1','7') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('400.00','2','7') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('300.00','3','7') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('100.00','4','7') [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods` SET `cat_id`='29',`brand_id`='1',`goods_name`='电动牙刷',`market_price`='600.00',`shop_price`='300.00',`is_on_sale`='是',`promote_price`='0.00',`promote_start_date`='0000-00-00 00:00:00',`promote_end_date`='0000-00-00 00:00:00',`is_new`='否',`is_best`='否',`is_hot`='否',`is_floor`='是',`sort_num`='100',`goods_desc`='<p>这个是个香蕉</p><p><img src=\"http://127.0.0.1/shop/Public/umeditor1_2_2-utf8-php/php/upload/20170126/14853970217356.jpg\" alt=\"14853970217356.jpg\" /></p><p></p>',`type_id`='1' WHERE `id` = 7 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-26T10:17:08+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0060s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_goods a LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name FROM p39_goods a LEFT JOIN p39_brand b ON a.brand_id=b.id LEFT JOIN p39_category c ON a.cat_id=c.id LEFT JOIN p39_goods_cat d ON a.id=d.goods_id LEFT JOIN p39_category e ON d.cat_id=e.id  GROUP BY a.id ORDER BY a.id desc LIMIT 0,2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:17:11+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_level` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_level`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_price` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_pic` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`mid_pic` FROM `p39_goods_pic` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0040s ]
+SQL: SELECT `cat_id` FROM `p39_goods_cat` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant type_id - assumed 'type_id' D:\phpStudy\WWW\shop\Admin\Controller\GoodsController.class.php 第 200 行.
+SQL: SELECT a.id attr_id,a.attr_name,a.attr_type,a.attr_option_values,b.attr_value,b.id FROM p39_attribute a LEFT JOIN p39_goods_attr b ON (a.id=b.attr_id AND b.goods_id=7)  WHERE a.type_id = '1'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:17:40+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `p39_goods_attr` [ RunTime:0.0050s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='黑色' WHERE `id` = '9' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='白色' WHERE `id` = '10' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='紫色' WHERE `id` = '11' [ RunTime:0.0040s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='5' WHERE `id` = '12' [ RunTime:0.0030s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='7' WHERE `id` = '13' [ RunTime:0.0030s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='2015-10-10' WHERE `id` = '14' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='安卓' WHERE `id` = '15' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='苹果' WHERE `id` = '16' [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0040s ]
+SQL: DELETE FROM `p39_goods_cat` WHERE `goods_id` = 7 [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_goods_cat` (`cat_id`,`goods_id`) VALUES ('19','7') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: DELETE FROM `p39_member_price` WHERE `goods_id` = 7 [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('500.00','1','7') [ RunTime:0.0060s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('400.00','2','7') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('300.00','3','7') [ RunTime:0.0000s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('100.00','4','7') [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods` SET `cat_id`='29',`brand_id`='1',`goods_name`='电动牙刷',`market_price`='600.00',`shop_price`='300.00',`is_on_sale`='是',`promote_price`='0.00',`promote_start_date`='0000-00-00 00:00:00',`promote_end_date`='0000-00-00 00:00:00',`is_new`='否',`is_best`='否',`is_hot`='否',`is_floor`='是',`sort_num`='100',`goods_desc`='<p>这个是个<span style=\"font-size:32px;color:#31859b;\">香蕉<img src=\"http://img.baidu.com/hi/jx2/j_0069.gif\" alt=\"j_0069.gif\" /></span></p><p><img src=\"http://127.0.0.1/shop/Public/umeditor1_2_2-utf8-php/php/upload/20170126/14853970217356.jpg\" alt=\"14853970217356.jpg\" /></p><p></p>',`type_id`='1' WHERE `id` = 7 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T10:17:41+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_goods a LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name FROM p39_goods a LEFT JOIN p39_brand b ON a.brand_id=b.id LEFT JOIN p39_category c ON a.cat_id=c.id LEFT JOIN p39_goods_cat d ON a.id=d.goods_id LEFT JOIN p39_category e ON d.cat_id=e.id  GROUP BY a.id ORDER BY a.id desc LIMIT 0,2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-26T14:34:36+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_level` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_level`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_price` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_pic` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`mid_pic` FROM `p39_goods_pic` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0040s ]
+SQL: SELECT `cat_id` FROM `p39_goods_cat` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0040s ]
+NOTIC: [8] Use of undefined constant type_id - assumed 'type_id' D:\phpStudy\WWW\shop\Admin\Controller\GoodsController.class.php 第 200 行.
+SQL: SELECT a.id attr_id,a.attr_name,a.attr_type,a.attr_option_values,b.attr_value,b.id FROM p39_attribute a LEFT JOIN p39_goods_attr b ON (a.id=b.attr_id AND b.goods_id=7)  WHERE a.type_id = '1'  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T14:35:12+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/__GROUP__/Goods/goodsList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:__GROUP__
+
+[ 2017-01-26T14:35:13+08:00 ] 127.0.0.1 /shop/index.php/Admin/Index/__GROUP__/Index/main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:__GROUP__
+
+[ 2017-01-26T14:35:14+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_goods a LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name FROM p39_goods a LEFT JOIN p39_brand b ON a.brand_id=b.id LEFT JOIN p39_category c ON a.cat_id=c.id LEFT JOIN p39_goods_cat d ON a.id=d.goods_id LEFT JOIN p39_category e ON d.cat_id=e.id  GROUP BY a.id ORDER BY a.id desc LIMIT 0,2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-26T14:50:30+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_level` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_member_level`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_price` WHERE `goods_id` = '7'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_goods_pic` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`mid_pic` FROM `p39_goods_pic` WHERE `goods_id` = '7'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0060s ]
+SQL: SELECT `cat_id` FROM `p39_goods_cat` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0050s ]
+NOTIC: [8] Use of undefined constant type_id - assumed 'type_id' D:\phpStudy\WWW\shop\Admin\Controller\GoodsController.class.php 第 200 行.
+SQL: SELECT a.id attr_id,a.attr_name,a.attr_type,a.attr_option_values,b.attr_value,b.id FROM p39_attribute a LEFT JOIN p39_goods_attr b ON (a.id=b.attr_id AND b.goods_id=7)  WHERE a.type_id = '1'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T14:50:40+08:00 ] 127.0.0.1 /shop/index.php/Admin/Category/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T14:50:46+08:00 ] 127.0.0.1 /shop/index.php/Admin/Brand/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_brand a LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM p39_brand a GROUP BY a.id LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-26T14:50:46+08:00 ] 127.0.0.1 /shop/index.php/Admin/Type/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_type a LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM p39_type a GROUP BY a.id LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-26T14:50:49+08:00 ] 127.0.0.1 /shop/index.php/Admin/Attribute/lst/type_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_attribute a WHERE `type_id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM p39_attribute a WHERE `type_id` = '1' GROUP BY a.id LIMIT 0,20   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T14:50:54+08:00 ] 127.0.0.1 /shop/index.php/Admin/Attribute/add/type_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-01-26T14:51:34+08:00 ] 127.0.0.1 /shop/index.php/Admin/Attribute/add/type_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `p39_attribute` (`attr_name`,`attr_type`,`attr_option_values`,`type_id`) VALUES ('防水性','唯一','','1') [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T14:51:35+08:00 ] 127.0.0.1 /shop/index.php/Admin/Attribute/lst/type_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_attribute a WHERE `type_id` = '1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM p39_attribute a WHERE `type_id` = '1' GROUP BY a.id LIMIT 0,20   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T14:51:39+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_goods a LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name FROM p39_goods a LEFT JOIN p39_brand b ON a.brand_id=b.id LEFT JOIN p39_category c ON a.cat_id=c.id LEFT JOIN p39_goods_cat d ON a.id=d.goods_id LEFT JOIN p39_category e ON d.cat_id=e.id  GROUP BY a.id ORDER BY a.id desc LIMIT 0,2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T14:51:42+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_level` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_level`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_member_price` WHERE `goods_id` = '7'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_goods_pic` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`mid_pic` FROM `p39_goods_pic` WHERE `goods_id` = '7'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0090s ]
+SQL: SELECT `cat_id` FROM `p39_goods_cat` WHERE `goods_id` = '7'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_attribute` [ RunTime:0.0060s ]
+NOTIC: [8] Use of undefined constant type_id - assumed 'type_id' D:\phpStudy\WWW\shop\Admin\Controller\GoodsController.class.php 第 200 行.
+SQL: SELECT a.id attr_id,a.attr_name,a.attr_type,a.attr_option_values,b.attr_value,b.id FROM p39_attribute a LEFT JOIN p39_goods_attr b ON (a.id=b.attr_id AND b.goods_id=7)  WHERE a.type_id = '1'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `p39_type` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`type_name` FROM `p39_type`  [ RunTime:0.0010s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-26T14:51:50+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/edit/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\phpStudy\WWW\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `p39_goods_attr` [ RunTime:0.0040s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='黑色' WHERE `id` = '9' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='白色' WHERE `id` = '10' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='紫色' WHERE `id` = '11' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='5' WHERE `id` = '12' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='7' WHERE `id` = '13' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='2015-10-10' WHERE `id` = '14' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='安卓' WHERE `id` = '15' [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods_attr` SET `attr_value`='苹果' WHERE `id` = '16' [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_goods_attr` (`goods_id`,`attr_id`,`attr_value`) VALUES ('7','7','优秀') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_goods_cat` [ RunTime:0.0050s ]
+SQL: DELETE FROM `p39_goods_cat` WHERE `goods_id` = 7 [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_goods_cat` (`cat_id`,`goods_id`) VALUES ('19','7') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_member_price` [ RunTime:0.0050s ]
+SQL: DELETE FROM `p39_member_price` WHERE `goods_id` = 7 [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('500.00','1','7') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('400.00','2','7') [ RunTime:0.0010s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('300.00','3','7') [ RunTime:0.0020s ]
+SQL: INSERT INTO `p39_member_price` (`price`,`level_id`,`goods_id`) VALUES ('100.00','4','7') [ RunTime:0.0010s ]
+SQL: UPDATE `p39_goods` SET `cat_id`='29',`brand_id`='1',`goods_name`='电动牙刷',`market_price`='600.00',`shop_price`='300.00',`is_on_sale`='是',`promote_price`='0.00',`promote_start_date`='0000-00-00 00:00:00',`promote_end_date`='0000-00-00 00:00:00',`is_new`='否',`is_best`='否',`is_hot`='否',`is_floor`='是',`sort_num`='100',`goods_desc`='<p>这个是个<span style=\"font-size:32px;color:#31859b;\">香蕉<img src=\"http://img.baidu.com/hi/jx2/j_0069.gif\" alt=\"j_0069.gif\" /></span></p><p><img src=\"http://127.0.0.1/shop/Public/umeditor1_2_2-utf8-php/php/upload/20170126/14853970217356.jpg\" alt=\"14853970217356.jpg\" /></p><p></p>',`type_id`='1' WHERE `id` = 7 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-01-26T14:51:51+08:00 ] 127.0.0.1 /shop/index.php/Admin/Goods/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_privilege` [ RunTime:0.0040s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 475 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM p39_goods a LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT a.*,b.brand_name,c.cat_name,GROUP_CONCAT(e.cat_name SEPARATOR "<br />") ext_cat_name FROM p39_goods a LEFT JOIN p39_brand b ON a.brand_id=b.id LEFT JOIN p39_category c ON a.cat_id=c.id LEFT JOIN p39_goods_cat d ON a.id=d.goods_id LEFT JOIN p39_category e ON d.cat_id=e.id  GROUP BY a.id ORDER BY a.id desc LIMIT 0,2   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_brand` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`brand_name` FROM `p39_brand`  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

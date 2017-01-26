@@ -59,11 +59,50 @@ class IndexController extends NavController {
         $info = $gModel->find($id);
         $catModel = D('Admin/Category');
         $catPath = $catModel->parentPath($info['cat_id']);
+        //var_dump($catPath);
+        //取出商品相册
+        $gpModel = D('goods_pic');
+        $gpData = $gpModel->where(array(
+            'goods_id'=>array('eq',$id),
+            ))->select();
+        //取出这件商品所有属性
+        $gaModel = D('goods_attr');
+        $gaData = $gaModel->alias('a')
+        ->field('a.*,b.attr_name,b.attr_type')
+        ->join('LEFT JOIN __ATTRIBUTE__ b ON a.attr_id=b.id')
+        ->where(array(
+            'a.goods_id'=>array('eq',$id), 
+            ))->select();
+        //var_dump($gaData);
+        //整理所有的商品，把唯一的和可选的属性分开存放
+        $uniArr = array(); //唯一属性
+        $mulArr = array(); //可选属性
+        foreach ($gaData as $k => $v) {
+            if($v['attr_type']=='唯一')
+                $uniArr[] = $v;
+            else
+                $mulArr[$v['attr_name']][] = $v;
+        }
+       
+        //取出这件商品的所有会员价格
+        $mpModel = D('member_price');
+        $mpData = $mpModel->alias('a')
+        ->field('a.price,b.level_name')
+        ->join('LEFT JOIN __MEMBER_LEVEL__ b ON a.level_id=b.id')
+        ->where(array(
+            'a.goods_id'=>array('eq',$id), 
+            ))->select();
+        $viewPath = C('IMAGE_CONFIG');
 
-        var_dump($catPath);
-
+ var_dump($mpData);
         $this->assign(array(
+            'gpData'=>$gpData,
+            'gaData'=>$gaData,
+            'mpData'=>$mpData,
             'info'=>$info,
+            'viewPath'=>$viewPath['viewPath'],
+            'uniArr'=>$uniArr,
+            'mulArr'=>$mulArr,
             'catPath'=>$catPath,
             ));
 

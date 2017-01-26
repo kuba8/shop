@@ -134,7 +134,7 @@ class GoodsModel extends Model
     $mp=I('post.member_price');
     $mpModel=D('member_price');
     $mpModel->where(array(
-      'goods_id'=>array('eq','$id'),
+      'goods_id'=>array('eq',$id),
       ))->delete();
     foreach ($mp as $k => $v) {
 

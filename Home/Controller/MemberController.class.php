@@ -65,7 +65,20 @@ class MemberController extends Controller {
     {
         $model = D('Admin/Member');
         $model->logout();
-        redirect('/');
+        redirect(U('/'));
+    }
+
+    public function ajaxChkLogin()
+    {
+        if(session('m_id'))
+            echo json_encode(array(
+                'login'=>1,
+                'username'=>session('m_username'),
+                ));
+        else
+            echo json_encode(array(
+                'login'=>0,
+                ));
     }
 
    

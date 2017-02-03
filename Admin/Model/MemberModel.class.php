@@ -10,7 +10,7 @@ class MemberModel extends Model
 		array('username', 'require', '用户名不能为空！', 1, 'regex', 3),
 		array('username', '1,30', '用户名的值最长不能超过 30 个字符！', 1, 'length', 3),
 		array('password', 'require', '密码不能为空！', 1, 'regex', 1),
-		array('password', '6,20', '密码的值最长不能超过 6-20 个字符！', 1, 'regex', 1),
+		array('password', '6,20', '密码的值最长不能超过 6-20 个字符！', 1, 'length', 3),
 		array('password', 'cpassword', '两次密码输入不一致！', 1, 'confirm', 3),
 		array('username', '', '用户名已存在！', 1, 'unique', 3),
 		array('chkcode', 'require', '验证码不能为空！', 1, 'regex', 1),
@@ -36,8 +36,16 @@ class MemberModel extends Model
 		{
 			if($user['password']==md5($password))
 			{
+				//登录成功存session
 				session('m_id',$user['id']);
 				session('m_username',$user['username']);
+				//计算当前会员级别ID并存session
+				$mlModel = D('member_level');
+				$levelId = $mlModel->field('id')->where(array(
+						'jifen_bottom'=>array('elt',$user['jifen']),
+						'jifen_top'=>array('egt',$user['jifen']),
+					))->find();
+				session('level_id',$levelId['id']);
 				return TRUE;
 			}
 			else

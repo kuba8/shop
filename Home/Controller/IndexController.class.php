@@ -2,6 +2,13 @@
 namespace Home\Controller;
 class IndexController extends NavController {
 
+    public function ajaxGetMemberPrice()
+    {
+        $goodsId = I('get.goods_id');
+        $gModel = D('Admin/Goods');
+        echo $gModel->getMemberPrice($goodsId);
+    }
+
     public function displayHistory()
     {
         $id = I('get.id');

@@ -24,7 +24,13 @@
 			</div>
 			<div class="topnav_right fr">
 				<ul>
-					<li>您好，欢迎来到京西！[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </li>
+					<li>
+					<?php if(session('m_id')):?>
+					您好，<?php echo session('m_username');?>[<a href="<?php echo U('Member/logout');?>">退出</a>]
+					<?php else:?>
+					您好，欢迎来到京西！[<a href="<?php echo U('Member/login');?>">登录</a>] [<a href="<?php echo U('Member/regist');?>">免费注册</a>] 
+					<?php endif;?>
+					</li>
 					<li class="line">|</li>
 					<li>我的订单</li>
 					<li class="line">|</li>
@@ -57,7 +63,7 @@
 		</div>
 		<div class="login_bd">
 			<div class="login_form fl">
-				<form action="/shop/index.php/Home/Member/regist" method="post">
+				<form action="/shop/index.php/Home/Member/regist.html" method="post">
 					<ul>
 						<li>
 							<label for="">用户名：</label>
@@ -82,7 +88,7 @@
 						</li>
 						<li>
 							<label for="">&nbsp;</label>
-							<input type="checkbox" class="chb" checked="checked" /> 我已阅读并同意《用户注册协议》
+							<input type="checkbox" name="must_click" value="1" class="chb" checked="checked" /> 我已阅读并同意《用户注册协议》
 						</li>
 						<li>
 							<label for="">&nbsp;</label>

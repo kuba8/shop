@@ -24,7 +24,7 @@
 			</div>
 			<div class="topnav_right fr">
 				<ul>
-					<li>您好，欢迎来到京西！[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </li>
+					<li id="logInfo"></li>
 					<li class="line">|</li>
 					<li>我的订单</li>
 					<li class="line">|</li>
@@ -443,20 +443,6 @@
 				<!-- 疯狂抢购 start-->
 				<div class="crazy">
 					<ul>
-											<li>
-							<dl>
-								<dt><a href="/shop/index.php/Home/Index/goods/id/5.html"><img   src='http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-18/thumb_2_582eae2df10ca.JPG' /></a></dt>
-								<dd><a href="">iphone8</a></dd>
-								<dd><span>售价：</span><strong> ￥60.00元</strong></dd>
-							</dl>
-						</li>
-											<li>
-							<dl>
-								<dt><a href="/shop/index.php/Home/Index/goods/id/3.html"><img   src='http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-16/thumb_2_582bc6ef54c8b.jpg' /></a></dt>
-								<dd><a href="">小米note</a></dd>
-								<dd><span>售价：</span><strong> ￥80.00元</strong></dd>
-							</dl>
-						</li>
 										</ul>	
 				</div>
 				<!-- 疯狂抢购 end-->
@@ -867,3 +853,20 @@
 
 </body>
 </html>
+<script>
+	$.ajax({
+		type:"GET",
+		url:"/shop/index.php/Home/Member/ajaxChkLogin.html",
+		dataType:"json",
+		success:function(data)
+		{
+			if(data.login == 1)
+			var li = '您好，'+data.username+'[<a href="/shop/index.php/Home/Member/logout.html">退出</a>]'
+		
+			else
+			var li = '您好，欢迎来到京西！[<a href="/shop/index.php/Home/Member/login.html">登录</a>] [<a href="/shop/index.php/Home/Member/regist.html">免费注册</a>]'
+			$("#logInfo").html(li);
+		}
+	});
+
+</script>

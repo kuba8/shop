@@ -478,6 +478,7 @@ protected function _after_insert(&$data,$option){
     $levelId = session('level_id');
     //取出商品的促销价格
     $promotePrice = $this->field('promote_price')->where(array(
+          'id' => array('eq', $goodsId),
           'promote_price'=>array('gt',0),
           'promote_start_date'=>array('elt',$today),
           'promote_end_date'=>array('egt',$today),

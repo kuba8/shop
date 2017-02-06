@@ -18,7 +18,7 @@
 
 <!-- 列表 -->
 <div class="list-div" id="listDiv">
-<form method="POST" action="/shop/index.php/Admin/Goods/goods_number/id/8.html">
+<form method="POST" action="/shop/index.php/Admin/Goods/goods_number/id/7.html">
 	<table cellpadding="3" cellspacing="1">
 		<tr>
 			<?php foreach ($gaData as $k =>$v):?>

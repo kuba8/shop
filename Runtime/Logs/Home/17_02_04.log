@@ -1,0 +1,300 @@
+[ 2017-02-04T16:43:06+08:00 ] 127.0.0.1 /shop/index.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+
+[ 2017-02-04T16:43:06+08:00 ] 127.0.0.1 /shop/index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-04T16:43:08+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/goods/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+
+[ 2017-02-04T16:43:09+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/displayHistory/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `p39_category`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`mid_logo`,`goods_name` FROM `p39_goods` WHERE `id` IN ('7','5','6','2','3') AND `is_on_sale` = '是' ORDER BY FIELD(id,7,5,6,2,3)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2017-02-04T16:43:09+08:00 ] 127.0.0.1 /shop/index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.079005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.079005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-04T16:43:09+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/ajaxGetMemberPrice/goods_id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.064004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.064004s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0070s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 521 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0080s ]
+SQL: SELECT `promote_price` FROM `p39_goods` WHERE `id` = '7' AND `promote_price` > 0 AND `promote_start_date` <= '2017-02-04 16:43' AND `promote_end_date` >= '2017-02-04 16:43' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `shop_price` FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-04T16:45:04+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/goods/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+
+[ 2017-02-04T16:45:04+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/displayHistory/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`mid_logo`,`goods_name` FROM `p39_goods` WHERE `id` IN ('7','5','6','2','3') AND `is_on_sale` = '是' ORDER BY FIELD(id,7,5,6,2,3)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-04T16:45:04+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/ajaxGetMemberPrice/goods_id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.060003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.060003s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0070s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 521 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT `promote_price` FROM `p39_goods` WHERE `id` = '7' AND `promote_price` > 0 AND `promote_start_date` <= '2017-02-04 16:45' AND `promote_end_date` >= '2017-02-04 16:45' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `shop_price` FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-02-04T16:45:04+08:00 ] 127.0.0.1 /shop/index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.086005s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.086005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-04T16:45:05+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/goods/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+
+[ 2017-02-04T16:45:05+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/displayHistory/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`mid_logo`,`goods_name` FROM `p39_goods` WHERE `id` IN ('7','5','6','2','3') AND `is_on_sale` = '是' ORDER BY FIELD(id,7,5,6,2,3)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-04T16:45:05+08:00 ] 127.0.0.1 /shop/index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.031002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-04T16:45:05+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/ajaxGetMemberPrice/goods_id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.026002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026002s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 521 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0080s ]
+SQL: SELECT `promote_price` FROM `p39_goods` WHERE `id` = '7' AND `promote_price` > 0 AND `promote_start_date` <= '2017-02-04 16:45' AND `promote_end_date` >= '2017-02-04 16:45' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `shop_price` FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-04T16:45:06+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/goods/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+
+[ 2017-02-04T16:45:06+08:00 ] 127.0.0.1 /shop/index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-04T16:45:06+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/ajaxGetMemberPrice/goods_id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0060s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 521 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0070s ]
+SQL: SELECT `promote_price` FROM `p39_goods` WHERE `id` = '7' AND `promote_price` > 0 AND `promote_start_date` <= '2017-02-04 16:45' AND `promote_end_date` >= '2017-02-04 16:45' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `shop_price` FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-02-04T16:45:06+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/displayHistory/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.037002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037002s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`mid_logo`,`goods_name` FROM `p39_goods` WHERE `id` IN ('7','5','6','2','3') AND `is_on_sale` = '是' ORDER BY FIELD(id,7,5,6,2,3)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-04T16:45:06+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/goods/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+
+[ 2017-02-04T16:45:06+08:00 ] 127.0.0.1 /shop/index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-04T16:45:06+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/ajaxGetMemberPrice/goods_id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 521 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0070s ]
+SQL: SELECT `promote_price` FROM `p39_goods` WHERE `id` = '7' AND `promote_price` > 0 AND `promote_start_date` <= '2017-02-04 16:45' AND `promote_end_date` >= '2017-02-04 16:45' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `shop_price` FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-04T16:45:06+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/displayHistory/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.034002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.034002s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0050s ]
+SQL: SELECT `id`,`mid_logo`,`goods_name` FROM `p39_goods` WHERE `id` IN ('7','5','6','2','3') AND `is_on_sale` = '是' ORDER BY FIELD(id,7,5,6,2,3)  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-04T16:45:07+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/goods/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+
+[ 2017-02-04T16:45:07+08:00 ] 127.0.0.1 /shop/index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-04T16:45:07+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/displayHistory/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`mid_logo`,`goods_name` FROM `p39_goods` WHERE `id` IN ('7','5','6','2','3') AND `is_on_sale` = '是' ORDER BY FIELD(id,7,5,6,2,3)  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-04T16:45:07+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/ajaxGetMemberPrice/goods_id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.029002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029002s ]
+SQL: SHOW COLUMNS FROM `p39_category` [ RunTime:0.0080s ]
+NOTIC: [2048] Declaration of Admin\Model\GoodsModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\phpStudy\WWW\shop\Admin\Model\GoodsModel.class.php 第 521 行.
+SQL: SHOW COLUMNS FROM `p39_goods` [ RunTime:0.0070s ]
+SQL: SELECT `promote_price` FROM `p39_goods` WHERE `id` = '7' AND `promote_price` > 0 AND `promote_start_date` <= '2017-02-04 16:45' AND `promote_end_date` >= '2017-02-04 16:45' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `shop_price` FROM `p39_goods` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

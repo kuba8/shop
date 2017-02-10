@@ -22,7 +22,14 @@ class MemberController extends Controller {
             {
                 if($model->login())
                 {
-                    $this->success('登陆成功',U('/'));
+                    $returnUrl = U('/');
+                    $ru = session('returnUrl');
+                    if($ru)
+                    {
+                        session('returnUrl',null);
+                        $returnUrl = $ru;
+                    }
+                    $this->success('登陆成功',$returnUrl);
                     exit;
                 }
             }

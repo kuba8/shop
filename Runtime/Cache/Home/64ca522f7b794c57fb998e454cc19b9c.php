@@ -133,12 +133,12 @@
 			<div class="cart fl">
 				<dl>
 					<dt>
-						<a href="">去购物车结算</a>
+						<a id="cart_list" href="<?php echo U('Cart/lst');?>">去购物车结算</a>
 						<b></b>
 					</dt>
 					<dd>
-						<div class="prompt">
-							购物车中还没有商品，赶紧选购吧！
+						<div class="prompt" id="cart_div_list">
+							<img src="/shop/Public/Home/images/loading.gif" />
 						</div>
 					</dd>
 				</dl>
@@ -202,6 +202,30 @@
 	<!-- 头部 end-->
 
 	<div style="clear:both;"></div>
+	<script >
+	<?php $ic = C('IMAGE_CONFIG');?>
+	var picView = "<?php echo $ic['viewPath'];?>";
+	$("#cart_list").mouseover(function(){
+		$.ajax({
+			type:"GET",
+			url:"<?php echo U('Cart/ajaxCartList');?>",
+			dataType:"json",
+			success:function(data)
+			{
+				var html = "<table>";
+				$(data).each(function(k,v){
+					html += "<tr>";
+					html += '<td><img width="50" src="'+picView+v.mid_logo+'"></td>';
+					html += '<td>'+v.goods_name+'</td>';		
+					html += '</tr>';
+				});
+				   html += "</table>";
+				$("#cart_div_list").html(html);
+			}
+		});
+
+	})
+	</script>
 
 	<!-- 商品页面主体 start -->
 	<div class="main w1210 mt10 bc">

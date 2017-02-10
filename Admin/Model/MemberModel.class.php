@@ -46,6 +46,8 @@ class MemberModel extends Model
 						'jifen_top'=>array('egt',$user['jifen']),
 					))->find();
 				session('level_id',$levelId['id']);
+				$cartModel = D('Home/Cart');
+				$cartModel->moveDataToDb();
 				return TRUE;
 			}
 			else

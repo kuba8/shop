@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2017 年 02 月 06 日 17:29
+-- 生成日期: 2017 年 02 月 10 日 16:52
 -- 服务器版本: 5.5.40
 -- PHP 版本: 5.3.29
 
@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `p39_cart` (
   `member_id` mediumint(8) unsigned NOT NULL COMMENT '会员Id',
   PRIMARY KEY (`id`),
   KEY `member_id` (`member_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='购物车' AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='购物车' AUTO_INCREMENT=18 ;
 
 --
 -- 转存表中的数据 `p39_cart`
@@ -137,7 +137,11 @@ CREATE TABLE IF NOT EXISTS `p39_cart` (
 
 INSERT INTO `p39_cart` (`id`, `goods_id`, `goods_attr_id`, `goods_number`, `member_id`) VALUES
 (2, 7, '9,12,15', 6, 1),
-(3, 7, '9,13,15', 2, 1);
+(3, 7, '9,13,15', 2, 1),
+(4, 7, '10,12,15', 5, 1),
+(5, 7, '9,12,16', 3, 1),
+(6, 7, '11,13,15', 6, 1),
+(12, 7, '10,13,16', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -322,18 +326,20 @@ INSERT INTO `p39_goods_number` (`goods_id`, `goods_number`, `goods_attr_id`) VAL
 (6, 222, '2,5,7'),
 (6, 666, '1,5,8'),
 (6, 555, '3,4,8'),
-(7, 22, '9,12,15'),
-(7, 11, '9,12,16'),
-(7, 22, '9,13,15'),
-(7, 22, '9,13,16'),
-(7, 12, '10,12,15'),
-(7, 12, '10,12,16'),
-(7, 12, '10,13,15'),
-(7, 15, '10,13,16'),
-(7, 15, '11,12,15'),
-(7, 16, '11,12,16'),
-(7, 16, '11,13,15'),
-(7, 16, '11,13,16');
+(5, 84, ''),
+(3, 96, ''),
+(7, 31, '9,12,15'),
+(7, 66, '9,12,16'),
+(7, 64, '9,13,15'),
+(7, 66, '9,13,16'),
+(7, 66, '10,12,15'),
+(7, 66, '10,12,16'),
+(7, 44, '10,13,15'),
+(7, 62, '10,13,16'),
+(7, 66, '11,12,15'),
+(7, 66, '11,12,16'),
+(7, 66, '11,13,15'),
+(7, 66, '11,13,16');
 
 -- --------------------------------------------------------
 
@@ -457,6 +463,93 @@ INSERT INTO `p39_member_price` (`price`, `level_id`, `goods_id`) VALUES
 ('1800.00', 2, 3),
 ('1700.00', 3, 3),
 ('1500.00', 4, 3);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `p39_order`
+--
+
+CREATE TABLE IF NOT EXISTS `p39_order` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `member_id` mediumint(8) unsigned NOT NULL COMMENT '会员Id',
+  `addtime` int(10) unsigned NOT NULL COMMENT '下单时间',
+  `pay_status` enum('是','否') NOT NULL DEFAULT '否' COMMENT '支付状态',
+  `pay_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '支付时间',
+  `total_price` decimal(10,2) NOT NULL COMMENT '定单总价',
+  `shr_name` varchar(30) NOT NULL COMMENT '收货人姓名',
+  `shr_tel` varchar(30) NOT NULL COMMENT '收货人电话',
+  `shr_province` varchar(30) NOT NULL COMMENT '收货人省',
+  `shr_city` varchar(30) NOT NULL COMMENT '收货人城市',
+  `shr_area` varchar(30) NOT NULL COMMENT '收货人地区',
+  `shr_address` varchar(30) NOT NULL COMMENT '收货人详细地址',
+  `post_status` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '发货状态,0:未发货,1:已发货2:已收到货',
+  `post_number` varchar(30) NOT NULL DEFAULT '' COMMENT '快递号',
+  PRIMARY KEY (`id`),
+  KEY `member_id` (`member_id`),
+  KEY `addtime` (`addtime`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='定单基本信息' AUTO_INCREMENT=9 ;
+
+--
+-- 转存表中的数据 `p39_order`
+--
+
+INSERT INTO `p39_order` (`id`, `member_id`, `addtime`, `pay_status`, `pay_time`, `total_price`, `shr_name`, `shr_tel`, `shr_province`, `shr_city`, `shr_area`, `shr_address`, `post_status`, `post_number`) VALUES
+(1, 2, 1486602139, '否', 0, '42600.00', '酷丫丫', '13333333333', '北京', '朝阳区', '西二旗', '关山光谷软件园', 0, ''),
+(2, 2, 1486602645, '否', 0, '43000.00', '酷丫丫', '13333333333', '北京', '朝阳区', '西二旗', '关山光谷软件园', 0, ''),
+(3, 2, 1486602740, '否', 0, '43000.00', '酷丫丫', '13333333333', '北京', '朝阳区', '西二旗', '关山光谷软件园', 0, ''),
+(4, 2, 1486602859, '否', 0, '400.00', '酷丫丫', '13333333333', '北京', '朝阳区', '西二旗', '关山光谷软件园', 0, ''),
+(5, 2, 1486604529, '否', 0, '400.00', '酷丫丫', '13333333333', '北京', '朝阳区', '西二旗', '关山光谷软件园', 0, ''),
+(6, 2, 1486609498, '否', 0, '1200.00', '酷丫丫', '13333333333', '北京', '朝阳区', '西二旗', '关山光谷软件园', 0, ''),
+(7, 2, 1486610057, '否', 0, '400.00', '酷丫丫', '13333333333', '北京', '朝阳区', '西二旗', '关山光谷软件园', 0, ''),
+(8, 2, 1486713384, '否', 0, '400.00', '酷丫丫', '13333333333', '北京', '东城区', '西二旗', '关山光谷软件园', 0, '');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `p39_order_goods`
+--
+
+CREATE TABLE IF NOT EXISTS `p39_order_goods` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `order_id` mediumint(8) unsigned NOT NULL COMMENT '定单Id',
+  `goods_id` mediumint(8) unsigned NOT NULL COMMENT '商品Id',
+  `goods_attr_id` varchar(150) NOT NULL DEFAULT '' COMMENT '商品属性id',
+  `goods_number` mediumint(8) unsigned NOT NULL COMMENT '购买的数量',
+  `price` decimal(10,2) NOT NULL COMMENT '购买的价格',
+  PRIMARY KEY (`id`),
+  KEY `order_id` (`order_id`),
+  KEY `goods_id` (`goods_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='定单商品表' AUTO_INCREMENT=24 ;
+
+--
+-- 转存表中的数据 `p39_order_goods`
+--
+
+INSERT INTO `p39_order_goods` (`id`, `order_id`, `goods_id`, `goods_attr_id`, `goods_number`, `price`) VALUES
+(1, 1, 7, '9,12,15', 13, '0.00'),
+(2, 1, 7, '10,13,15', 11, '0.00'),
+(3, 1, 5, '', 5, '0.00'),
+(4, 1, 3, '', 1, '0.00'),
+(5, 1, 7, '10,13,16', 2, '0.00'),
+(6, 1, 7, '9,13,15', 1, '0.00'),
+(7, 2, 7, '9,12,15', 14, '0.00'),
+(8, 2, 7, '10,13,15', 11, '0.00'),
+(9, 2, 5, '', 5, '0.00'),
+(10, 2, 3, '', 1, '0.00'),
+(11, 2, 7, '10,13,16', 2, '0.00'),
+(12, 2, 7, '9,13,15', 1, '0.00'),
+(13, 3, 7, '9,12,15', 14, '0.00'),
+(14, 3, 7, '10,13,15', 11, '0.00'),
+(15, 3, 5, '', 5, '0.00'),
+(16, 3, 3, '', 1, '0.00'),
+(17, 3, 7, '10,13,16', 2, '0.00'),
+(18, 3, 7, '9,13,15', 1, '0.00'),
+(19, 4, 7, '9,12,15', 1, '0.00'),
+(20, 5, 7, '9,12,15', 1, '0.00'),
+(21, 6, 7, '9,12,15', 3, '0.00'),
+(22, 7, 7, '9,12,15', 1, '0.00'),
+(23, 8, 7, '9,12,15', 1, '0.00');
 
 -- --------------------------------------------------------
 

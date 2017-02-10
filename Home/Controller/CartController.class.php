@@ -23,7 +23,23 @@ class CartController extends Controller {
 
     public function lst()
     {
-        var_dump($_COOKIE);
+        header('Content-Type:text/html;charset=utf-8');
+        $cartModel = D('Cart');
+        $data = $cartModel->cartList();
+        $this->assign(array(
+            'data'=>$data,
+            '_page_keywords'=>'购物车列表',
+            '_page_description'=>'购物车列表',
+            '_page_title'=>购物车列表,
+            ));
+        $this->display();
+
     }
 
+    public function ajaxCartList()
+    {
+        $cartModel = D('Cart');
+        $data = $cartModel->cartList();
+        echo json_encode($data);
+    }
 }

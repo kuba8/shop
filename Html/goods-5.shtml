@@ -26,7 +26,7 @@
 				<ul>
 					<li id="logInfo"></li>
 					<li class="line">|</li>
-					<li>我的订单</li>
+					<li><a href="/shop/index.php/Home/My/order.html">我的订单</a></li>
 					<li class="line">|</li>
 					<li>客户服务</li>
 
@@ -161,31 +161,31 @@
 				<div class="cat_bd none"> 
 				
 										<div class="cat item1 ">
-						<h3><a href="">家用电器</a> <b></b></h3>
+						<h3><a href="/shop/index.php/Home/Search/cat_search/cat_id/1">家用电器</a> <b></b></h3>
 						<div class="cat_detail none">
 														<dl class="dl_1st">
-								<dt><a href="">生活电器</a></dt>
+								<dt><a href="/shop/index.php/Home/Search/cat_search/cat_id/17">生活电器</a></dt>
 								<dd>
-																	<a href="">洗衣机</a>
-																	<a href="">烘干机</a>
-																	<a href="">按摩机</a>
+																	<a href="/shop/index.php/Home/Search/cat_search/cat_id/27">洗衣机</a>
+																	<a href="/shop/index.php/Home/Search/cat_search/cat_id/28">烘干机</a>
+																	<a href="/shop/index.php/Home/Search/cat_search/cat_id/29">按摩机</a>
 												
 								</dd>
 							</dl>
 														<dl >
-								<dt><a href="">厨房电器</a></dt>
-								<dd>
-												
-								</dd>
-							</dl>
-														<dl >
-								<dt><a href="">个护健康</a></dt>
+								<dt><a href="/shop/index.php/Home/Search/cat_search/cat_id/18">厨房电器</a></dt>
 								<dd>
 												
 								</dd>
 							</dl>
 														<dl >
-								<dt><a href="">五金家电</a></dt>
+								<dt><a href="/shop/index.php/Home/Search/cat_search/cat_id/19">个护健康</a></dt>
+								<dd>
+												
+								</dd>
+							</dl>
+														<dl >
+								<dt><a href="/shop/index.php/Home/Search/cat_search/cat_id/30">五金家电</a></dt>
 								<dd>
 												
 								</dd>
@@ -195,16 +195,16 @@
 						</div>
 					</div>
 									<div class="cat  ">
-						<h3><a href="">手机、数码、京东通信</a> <b></b></h3>
+						<h3><a href="/shop/index.php/Home/Search/cat_search/cat_id/2">手机、数码、京东通信</a> <b></b></h3>
 						<div class="cat_detail none">
 														<dl class="dl_1st">
-								<dt><a href="">iphone</a></dt>
+								<dt><a href="/shop/index.php/Home/Search/cat_search/cat_id/21">iphone</a></dt>
 								<dd>
 												
 								</dd>
 							</dl>
 														<dl >
-								<dt><a href="">三星手机</a></dt>
+								<dt><a href="/shop/index.php/Home/Search/cat_search/cat_id/31">三星手机</a></dt>
 								<dd>
 												
 								</dd>
@@ -214,77 +214,77 @@
 						</div>
 					</div>
 									<div class="cat  ">
-						<h3><a href="">电脑、办公</a> <b></b></h3>
+						<h3><a href="/shop/index.php/Home/Search/cat_search/cat_id/3">电脑、办公</a> <b></b></h3>
 						<div class="cat_detail none">
 														
 				
 						</div>
 					</div>
 									<div class="cat  ">
-						<h3><a href="">家居、家具、家装、厨具</a> <b></b></h3>
+						<h3><a href="/shop/index.php/Home/Search/cat_search/cat_id/4">家居、家具、家装、厨具</a> <b></b></h3>
 						<div class="cat_detail none">
 														
 				
 						</div>
 					</div>
 									<div class="cat  ">
-						<h3><a href="">男装、女装、内衣、珠宝</a> <b></b></h3>
+						<h3><a href="/shop/index.php/Home/Search/cat_search/cat_id/5">男装、女装、内衣、珠宝</a> <b></b></h3>
 						<div class="cat_detail none">
 														
 				
 						</div>
 					</div>
 									<div class="cat  ">
-						<h3><a href="">个护化妆</a> <b></b></h3>
+						<h3><a href="/shop/index.php/Home/Search/cat_search/cat_id/6">个护化妆</a> <b></b></h3>
 						<div class="cat_detail none">
 														
 				
 						</div>
 					</div>
 									<div class="cat  ">
-						<h3><a href="">运动户外</a> <b></b></h3>
+						<h3><a href="/shop/index.php/Home/Search/cat_search/cat_id/8">运动户外</a> <b></b></h3>
 						<div class="cat_detail none">
 														
 				
 						</div>
 					</div>
 									<div class="cat  ">
-						<h3><a href="">汽车、汽车用品</a> <b></b></h3>
+						<h3><a href="/shop/index.php/Home/Search/cat_search/cat_id/9">汽车、汽车用品</a> <b></b></h3>
 						<div class="cat_detail none">
 														
 				
 						</div>
 					</div>
 									<div class="cat  ">
-						<h3><a href="">母婴、玩具乐器</a> <b></b></h3>
+						<h3><a href="/shop/index.php/Home/Search/cat_search/cat_id/10">母婴、玩具乐器</a> <b></b></h3>
 						<div class="cat_detail none">
 														
 				
 						</div>
 					</div>
 									<div class="cat  ">
-						<h3><a href="">食品、酒类、生鲜、特产</a> <b></b></h3>
+						<h3><a href="/shop/index.php/Home/Search/cat_search/cat_id/11">食品、酒类、生鲜、特产</a> <b></b></h3>
 						<div class="cat_detail none">
 														
 				
 						</div>
 					</div>
 									<div class="cat  ">
-						<h3><a href="">营养保健</a> <b></b></h3>
+						<h3><a href="/shop/index.php/Home/Search/cat_search/cat_id/12">营养保健</a> <b></b></h3>
 						<div class="cat_detail none">
 														
 				
 						</div>
 					</div>
 									<div class="cat  ">
-						<h3><a href="">图书、音像、电子书</a> <b></b></h3>
+						<h3><a href="/shop/index.php/Home/Search/cat_search/cat_id/13">图书、音像、电子书</a> <b></b></h3>
 						<div class="cat_detail none">
 														
 				
 						</div>
 					</div>
 									<div class="cat  ">
-						<h3><a href="">彩票、旅行、充值、票务</a> <b></b></h3>
+						<h3><a href="/shop/index.php/Home/Search/cat_search/cat_id/14">彩票、旅行、充值、票务</a> <b></b></h3>
 						<div class="cat_detail none">
 														
 				
@@ -342,8 +342,10 @@
 		<!-- 面包屑导航 start -->
 		<div class="breadcrumb">
 		<h2>当前位置：<a href="">首页</a> > 
-						<a href=""></a> >
-						iphone7</h2>
+						<a href="">家用电器</a> >
+						<a href="">生活电器</a> >
+						<a href="">按摩机</a> >
+						iphone8</h2>
 
 		</div>
 		<!-- 面包屑导航 end -->
@@ -455,13 +457,13 @@
 		<div class="goods_content fl mt10 ml10">
 			<!-- 商品概要信息 start -->
 			<div class="summary">
-				<h3><strong>iphone7</strong></h3>
+				<h3><strong>iphone8</strong></h3>
 				
 				<!-- 图片预览区域 start -->
 				<div class="preview fl">
 					<div class="midpic">
-						<a href="http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-16/thumb_0_582bc6907bbe2.jpg" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
-							<img   src='http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-16/thumb_1_582bc6907bbe2.jpg' />               <!-- 第一幅图片的中图 -->
+						<a href="http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-18/thumb_0_582eae2df10ca.JPG" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
+							<img   src='http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-18/thumb_1_582eae2df10ca.JPG' />               <!-- 第一幅图片的中图 -->
 						</a>
 					</div>
 	
@@ -473,7 +475,7 @@
 						<div class="smallpic_wrap">
 							<ul>
 								<li class="cur">
-									<a class="zoomThumbActive" href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: 'http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-16/thumb_1_582bc6907bbe2.jpg',largeimage: 'http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-16/thumb_0_582bc6907bbe2.jpg'}"><img src="http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-16/thumb_3_582bc6907bbe2.jpg"></a>
+									<a class="zoomThumbActive" href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: 'http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-18/thumb_1_582eae2df10ca.JPG',largeimage: 'http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-18/thumb_0_582eae2df10ca.JPG'}"><img src="http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-18/thumb_3_582eae2df10ca.JPG"></a>
 								</li>
 															</ul>
 						</div>
@@ -485,39 +487,23 @@
 				<!-- 商品基本信息区域 start -->
 				<div class="goodsinfo fl ml10">
 					<ul>
-						<li><span>商品编号： </span>2</li>
-						<li class="market_price"><span>定价：</span><em>￥8000.00</em></li>
-						<li class="shop_price"><span>本店价：</span> <strong>￥7800.00</strong></li>
+						<li><span>商品编号： </span>5</li>
+						<li class="market_price"><span>定价：</span><em>￥7000.00</em></li>
+						<li class="shop_price"><span>本店价：</span> <strong>￥6000.00</strong></li>
 						<li class="shop_price"><span>会员价格：</span>
 						<p>
 							<table border="1" cellpadding="5" cellspacing="5" width="30%">
-																	<tr>
-										<td>注册会员</td>
-										<td>7800.00</td>
-									</tr>
-																	<tr>
-										<td>初级会员</td>
-										<td>6800.00</td>
-									</tr>
-																	<tr>
-										<td>高级会员</td>
-										<td>5800.00</td>
-									</tr>
-																	<tr>
-										<td>VIP</td>
-										<td>5000.00</td>
-									</tr>
 									
 							</table>
 
 						</p>	
 						</li>
 						<li class="shop_price"><span>购买价格：</span><strong style="font-size: 25px;" id="member_price"></strong></li>
-						<li><span>上架时间：</span>2016-11-16 10:38:08</li>
+						<li><span>上架时间：</span>2016-11-18 15:30:54</li>
 						<li class="star star5"><span>商品评分：</span> <strong></strong><a href="">(已有21人评价)</a></li> <!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
 					</ul>
 					<form action="/shop/index.php/Home/Cart/add.html" method="post" class="choose">
-					<input type="hidden" name="goods_id" value="2" />
+					<input type="hidden" name="goods_id" value="5" />
 						<ul>
 													
 							<li>
@@ -866,7 +852,7 @@
 var viewPath = 'http://127.0.0.1/shop/Public/Uploads/';
 	$.ajax({
 		type : "GET",
-		url : "/shop/index.php/Home/Index/displayHistory/id/2.html",
+		url : "/shop/index.php/Home/Index/displayHistory/id/5.html",
 		dataType : "json",
 		success : function(data)
 		{
@@ -880,7 +866,7 @@ var viewPath = 'http://127.0.0.1/shop/Public/Uploads/';
 
 	$.ajax({
 		type:"GET",
-		url:"/shop/index.php/Home/Index/ajaxGetMemberPrice/goods_id/2.html",
+		url:"/shop/index.php/Home/Index/ajaxGetMemberPrice/goods_id/5.html",
 		success:function(data)
 		{
 			$("#member_price").html("￥"+data+"元");

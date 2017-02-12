@@ -162,4 +162,73 @@ class CategoryModel extends Model
 		return $ret;
 	}
 
+	public function getSearchConditionByCatId($catId)
+	{
+		$ret =array();
+		$goodsModel = D('Admin/Goods');
+		//先取出这个分类下所有商品的id
+		$goodsId = $goodsModel->getGoodsIdByCatId($catId);
+		//根据商品ID取出品牌ID再连品牌表取出品牌名称
+		$ret['brand']=$goodsModel->alias('a')
+		 	->field('DISTINCT brand_id,b.brand_name,b.logo')
+		 	->join('LEFT JOIN __BRAND__ b ON a.brand_id=b.id')
+		 	->where(array(
+		 		'a.id'=>array('in',$goodsId),
+		 		'a.brand_id'=>array('neq',0),
+		 		))->select();
+
+		 $sectionCount = 6;
+		 //取出这个分类下的最大和最小价格
+		 $priceInfo = $goodsModel->field('MAX(shop_price) max_price,MIN(shop_price) min_price')
+		 ->where(array(
+		 	'id'=>array('in',$goodsId),
+		 	))->find();
+		 //var_dump($priceInfo);
+		 //最大价和最小价的区间
+		 $priceSection = $priceInfo['max_price'] - $priceInfo['min_price'];
+		 //var_dump($priceSection);
+		 //分类下商品的数量
+		 $goodsCount = count($goodsId);
+		 //只有商品数量有这些时才分段
+		 if($priceSection < 100)
+		 	$sectionCount = 2;
+		 elseif ($priceSection < 1000)
+		 	$sectionCount = 4;
+		 elseif ($priceSection < 10000)
+		 	$sectionCount = 6;
+		 else
+		 	$sectionCount = 7;
+		 //根据这些段数划分范围
+		 $pricePerSection = ceil($priceSection / $sectionCount);
+		 $price = array();
+		 $firstPrice = 0;
+		 //循环每个段
+		 for ($i=0; $i < $sectionCount; $i++) 
+		 { 
+		 		$_tmpEnd = $firstPrice+$pricePerSection;
+		 		$_tmpEnd = ((ceil($_tmpEnd/100)) *100 -1);
+		 		$price[] = $firstPrice . '-' . $_tmpEnd;
+		 		$firstPrice = $_tmpEnd+1;	
+		 }
+		 $ret['price'] = $price;
+
+		 $gaModel = D('goods_attr');
+		 $gaData=$gaModel->alias('a')
+		 	->field('DISTINCT a.attr_id,a.attr_value,b.attr_name')
+		 	->join('LEFT JOIN __ATTRIBUTE__ b ON a.attr_id=b.id')
+		 	->where(array(
+		 		'a.goods_id'=>array('in',$goodsId),
+		 		))->select();
+		 	//var_dump($gaData);
+		 	$_gaData = array();
+		 	foreach ($gaData as $k => $v)
+		 	{
+		 		$_gaData[$v['attr_name']][]=$v;
+		 	}
+
+		 	$ret['gaData'] = $_gaData;
+		 return $ret;
+
+	}
+
 }

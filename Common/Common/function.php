@@ -124,3 +124,11 @@ $_clean_xss_config->set('HTML.TargetBlank', TRUE);
 $_clean_xss_obj = new HTMLPurifier($_clean_xss_config);
 return $_clean_xss_obj->purify($data);
 }
+
+
+function filterUrl($param)
+{
+	$url = $_SERVER['PHP_SELF'];
+	$re = "/\/$param\/[^\/]+/";
+	return preg_replace($re, '', $url);
+}

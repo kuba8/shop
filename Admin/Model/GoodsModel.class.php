@@ -518,5 +518,33 @@ protected function _after_insert(&$data,$option){
     }
   }
 
-}
+  public function cat_search($catId,$pageSize = 2)
+  {
+        /********************搜索****************/
+    $where['a.is_on_sale'] = array('eq','是');
 
+        /********************翻页*****************/
+    $count=$this->alias('a')->where($where)->count();
+    $page= new \Think\Page($count,$pageSize);
+
+    $page->setConfig('next','下一页');
+    $page->setConfig('prev','上一页');
+    $data['page'] = $page->show();
+
+    //取数据
+    $data['data'] = $this->alias('a')
+    ->field('a.id,a.goods_name,a.mid_logo,a.shop_price,SUM(b.goods_number) xl')
+    ->join('LEFT JOIN __ORDER_GOODS__ b
+          ON (a.id=b.goods_id
+                AND
+                b.order_id IN(SELECT id FROM __ORDER__ WHERE pay_status="否"))')
+    ->where($where)
+    ->limit($page->firstRow.','.$page->listRows)
+    ->group('a.id')
+    ->order('xl DESC')
+    ->select();
+
+    //返回数据
+    return $data;
+}
+}

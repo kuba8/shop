@@ -521,7 +521,71 @@ protected function _after_insert(&$data,$option){
   public function cat_search($catId,$pageSize = 2)
   {
         /********************搜索****************/
-    $where['a.is_on_sale'] = array('eq','是');
+    //$where['a.is_on_sale'] = array('eq','是');
+    //根据分类ID搜索出这个分类下的商品的ID
+      $goodsId = $this->getGoodsIdByCatId($catId);
+      $where['a.id'] = array('in',$goodsId);
+      //品牌
+      $brandId = I('get.brand_id');
+      if($brandId)
+        $where['a.brand_id'] = array('eq',(int)$brandId);
+      //价格
+      $price = I('get.price');
+      if($price)
+      {
+        $price = explode('-',$price);
+        $where['a.shop_price'] = array('between',$price);
+      }
+      /*************商品属性搜索开始***************/
+    $gaModel = D('goods_attr');
+    $attrGoodsId = NULL;
+    foreach ($_GET as $k => $v) 
+    {
+      //如果变量是以sttr_开头的说明是一个属性的查询，格式：attr_1/黑色-颜色
+      if(strpos($k,'attr_')===0)
+      {
+        //先解析出属性ID和属性值
+        $attrId = str_replace('attr_','',$k);//属性ID
+        //先取出最后一个-往后的字符串
+        $attrName = strrchr($v,'-');
+        $attrValue = str_replace($attrName, '', $v);
+        //根据属性ID和属性值搜索出这个属性值下的商品id：并返回一个字符串格式：1，2，3
+        $gids = $gaModel->field('GROUP_CONCAT(goods_id) gids')->where(array(
+              'attr_id'=>array('eq',$attrId),
+              'attr_value'=>array('eq',$attrValue),
+          ))->find();
+        var_dump($gids);
+        //判断是否有商品
+       if($gids['gids'])
+       {
+        $gids['gids'] = explode(',', $gids['gids']);
+        //说明是搜索的第一个属性
+        if($attrGoodsId===NULL)
+          $attrGoodsId = $gids['gids'];
+        else
+        {
+          $attrGoodsId = array_intersect($attrGoodsId, $gids['gids']);
+          if(empty($attrGoodsId))
+          {
+            $where['a.id'] = array('eq',0);
+            break;
+          }
+        }
+       }
+       else
+       {
+        $attrGoodsId =array();
+        $where['a.id'] = array('eq',0);
+        break;
+       }
+      }
+    }
+    if($attrGoodsId)
+      $where['a.id'] = array('IN',$attrGoodsId);
+
+
+
+
 
         /********************翻页*****************/
     $count=$this->alias('a')->where($where)->count();
@@ -530,6 +594,23 @@ protected function _after_insert(&$data,$option){
     $page->setConfig('next','下一页');
     $page->setConfig('prev','上一页');
     $data['page'] = $page->show();
+
+    /********************排序*****************/
+    $orderby = 'xl'; //默认
+    $orderway = 'desc'; //默认
+    $odby = I('get.odby');
+    if($odby)
+    {
+      if($odby=='addtime')
+        $orderby = 'a.addtime';
+      if(strpos($odby,'price_')===0)
+      {
+        $orderby='a.shop_price';
+        if($odby=='price_asc')
+          $orderway='asc';
+      }
+    }
+     
 
     //取数据
     $data['data'] = $this->alias('a')
@@ -541,10 +622,10 @@ protected function _after_insert(&$data,$option){
     ->where($where)
     ->limit($page->firstRow.','.$page->listRows)
     ->group('a.id')
-    ->order('xl DESC')
+    ->order("$orderby $orderway")
     ->select();
 
     //返回数据
     return $data;
-}
+    }
 }

@@ -514,17 +514,7 @@
 						
 
 						<!-- 分页信息 start -->
-						<div class="page mt20">
-							<a href="">首页</a>
-							<a href="">上一页</a>
-							<a href="">1</a>
-							<a href="">2</a>
-							<a href="" class="cur">3</a>
-							<a href="">4</a>
-							<a href="">5</a>
-							<a href="">下一页</a>
-							<a href="">尾页</a>
-						</div>
+						<div class="page mt20"></div>
 						<!-- 分页信息 end -->
 
 						<!--  评论表单 start-->
@@ -695,7 +685,7 @@ var viewPath = '<?php echo $viewPath;?>';
 			type:"POST",
 			url:"<?php echo U('Comment/add');?>",
 			data:formData,
-			datatype:"json",
+			dataType:"json",
 			success:function(data)
 			{
 				if(data.info=='必须先登录!')
@@ -753,6 +743,59 @@ var viewPath = '<?php echo $viewPath;?>';
 		});
 
 	});
+
+	var cache = [];
+	function getCache(page)
+	{
+		for(var i=0;i<cache.length;i++)
+		{
+			if(cache[i][0] == page)
+				return cache[i];
+		}
+		return false;
+	}
+
+	function ajaxGetPl(page)	
+	{
+		var c = getCache(page);
+		if(c!==false)
+		{
+			$("#comment_container").html(c[1]);
+			$('.page').html(c[2]);
+			return;
+		}
+		$.ajax({
+			type:"GET",
+			url:"<?php echo U('Comment/ajaxGetPl?goods_id='.$info['id'],'',FALSE);?>/p/"+page,
+			dataType:"json",
+			success:function(data)
+			{
+				var html = "";
+				$(data.data).each(function(k,v){
+					html += '<div class="comment_items mt10"><div class="user_pic"><dl><dt><a href=""><img src="'+v.face+'" alt="" /></a></dt><dd><a href="">'+v.username+'</a></dd></dl></div><div class="item"><div class="title"><span>'+v.addtime+'</span><strong class="star star'+v.star+'"></strong></div><div class="comment_content">'+v.content+'</div><div class="btns"><a href="" class="reply">回复('+v.reply_count+')</a><a href="" class="useful">有用('+v.click_count+')</a></div></div><div class="cornor"></div></div>';
+				});
+			
+				$("#comment_container").html(html);
+				//拼出翻页字符串
+				var pageString = "";
+				for(var i=1;i<=data.pageCount;i++)
+				{
+					if(page==i)
+						var cls = 'class="cur"';
+					else
+						var cls = '';
+					pageString +='<a '+cls+' onclick="ajaxGetPl('+i+');" href="javascript:void(0);">'+i+'</a>';
+				}
+				$('.page').html(pageString);
+
+				//放入缓存中
+				cache.push([page,html,pageString]);
+			}
+		});
+	}
+
+ajaxGetPl(1);
+
 
 </script>
 

@@ -26,4 +26,12 @@ class CommentController extends Controller
         $this->error($model->getError(),'',TRUE);
     }
 
+    public function ajaxGetPl()
+    {
+        $goodsId = I('get.goods_id');
+        $model = D('Admin/Comment');
+        $data = $model->search($goodsId,5);
+        echo json_encode($data); 
+    }
+
 }

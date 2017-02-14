@@ -343,9 +343,8 @@
 		<div class="breadcrumb">
 		<h2>当前位置：<a href="">首页</a> > 
 						<a href="">家用电器</a> >
-						<a href="">生活电器</a> >
-						<a href="">按摩机</a> >
-						iphone8</h2>
+						<a href="">厨房电器</a> >
+						测试测试测试</h2>
 
 		</div>
 		<!-- 面包屑导航 end -->
@@ -457,13 +456,13 @@
 		<div class="goods_content fl mt10 ml10">
 			<!-- 商品概要信息 start -->
 			<div class="summary">
-				<h3><strong>iphone8</strong></h3>
+				<h3><strong>测试测试测试</strong></h3>
 				
 				<!-- 图片预览区域 start -->
 				<div class="preview fl">
 					<div class="midpic">
-						<a href="http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-18/thumb_0_582eae2df10ca.JPG" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
-							<img   src='http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-18/thumb_1_582eae2df10ca.JPG' />               <!-- 第一幅图片的中图 -->
+						<a href="http://127.0.0.1/shop/Public/Uploads/" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
+							<img   src='http://127.0.0.1/shop/Public/Uploads/' />               <!-- 第一幅图片的中图 -->
 						</a>
 					</div>
 	
@@ -475,7 +474,7 @@
 						<div class="smallpic_wrap">
 							<ul>
 								<li class="cur">
-									<a class="zoomThumbActive" href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: 'http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-18/thumb_1_582eae2df10ca.JPG',largeimage: 'http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-18/thumb_0_582eae2df10ca.JPG'}"><img src="http://127.0.0.1/shop/Public/Uploads/Goods/2016-11-18/thumb_3_582eae2df10ca.JPG"></a>
+									<a class="zoomThumbActive" href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: 'http://127.0.0.1/shop/Public/Uploads/',largeimage: 'http://127.0.0.1/shop/Public/Uploads/'}"><img src="http://127.0.0.1/shop/Public/Uploads/"></a>
 								</li>
 															</ul>
 						</div>
@@ -487,9 +486,9 @@
 				<!-- 商品基本信息区域 start -->
 				<div class="goodsinfo fl ml10">
 					<ul>
-						<li><span>商品编号： </span>5</li>
-						<li class="market_price"><span>定价：</span><em>￥7000.00</em></li>
-						<li class="shop_price"><span>本店价：</span> <strong>￥6000.00</strong></li>
+						<li><span>商品编号： </span>6</li>
+						<li class="market_price"><span>定价：</span><em>￥3000.00</em></li>
+						<li class="shop_price"><span>本店价：</span> <strong>￥2800.00</strong></li>
 						<li class="shop_price"><span>会员价格：</span>
 						<p>
 							<table border="1" cellpadding="5" cellspacing="5" width="30%">
@@ -499,12 +498,50 @@
 						</p>	
 						</li>
 						<li class="shop_price"><span>购买价格：</span><strong style="font-size: 25px;" id="member_price"></strong></li>
-						<li><span>上架时间：</span>2016-11-18 15:30:54</li>
+						<li><span>上架时间：</span>2016-12-05 10:06:48</li>
 						<li class="star star5"><span>商品评分：</span> <strong></strong><a href="">(已有21人评价)</a></li> <!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
 					</ul>
 					<form action="/shop/index.php/Home/Cart/add.html" method="post" class="choose">
-					<input type="hidden" name="goods_id" value="5" />
+					<input type="hidden" name="goods_id" value="6" />
 						<ul>
+													<li class="product">
+								<dl>
+									<dt>颜色：</dt>
+									<dd>
+																			<a class="selected"  href="javascript:;">黑色 <input checked="checked" type="radio" name="goods_attr_id[1]" value="1"  /></a>
+								
+																			<a   href="javascript:;">紫色 <input  type="radio" name="goods_attr_id[1]" value="2"  /></a>
+								
+																			<a   href="javascript:;">粉红色 <input  type="radio" name="goods_attr_id[1]" value="3"  /></a>
+								
+																		</dd>
+								</dl>
+							</li>
+
+													<li class="product">
+								<dl>
+									<dt>尺寸：</dt>
+									<dd>
+																			<a class="selected"  href="javascript:;">5 <input checked="checked" type="radio" name="goods_attr_id[4]" value="4"  /></a>
+								
+																			<a   href="javascript:;">3 <input  type="radio" name="goods_attr_id[4]" value="5"  /></a>
+								
+																		</dd>
+								</dl>
+							</li>
+
+													<li class="product">
+								<dl>
+									<dt>操作系统：</dt>
+									<dd>
+																			<a class="selected"  href="javascript:;">安卓 <input checked="checked" type="radio" name="goods_attr_id[6]" value="7"  /></a>
+								
+																			<a   href="javascript:;">苹果 <input  type="radio" name="goods_attr_id[6]" value="8"  /></a>
+								
+																		</dd>
+								</dl>
+							</li>
+
 													
 							<li>
 								<dl>
@@ -549,6 +586,7 @@
 					<div class="introduce detail_div none">
 						<div class="attr mt15">
 							<ul>
+															<li><span>出厂日期：</span>2015-10-10</li>
 								
 							</ul>
 						</div>
@@ -591,9 +629,115 @@
 							</div>
 						</div>
 
-						<div id="comment_container"></div>
+						<div class="comment_items mt10">
+							<div class="user_pic">
+								<dl>
+									<dt><a href=""><img src="/shop/Public/Home/images/user1.gif" alt="" /></a></dt>
+									<dd><a href="">乖乖</a></dd>
+								</dl>
+							</div>
+							<div class="item">
+								<div class="title">
+									<span>2013-03-11 22:18</span>
+									<strong class="star star5"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
+								</div>
+								<div class="comment_content">
+									<dl>
+										<dt>心得：</dt>
+										<dd>东西挺好，挺满意的！</dd>
+									</dl>
+									<dl>
+										<dt>优点：</dt>
+										<dd>反应速度开，散热性能好</dd>
+									</dl>
+									<dl>
+										<dt>不足：</dt>
+										<dd>暂时还没发现缺点哦！</dd>
+									</dl>
+									<dl>
+										<dt>购买日期：</dt>
+										<dd>2013-11-24</dd>
+									</dl>
+								</div>
+								<div class="btns">
+									<a href="" class="reply">回复(0)</a>
+									<a href="" class="useful">有用(0)</a>
+								</div>
+							</div>
+							<div class="cornor"></div>
+						</div>
 
-						
+						<div class="comment_items mt10">
+							<div class="user_pic">
+								<dl>
+									<dt><a href=""><img src="/shop/Public/Home/images/user2.jpg" alt="" /></a></dt>
+									<dd><a href="">小宝贝</a></dd>
+								</dl>
+							</div>
+							<div class="item">
+								<div class="title">
+									<span>2013-10-01 14:10</span>
+									<strong class="star star4"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
+								</div>
+								<div class="comment_content">
+									<dl>
+										<dt>心得：</dt>
+										<dd>外观漂亮同，还在使用过程中。</dd>
+									</dl>
+									<dl>
+										<dt>型号：</dt>
+										<dd>i5 8G内存版</dd>
+									</dl>
+									<dl>
+										<dt>购买日期：</dt>
+										<dd>2013-11-20</dd>
+									</dl>
+								</div>
+								<div class="btns">
+									<a href="" class="reply">回复(0)</a>
+									<a href="" class="useful">有用(0)</a>
+								</div>
+							</div>
+							<div class="cornor"></div>
+						</div>
+
+						<div class="comment_items mt10">
+							<div class="user_pic">
+								<dl>
+									<dt><a href=""><img src="/shop/Public/Home/images/user3.jpg" alt="" /></a></dt>
+									<dd><a href="">天使</a></dd>
+								</dl>
+							</div>
+							<div class="item">
+								<div class="title">
+									<span>2013-03-11 22:18</span>
+									<strong class="star star5"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
+								</div>
+								<div class="comment_content">
+									<dl>
+										<dt>心得：</dt>
+										<dd>挺好的，物超所值，速度挺好，WIN8用起来也不错。</dd>
+									</dl>
+									<dl>
+										<dt>优点：</dt>
+										<dd>散热很好，配置不错</dd>
+									</dl>
+									<dl>
+										<dt>不足：</dt>
+										<dd>暂时还没发现缺点哦！</dd>
+									</dl>
+									<dl>
+										<dt>购买日期：</dt>
+										<dd>2013-11-24</dd>
+									</dl>
+								</div>
+								<div class="btns">
+									<a href="" class="reply">回复(0)</a>
+									<a href="" class="useful">有用(0)</a>
+								</div>
+							</div>
+							<div class="cornor"></div>
+						</div>
 
 						<!-- 分页信息 start -->
 						<div class="page mt20">
@@ -612,7 +756,7 @@
 						<!--  评论表单 start-->
 						<div class="comment_form mt20">
 							<form id="comment_form">
-							<input type="hidden" name="goods_id" value="5" />
+							<input type="hidden" name="goods_id" value="6" />
 								<ul>
 									<li>
 										<label for=""> 评分：</label>
@@ -747,7 +891,7 @@
 var viewPath = 'http://127.0.0.1/shop/Public/Uploads/';
 	$.ajax({
 		type : "GET",
-		url : "/shop/index.php/Home/Index/displayHistory/id/5.html",
+		url : "/shop/index.php/Home/Index/displayHistory/id/6.html",
 		dataType : "json",
 		success : function(data)
 		{
@@ -761,7 +905,7 @@ var viewPath = 'http://127.0.0.1/shop/Public/Uploads/';
 
 	$.ajax({
 		type:"GET",
-		url:"/shop/index.php/Home/Index/ajaxGetMemberPrice/goods_id/5.html",
+		url:"/shop/index.php/Home/Index/ajaxGetMemberPrice/goods_id/6.html",
 		success:function(data)
 		{
 			$("#member_price").html("￥"+data+"元");
@@ -785,9 +929,6 @@ var viewPath = 'http://127.0.0.1/shop/Public/Uploads/';
 				else
 				{
 					form.trigger("reset");
-					var html ='<div class="comment_items mt10"><div class="user_pic"><dl><dt><a href=""><img src="'+data.info.face+'" alt="" /></a></dt><dd><a href="">'+data.info.username+'</a></dd></dl></div><div class="item"><div class="title"><span>2013-03-11 22:18</span><strong class="star star'+data.info.star+'"></strong></div><div class="comment_content">'+data.info.content+'</div><div class="btns"><a href="" class="reply">回复(0)</a><a href="" class="useful">有用(0)</a></div></div><div class="cornor"></div></div>';
-					html = $(html);
-					$("#comment_container").prepend(html);
 				}
 			}
 		});

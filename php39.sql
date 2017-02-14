@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2017 年 02 月 12 日 22:45
--- 服务器版本: 5.5.47
+-- 生成日期: 2017 年 02 月 14 日 17:01
+-- 服务器版本: 5.5.40
 -- PHP 版本: 5.3.29
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
@@ -184,6 +184,74 @@ INSERT INTO `p39_category` (`id`, `cat_name`, `parent_id`, `is_floor`) VALUES
 (29, '按摩机', 17, '否'),
 (30, '五金家电', 1, '是'),
 (31, '三星手机', 2, '是');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `p39_comment`
+--
+
+CREATE TABLE IF NOT EXISTS `p39_comment` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `goods_id` mediumint(8) unsigned NOT NULL COMMENT '商品Id',
+  `member_id` mediumint(8) unsigned NOT NULL COMMENT '会员Id',
+  `content` varchar(200) NOT NULL COMMENT '内容',
+  `addtime` datetime NOT NULL COMMENT '发表时间',
+  `star` tinyint(3) unsigned NOT NULL COMMENT '分值',
+  `click_count` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '有用的数字',
+  PRIMARY KEY (`id`),
+  KEY `goods_id` (`goods_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='评论' AUTO_INCREMENT=29 ;
+
+--
+-- 转存表中的数据 `p39_comment`
+--
+
+INSERT INTO `p39_comment` (`id`, `goods_id`, `member_id`, `content`, `addtime`, `star`, `click_count`) VALUES
+(1, 7, 2, 'sdsd', '2017-02-14 14:59:12', 5, 0),
+(2, 7, 2, 'sds', '2017-02-14 14:59:14', 5, 0),
+(3, 7, 2, 'dssdsd', '2017-02-14 14:59:17', 5, 0),
+(4, 7, 2, 'dsdsd', '2017-02-14 14:59:19', 5, 0),
+(5, 7, 2, 'dsdsd', '2017-02-14 14:59:21', 5, 0),
+(6, 7, 2, 'sdsd', '2017-02-14 14:59:23', 5, 0),
+(7, 7, 2, 'dsds', '2017-02-14 14:59:26', 5, 0),
+(8, 7, 2, 'dsadsaa', '2017-02-14 14:59:32', 5, 0),
+(9, 7, 2, 'dsadsa', '2017-02-14 14:59:35', 5, 0),
+(10, 7, 2, 'dsads', '2017-02-14 14:59:37', 5, 0),
+(11, 7, 2, 'adsa', '2017-02-14 14:59:39', 5, 0),
+(12, 7, 2, 'sadsaasd', '2017-02-14 14:59:42', 5, 0),
+(13, 7, 2, 'fdsfds', '2017-02-14 15:00:05', 5, 0),
+(14, 7, 2, 'fdsfdsfds', '2017-02-14 15:00:09', 5, 0),
+(15, 7, 2, 'fdsfdsfds', '2017-02-14 15:00:12', 5, 0),
+(16, 7, 2, 'fdsfdsfsd', '2017-02-14 15:00:16', 5, 0),
+(17, 7, 2, 'agdgfd', '2017-02-14 15:00:20', 5, 0),
+(18, 7, 2, 'gdagfg', '2017-02-14 15:00:24', 5, 0),
+(19, 7, 2, 'gdsagfdg', '2017-02-14 15:00:28', 5, 0),
+(20, 7, 2, 'fdsafds', '2017-02-14 15:00:41', 5, 0),
+(21, 7, 2, 'fadfds', '2017-02-14 15:01:00', 5, 0),
+(22, 7, 2, 'fSDFASDF', '2017-02-14 15:01:07', 5, 0),
+(23, 7, 2, 'fdsfdsfds', '2017-02-14 15:01:16', 5, 0),
+(24, 7, 2, 'dfsdf', '2017-02-14 15:01:20', 5, 0),
+(25, 7, 2, 'fdsfds', '2017-02-14 15:01:23', 5, 0),
+(26, 7, 2, 'dsdsdds', '2017-02-14 15:42:37', 5, 0),
+(27, 7, 2, 'dsadsa', '2017-02-14 15:42:40', 5, 0),
+(28, 7, 2, 'fewfew', '2017-02-14 15:44:05', 5, 0);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `p39_comment_reply`
+--
+
+CREATE TABLE IF NOT EXISTS `p39_comment_reply` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `comment_id` mediumint(8) unsigned NOT NULL COMMENT '评论Id',
+  `member_id` mediumint(8) unsigned NOT NULL COMMENT '会员Id',
+  `content` varchar(200) NOT NULL COMMENT '内容',
+  `addtime` datetime NOT NULL COMMENT '发表时间',
+  PRIMARY KEY (`id`),
+  KEY `comment_id` (`comment_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='评论回复' AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -716,6 +784,21 @@ INSERT INTO `p39_type` (`id`, `type_name`) VALUES
 (2, '服装'),
 (3, '书'),
 (4, '笔记本');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `p39_yinxiang`
+--
+
+CREATE TABLE IF NOT EXISTS `p39_yinxiang` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `goods_id` mediumint(8) unsigned NOT NULL COMMENT '商品Id',
+  `yx_name` varchar(30) NOT NULL COMMENT '印象名称',
+  `yx_count` smallint(5) unsigned NOT NULL DEFAULT '1' COMMENT '印象的次数',
+  PRIMARY KEY (`id`),
+  KEY `goods_id` (`goods_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='印象' AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
